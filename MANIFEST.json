@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-27T12:07:26.500739+00:00",
+  "generated_at_utc": "2026-10-27T13:08:21.929260+00:00",
   "scope": "Git-visible code, aggregate evidence, figures, synthetic tests and authorized anonymous derivative; excludes this manifest itself",
   "files": {
     ".gitattributes": {
@@ -16,15 +16,15 @@
     },
     "CITATION.cff": {
       "bytes": 682,
-      "sha256": "1e988ddc23fea1f2a5bc480bdd40680484e082490d9b4e3b2b180c10dcb08e0f"
+      "sha256": "f007849bc73e11f5279aabefd141c3f847dc058753744f96e3eef4780862fbef"
     },
     "LICENSE": {
       "bytes": 1068,
       "sha256": "d961790572a7e0572c5144a973334f30dbf856c6ff00db04f1dc427254815f4f"
     },
     "README.md": {
-      "bytes": 8478,
-      "sha256": "783b2d94ae46e1afa1a27760b8a10445f0c94580dd0b3d4e52da528268f47f1e"
+      "bytes": 8670,
+      "sha256": "9681e24e8bc49613a1e06946fcba47f78cc7e867c36daa12d2da1b48e0747120"
     },
     "analysis/build_manifest.py": {
       "bytes": 3694,
@@ -215,12 +215,12 @@
       "sha256": "a778d439ee7b46253000435574628aec324d0f4cf78689361eb56bcb82b00685"
     },
     "docs/paper/README.md": {
-      "bytes": 3447,
-      "sha256": "8778c093e43a5e7e8cf85cf7af14d480de31a2d9446003500fc247ec77548939"
+      "bytes": 3752,
+      "sha256": "6512596b30d937805051ccda3c2f15990a3877ae6609cdb5f9091f2d82b50c29"
     },
     "docs/paper/SHA256SUMS.txt": {
       "bytes": 795,
-      "sha256": "395d5e29ce585d68291e2d5410802cb08b1163e60b1cdd1677f69c076df5505b"
+      "sha256": "2c36f82f319111781df1b9ccb7666794c31c6d0f4813c3c29b1406bcbe55d0ac"
     },
     "docs/paper/citation_revision.md": {
       "bytes": 3276,
@@ -254,9 +254,21 @@
       "bytes": 1849,
       "sha256": "347864a3802d3fe482cf386fe5c2f7341d866fafa4c79169c508162a6125a02d"
     },
+    "docs/paper/language_changes.diff": {
+      "bytes": 47411,
+      "sha256": "8d9466833fae256e87bd30c9606c9bc3f1bc1959b6ac3f9b3faa84d8a1a6db27"
+    },
+    "docs/paper/language_invariants.json": {
+      "bytes": 5344,
+      "sha256": "40db4d268a183d9c843012d5179539b8ae122d708fad89534f4544ff2b15f698"
+    },
+    "docs/paper/language_revision.md": {
+      "bytes": 2248,
+      "sha256": "d0a0865c2cd922bc40dd6206f2fe725608a46bc301fd7baf594b57521633b6de"
+    },
     "docs/paper/main.pdf": {
-      "bytes": 4226101,
-      "sha256": "62bb9179dcf8943b78b62ee5db7729d5634701591a1daf1676ba8ec379cc9512"
+      "bytes": 4226426,
+      "sha256": "9325452e264d2d8069486b404fd474353c58ebf5ed79beac0fa559e314e1c431"
     },
     "docs/paper/plot_package_verification.json": {
       "bytes": 628,
@@ -264,7 +276,7 @@
     },
     "docs/paper/source_package_verification.json": {
       "bytes": 650,
-      "sha256": "d1fe393e5f9d1ad329ac6348e1416b93889a201dabda9d7221ef84a610127e8f"
+      "sha256": "044d3fa9db3c3a9ae33caa317e5377b4ee7d79216e492611fb724307b1d3f9a5"
     },
     "docs/release_verification.json": {
       "bytes": 2336,

@@ -1,0 +1,188 @@
+{
+  "all_text_invariants_pass": true,
+  "chunks": {
+    "audit_transfer.tex": {
+      "changed": true,
+      "checks": {
+        "numeric_tokens": true,
+        "commands": true,
+        "math_inline": true,
+        "math_display": true,
+        "math_parentheses": true,
+        "citations": true,
+        "references": true,
+        "structure": true,
+        "blocks": true,
+        "locked_environments": true
+      },
+      "before_characters": 6946,
+      "after_characters": 6955
+    },
+    "conclusion.tex": {
+      "changed": true,
+      "checks": {
+        "numeric_tokens": true,
+        "commands": true,
+        "math_inline": true,
+        "math_display": true,
+        "math_parentheses": true,
+        "citations": true,
+        "references": true,
+        "structure": true,
+        "blocks": true,
+        "locked_environments": true
+      },
+      "before_characters": 628,
+      "after_characters": 657
+    },
+    "discussion_base.tex": {
+      "changed": true,
+      "checks": {
+        "numeric_tokens": true,
+        "commands": true,
+        "math_inline": true,
+        "math_display": true,
+        "math_parentheses": true,
+        "citations": true,
+        "references": true,
+        "structure": true,
+        "blocks": true,
+        "locked_environments": true
+      },
+      "before_characters": 3565,
+      "after_characters": 3664
+    },
+    "opening.tex": {
+      "changed": true,
+      "checks": {
+        "numeric_tokens": true,
+        "commands": true,
+        "math_inline": true,
+        "math_display": true,
+        "math_parentheses": true,
+        "citations": true,
+        "references": true,
+        "structure": true,
+        "blocks": true,
+        "locked_environments": true
+      },
+      "before_characters": 6813,
+      "after_characters": 6776
+    },
+    "preamble.tex": {
+      "changed": false,
+      "checks": {
+        "numeric_tokens": true,
+        "commands": true,
+        "math_inline": true,
+        "math_display": true,
+        "math_parentheses": true,
+        "citations": true,
+        "references": true,
+        "structure": true,
+        "blocks": true,
+        "locked_environments": true
+      },
+      "before_characters": 2223,
+      "after_characters": 2223
+    },
+    "protocol.tex": {
+      "changed": true,
+      "checks": {
+        "numeric_tokens": true,
+        "commands": true,
+        "math_inline": true,
+        "math_display": true,
+        "math_parentheses": true,
+        "citations": true,
+        "references": true,
+        "structure": true,
+        "blocks": true,
+        "locked_environments": true
+      },
+      "before_characters": 10544,
+      "after_characters": 10553
+    },
+    "related.tex": {
+      "changed": true,
+      "checks": {
+        "numeric_tokens": true,
+        "commands": true,
+        "math_inline": true,
+        "math_display": true,
+        "math_parentheses": true,
+        "citations": true,
+        "references": true,
+        "structure": true,
+        "blocks": true,
+        "locked_environments": true
+      },
+      "before_characters": 7541,
+      "after_characters": 7480
+    },
+    "results.tex": {
+      "changed": true,
+      "checks": {
+        "numeric_tokens": true,
+        "commands": true,
+        "math_inline": true,
+        "math_display": true,
+        "math_parentheses": true,
+        "citations": true,
+        "references": true,
+        "structure": true,
+        "blocks": true,
+        "locked_environments": true
+      },
+      "before_characters": 10365,
+      "after_characters": 10499
+    },
+    "setup.tex": {
+      "changed": true,
+      "checks": {
+        "numeric_tokens": true,
+        "commands": true,
+        "math_inline": true,
+        "math_display": true,
+        "math_parentheses": true,
+        "citations": true,
+        "references": true,
+        "structure": true,
+        "blocks": true,
+        "locked_environments": true
+      },
+      "before_characters": 5970,
+      "after_characters": 5984
+    }
+  },
+  "preserved_assets": {
+    "refs.bib": true,
+    "acmart.cls": true,
+    "pvldb.sty": true,
+    "ACM-Reference-Format.bst": true,
+    "numbers_v2.tex": true,
+    "figures/fig0_concept.png": true,
+    "figures/fig0_concept.prompt.txt": true,
+    "figures/fig0_concept.provenance.json": true,
+    "figures/fig1_workflow.png": true,
+    "figures/fig1_workflow.prompt.txt": true,
+    "figures/fig1_workflow.provenance.json": true,
+    "figures/fig2_main_comparison.paired_differences.csv": true,
+    "figures/fig2_main_comparison.pdf": true,
+    "figures/fig2_main_comparison.source_data.csv": true,
+    "figures/fig2_main_comparison.svg": true,
+    "figures/fig3_risk_recall.pdf": true,
+    "figures/fig3_risk_recall.source_data.csv": true,
+    "figures/fig3_risk_recall.svg": true,
+    "figures/fig4_mechanism.pdf": true,
+    "figures/fig4_mechanism.source_data.csv": true,
+    "figures/fig4_mechanism.svg": true,
+    "tables/v2_candidates.tex": true,
+    "tables/v2_core.tex": true,
+    "tables/v2_denominators.tex": true,
+    "tables/v2_logit.tex": true,
+    "tables/v2_timing.tex": true,
+    "tables/v3_resources.tex": true
+  },
+  "all_assets_unchanged": true
+}

@@ -2,7 +2,12 @@
 
 [Paper PDF](main.pdf) · [Figure 1 PNG](figures/fig0_concept.png) ·
 [Figure 2 PNG](figures/fig1_workflow.png) ·
-[LaTeX source ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.6/pvldb_revision_source.zip)
+[LaTeX source ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.7/pvldb_revision_source.zip)
+
+Version v0.2.7 improves the English throughout the manuscript while preserving
+its numerical values, equations, citations, figures, tables and claim boundaries.
+See the [language revision](language_revision.md), [source diff](language_changes.diff)
+and [invariant checks](language_invariants.json).
 
 The manuscript has 13 pages, five figures, seven tables and two algorithms.
 The main text ends on page 12; references continue onto page 13. The 37 cited
@@ -35,7 +40,7 @@ Version v0.2.6 uses 9.5–11 pt labels at 180 mm width, paired effect intervals,
 full-grid risk curves with enlarged decision regions, and horizontal diverging
 count plots. Original measurements are preserved. See the
 [figure revision](data_figure_revision.md) and
-[standalone plotting source/data ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.6/data_figures_source.zip).
+[standalone plotting source/data ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.7/data_figures_source.zip).
 
 ![Matched performance and paired gains](../../reproductions/revision_v2/figures/fig2_main_comparison.png)
 

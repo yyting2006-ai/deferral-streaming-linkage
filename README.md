@@ -2,7 +2,10 @@
 
 Research artifact for *What Does Deferral Buy? Measuring Provisional Identity in Streaming Linkage*. The current entry point is [`experiments/e37_revision_suite.py`](experiments/e37_revision_suite.py), using the corrected causal event engine. It emits one immutable final `NEW` or `MERGE` per observed record, executes deadlines at their exact UTC times, and enforces a cluster cap of 20 actual records.
 
-[Latest paper (PDF)](docs/paper/main.pdf) · [LaTeX source ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.6/pvldb_revision_source.zip) · [Paper release](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/tag/v0.2.6)
+[Latest paper (PDF)](docs/paper/main.pdf) · [LaTeX source ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.7/pvldb_revision_source.zip) · [Paper release](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/tag/v0.2.7)
+
+Version v0.2.7 revises academic prose throughout the paper. Numerical results,
+citations and scientific assets are preserved; see the [language revision](docs/paper/language_revision.md).
 
 ![Provisional identity: selected deferred path](docs/paper/figures/fig0_concept.png)
 

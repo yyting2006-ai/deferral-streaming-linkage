@@ -1,0 +1,734 @@
+--- v0.2.6/audit_transfer.tex
++++ revised/audit_transfer.tex
+@@ -3,10 +3,10 @@
+ 
+ For a fixed model, initial state, and randomness, we compare the full emitted
+ event sequences of an original and a suffix-perturbed stream. At a real timestamp
+-$T$, both sequences are independently filtered by emission time $\leq T$;
+-then length, order, time, request, action, target, and payload must agree.
+-Using the original prefix length to truncate the perturbed run would miss extra
+-early emissions. The executable comparator tests extra, missing, and prematurely
++$T$, we independently filter both sequences by emission time $\leq T$.
++Their length, order, time, request, action, target, and payload must agree.
++Truncating the perturbed run to the original prefix length would miss extra
++early emissions. The executable comparator checks extra, missing, and prematurely
+ emitted events as well as altered ordering, targets, and randomness.
+ 
+ \begin{algorithm}[t]
+@@ -30,30 +30,30 @@
+ $\tau=.0358$, and $D=7$, all three normal output-prefix comparisons match.
+ An intentionally invalid positive control uses the complete stream's
+ time-weighted description length to alter actual pair scoring before replay.
+-All three controls change full output payloads. At the first two cuts the
+-differences are score fields only; the third changes one emitted decision.
+-This demonstrates sensitivity to this particular future-information fault,
+-not completeness against every possible leakage pathway. The overlapping
+-cutoffs are diagnostic checks, not three independent statistical samples.
++All three control runs change full output payloads. At the first two cuts,
++only score fields differ; the third changes one emitted decision.
++The check detects this particular future-information fault; it does not cover
++every possible leakage pathway. The overlapping cutoffs are diagnostic checks,
++not three independent statistical samples.
+ 
+-A targeted post-review extension uses all 35,915 May requests,
++A targeted post-review check uses all 35,915 May requests,
+ the same fixed gate scorer, and a cutoff of May 20 at 07:00 UTC (midnight local
+ time). It preserves 21,683 arrivals and perturbs the subsequent
+ 14,232. Before the cutoff, the 21,328 outputs comprise
+ 20,961 arrival, 229 claim, and 138 deadline finalizations; claim
+-counts the pending target's NEW. All 138 own-deadline re-scorings occur at
++counts refer to the pending target's NEW. All 138 own-deadline re-scorings occur at
+ exactly seven days and before the month-end drain. The complete output prefixes
+ match field for field after suffix perturbation. At 96 actual equal-time
+ deadline/arrival timestamps, all 98 deadline calls precede arrivals. The
+ instrumented baseline also matches the prior complete May event log. This
+-extends observed deadline coverage, not the scope of the causal guarantee.
++extends observed deadline coverage; the scope of the causal guarantee is unchanged.
+ 
+ Two separate processes set \texttt{PYTHONHASHSEED} to 0 and 1,
+ respectively, and replay the same complete week with the band policy
+ and fixed scorer. Both emit 8,153 events and produce identical SHA-256 hashes
+ of their complete serialized event logs. Stable keys, rather than process
+ object identity, determine ties. The audit configuration was fixed separately
+-before main comparisons; its boosted threshold happens to agree with the
++before the main comparisons; its boosted threshold coincides with the
+ March-selected primary value. Full models, source versions, and configuration
+ hashes are retained for reproduction.
+ 
+@@ -64,10 +64,10 @@
+ The historical Chicago check uses an earlier engine and a six-field export
+ from the city's 311 portal \cite{chicago311}, without free text.
+ Among linked reports the median lag is 0.42 days and 84\%
+-fall within seven days. In its first March week the largest observed band
+-change among the tested settings is $+0.0038$ $F_1$; the selected setting changes
+-the following week's $F_1$ by $-0.0078$ in one fitted run. This descriptive
+-contrast is not an estimate of a zero effect and does not validate the repaired
++fall within seven days. In its first March week, the largest observed band
++change among the tested settings is $+0.0038$ $F_1$; the selected setting yields
++a change in the following week's $F_1$ of $-0.0078$ in one fitted run. This
++descriptive comparison does not estimate a zero effect or validate the repaired
+ gate policy in a second city. Its code, inputs, and original results remain
+ versioned separately from the corrected San Diego experiments.
+ 
+@@ -76,20 +76,20 @@
+ \cite{louisville311} across two weekly waves. The
+ written instructions require separate A/B issue clustering, followed by a
+ third adjudicator. They define an issue as a continuing problem or handling
+-cycle on the same object: matching category or address alone is insufficient;
+-an already resolved problem followed by a new failure should be separate.
++cycle on the same object. Matching category or address alone is insufficient;
++a new failure after a problem has been resolved should form a separate issue.
+ Annotators are instructed to avoid the other annotator's decisions, model
+ scores, and administrative identity information. Returned-file hashes match
+-the recorded adjudication inputs and final labels, but file consistency alone
+-cannot authenticate the execution of the prescribed independence.
+-Agreement measures require interpretation in the context of the annotation task
+-\cite{artstein2008}; we retain pre-adjudication agreement separately from the final labels.
++the recorded adjudication inputs and final labels. File consistency alone,
++however, cannot verify whether annotators followed the independence instructions.
++Agreement measures must be interpreted in the context of the annotation task
++\cite{artstein2008}; we report pre-adjudication agreement separately from the final labels.
+ 
+ A/B provisional clusterings agree on 90 positive pairs, disagree on 286, and
+ agree on 52,925 negative pairs. Positive-pair Dice agreement is 0.386 and
+ adjusted Rand index \cite{hubert1985} is 0.384. Excluding any record flagged for adjudication
+ leaves 258 records, with Dice 0.487 and adjusted Rand index 0.486; this is a
+-selected-confidence sensitivity rather than a substitute reliability estimate.
++sensitivity analysis on a selected-confidence subset, not a substitute reliability estimate.
+ Adjudication retains 292 records in 226 issues, including 26 multi-record
+ issues, and leaves 35 unadjudicable. All 326 asserted same/different review
+ judgments agree with the resulting partition. Unadjudicable records are
+@@ -114,13 +114,13 @@
+ \end{table}
+ 
+ Among same-service pairs passing the recorded token-overlap rule, the four
+-lag-bin same-issue rates are nonmonotonic (\Cref{tab:louisville}). To retain
+-within-issue dependence, we resample final issues with replacement. A
++lag-bin same-issue rates are nonmonotonic (\Cref{tab:louisville}). We preserve
++within-issue dependence by resampling final issues with replacement. A
+ within-issue pair receives its issue's multiplicity; a between-issue pair
+ receives the product of the two multiplicities. The resulting sensitivity
+ intervals are broad. Only two waves are available, and all 639 pairs in the
+-last bin cross waves; residual wave and service dependence remains.
+-The sample spans only 13 days. It establishes neither flatness nor a direct
+-test of a mechanism extending through 8--30 days. Released anonymous cluster
++last bin cross waves, leaving residual wave and service dependence.
++The sample spans only 13 days. It neither establishes flatness nor directly
++tests a mechanism extending through 8--30 days. The released anonymous cluster
+ and candidate-pair relationships reproduce the agreement and resampling
+ calculations conditional on the recorded candidate set.
+
+--- v0.2.6/conclusion.tex
++++ revised/conclusion.tex
+@@ -1,9 +1,9 @@
+ \section{Conclusion}
+ Retrievable provisional identities improve boosted-scorer $F_1$ on the two
+ measured streams, and the staleness gate exceeds a ten-day cutoff in matched
+-fits. The gain combines fewer wrong merges with losses as well as recoveries
+-of positive pairs. Visibility changes actual waiting and future candidates;
++fits. Higher aggregate scores coexist with fewer wrong merges and with both
++recovered and lost positive pairs. Visibility changes actual waiting and future candidates;
+ it is not an isolated retrieval intervention. The logistic reversal, partial
+-workflow labels, and limited human-label transfer check restrict the claim.
+-An explicit event-time contract and complete output audit make these policy
+-comparisons reproducible while exposing their latency and support costs.
++workflow labels, and limited human-label transfer check limit how broadly these
++results apply. The explicit event-time contract and complete output audit make
++the policy comparisons reproducible and record their latency and support costs.
+
+--- v0.2.6/discussion_base.tex
++++ revised/discussion_base.tex
+@@ -10,9 +10,9 @@
+ 
+ \paragraph{Reference labels and support.}
+ The workflow partition can omit cross-component matches and encode
+-administrative practices. Decision FMP changes support when policies change
+-whom they merge. The denominator and common-support analyses do not repair
+-unknown labels or randomize support. Closed-request sampling and retrospective
++administrative practices. The set of merge decisions underlying decision FMP
++changes with the records a policy merges. Denominator and common-support
++analyses leave unknown labels unresolved and do not randomize support. Closed-request sampling and retrospective
+ annual labels further limit selection and label availability.
+ 
+ \paragraph{Scope of generalization.}
+@@ -25,15 +25,16 @@
+ \paragraph{Candidate and tool comparisons.}
+ Frozen-trace filtering and graph bounds complement the adaptive replay.
+ The historical Splink runs have their own blocking and estimation. They provide
+-context, not shared-candidate evidence of a commitment effect. Their original
++context; they do not compare commitment policies on shared candidates. Their original
+ environment was not recorded. Our API check used Splink 5.0.0, which supports
+ term frequency adjustments; the old configurations did not enable them.
+ Differences between these systems cannot be attributed solely to commitment.
+ 
+ \paragraph{Computation and reproducibility.}
+-Exact timers and irreversible outputs retain a latency cost. Six-worker CPU
+-timing, including candidate-snapshot serialization in traced runs, does not
+-establish isolated single-core service capacity.
++Deferred, irreversible output incurs latency even when timers run exactly on
++schedule. Timing measurements use six CPU workers and include
++candidate-snapshot serialization in traced runs. They do not measure isolated
++single-core service capacity.
+ 
+ \section{Artifact and reproducibility}
+ \label{sec:artifact}
+@@ -42,9 +43,9 @@
+ \url{https://github.com/yyting2006-ai/deferral-streaming-linkage}.
+ Release v0.2.0 contains the corrected engine, complete policy and calibration
+ configuration, individual result rows, paired analysis, candidate-bound code,
+-event-prefix comparator, tests, figure sources, and checksums. Raw event logs
+-can be regenerated from the released San Diego snapshot and frozen scorer
+-recipe; the snapshot's checksum is checked before replay. The Chicago snapshot
++event-prefix comparator, tests, figure sources, and checksums. The released
++San Diego snapshot and frozen scorer recipe allow raw event logs to be
++regenerated. The snapshot's checksum is checked before replay. The Chicago snapshot
+ supports the separately versioned historical check. The Louisville derivative
+ contains fresh anonymous identifiers, cluster relationships, pending flags,
+ wave membership, and precomputed eligible-pair lag bins. It reproduces agreement
+@@ -53,10 +54,10 @@
+ Release v0.2.2 adds the post-deadline audit, resource summary, and current
+ manuscript figure mapping.
+ 
+-The earlier engine and its results remain under v0.1.0. Reproduction
+-instructions separate these versions, use a fresh output directory, and reject
+-cache reuse when configurations or provenance differ. Undefined metrics remain
+-undefined in the analysis rather than being accepted as zero-risk operating
+-points. Preparation, calibration selection, run schedules, and original unknown
+-selection times are recorded explicitly. The release is a reproducibility
+-package, not a claim that the venue has certified its artifacts.
++The earlier engine and its results remain under v0.1.0. The reproduction
++instructions distinguish the versions and require a fresh output directory.
++Cache reuse is rejected when configurations or provenance differ. Undefined
++metrics remain undefined; they are not treated as zero-risk operating points.
++Preparation, calibration selection, and run schedules are recorded explicitly,
++including any unknown original selection times. The release provides a
++reproducibility package; it does not imply venue certification of the artifacts.
+
+--- v0.2.6/opening.tex
++++ revised/opening.tex
+@@ -1,21 +1,21 @@
+ \begin{abstract}
+-Streaming linkage can keep uncertain reports retrievable while postponing their
+-final identity assignment. We measure this design with an event-time engine
+-that emits one irrevocable outcome per request, enforces a seven-day deadline,
+-and records complete outputs. On San Diego's May stream, five matched scorer
++A streaming linker can defer an uncertain report's final identity assignment while keeping
++it retrievable. We evaluate this choice using an event-time engine that emits
++one irrevocable outcome per request, enforces a seven-day deadline, and records
++complete outputs. On San Diego's May stream, five matched scorer
+ fits give mean pairwise $F_1$ of \MArrivalF{} for arrival commitment,
+ \MBandF{} for a score band, and \MGateF{} for a staleness gate. The gate exceeds
+ a ten-day cutoff by \MGateCutDiff{} (95\% fit-seed interval
+-$[\MGateCutLow,\MGateCutHigh]$). A newly frozen retrospective July evaluation
+-gives a gate--cutoff difference of \JGateCutDiff{}
++$[\MGateCutLow,\MGateCutHigh]$). A retrospective July evaluation under the
++newly frozen protocol gives a gate--cutoff difference of \JGateCutDiff{}
+ ($[\JGateCutLow,\JGateCutHigh]$). Hiding pending identities changes both
+-retrieval and realized waiting. Event-level analyses expose newly recovered
+-and lost positive pairs, different merge denominators, and both arrival- and
+-deadline-initiated claims. Actual candidate graphs separate direct coverage
+-from transitive reachability. The logistic scorer reverses the gate--cutoff
+-ordering on July. The findings concern workflow-derived identity labels;
+-scorer dependence, annotation uncertainty, and cross-city checks bound their
+-operational interpretation.
++retrieval and realized waiting. Event-level analyses track newly recovered
++and lost positive pairs, changes in merge denominators, and claims initiated
++both at arrival and at a deadline. Graphs built from actual candidates
++distinguish direct coverage from transitive reachability. The logistic scorer
++reverses the gate--cutoff ordering on July. These results are measured against
++workflow-derived identity labels. Scorer dependence, annotation uncertainty,
++and the cross-city checks limit their operational interpretation.
+ \end{abstract}
+ 
+ \keywords{entity resolution, streaming, decision timing, prefix-safety}
+@@ -46,13 +46,12 @@
+ \label{fig:concept}
+ \end{figure*}
+ 
+-Immediate output and causal output impose different conditions. An immediate
+-policy binds an identity at arrival. A causal policy can bind it later, using
+-only information available at emission. Delayed decisions and irreversible
++An immediate policy binds an identity at arrival. A causal policy can bind it
++later, using only information available at emission. Delayed decisions and irreversible
+ matching already have a substantial history in online matching and streaming
+-systems \cite{emek2016,akidau2015}. Our question is empirical: within a learned
+-streaming linker, what does a retrievable provisional identity buy, and how much
+-of its apparent benefit can a simple age cutoff reproduce?
++systems \cite{emek2016,akidau2015}. We ask what a learned streaming linker gains
++from a retrievable provisional identity, and how much of any gain a simple age
++cutoff can reproduce.
+ 
+ \paragraph{The measured system choice.}
+ Our pipeline retrieves candidate issues using address and token indexes and
+@@ -61,41 +60,40 @@
+ only marginal matches to sufficiently old representatives. Each held record
+ forms a singleton provisional identity with a timer. A later merge can finalize
+ that target before attaching to it, or the timer can re-score it. Previously
+-committed identities never change. This exposes a precise state-management
+-choice while retaining a fixed scorer and fixed retrieval budgets.
++committed identities never change. This protocol lets us compare state
++management while keeping the scorer and retrieval budgets fixed.
+ 
+ Retrieval settings do not determine a policy-independent candidate set. A
+ provisional identity may become a candidate for later requests and may change
+ the representatives and capacities they encounter. We therefore record actual
+ candidate snapshots and distinguish end-to-end policy comparisons from a
+-conditional analysis of one frozen candidate trace. The latter cannot recover
+-the adaptive feedback of a different policy.
++conditional analysis of one frozen candidate trace. A frozen trace cannot
++capture the feedback that a different policy would create.
+ 
+ \paragraph{Evidence from matched comparisons.}
+ On May, the score band changes mean $F_1$ from \MArrivalF{} to \MBandF{},
+ and the gate reaches \MGateF{}. The ten-day cutoff reaches \MCutF{}.
+ The gate--cutoff contrast is \MGateCutDiff{}, with a five-fit interval of
+ $[\MGateCutLow,\MGateCutHigh]$ (\Cref{tab:core}). May had influenced earlier
+-exploration. We consequently preserve its exploratory status and freeze the
+-complete revised protocol before a later July evaluation. There the same
++exploration, so we retain its exploratory status. We freeze the complete
++revised protocol before evaluating July. On that stream, the same
+ gate and cutoff configurations differ by \JGateCutDiff{}
+ ($[\JGateCutLow,\JGateCutHigh]$). These intervals quantify scorer-fit variation
+ on fixed monthly streams, rather than city-level generalization.
+ 
+-The mechanism evidence is more specific than a single aggregate gain.
++Event-level analysis shows which pairs change and when requests are finalized.
+ Visibility-off controls change early claim opportunities and actual waiting
+ times as well as retrieval. Correct-pair sets contain both additions and
+ losses, and claims can originate at an arrival or another record's deadline.
+ A higher adjudicable-merge fraction can coexist with fewer adjudicable merges
+-in absolute terms. These distinctions rule out reading a net change as proof
+-that no individual record benefited, or treating an interval spanning zero as
+-an equivalence result.
++in absolute terms. A net change therefore cannot show that no individual record
++benefited. An interval spanning zero likewise does not establish equivalence.
+ 
+ \paragraph{Contributions.}
+-We contribute an explicitly timed, irrevocable streaming-linkage protocol with
+-executable output-prefix checks; matched policy and scorer comparisons with a
+-recorded selection timeline; and event/candidate analyses that separate pair
+-changes, merge-support changes, and finalization triggers. The accompanying
++We specify an irrevocable streaming-linkage protocol with explicit event timing
++and provide executable output-prefix checks. We compare matched policies and
++scorers with a recorded selection timeline, and analyze events and candidates
++to distinguish pair changes, merge-support changes, and finalization triggers. The accompanying
+ artifact preserves inputs, configurations, result rows, and verification code.
+ The reference partition is induced by administrative workflow links. Its
+ closed-world negatives, retrospectively available labels, and the limited
+
+
+--- v0.2.6/protocol.tex
++++ revised/protocol.tex
+@@ -28,15 +28,15 @@
+ 
+ Immediate commitment is the special case $D=0$. Nonanticipation alone does not
+ impose immediate commitment: evidence arriving after $a_i$ but no later than
+-$c_i$ may legitimately influence a delayed output. These definitions concern
++$c_i$ may influence a delayed output. These definitions concern
+ inference with a fixed scorer. They do not establish when retrospective training
+ labels became available.
+ 
+ \paragraph{Workflow reference partition.}
+ We construct undirected components from the available official child--parent
+ links. The labeled domain $\mathcal K$ contains records participating in these
+-links. For two records in $\mathcal K$, equal components are positive and unequal
+-components are negative under a \emph{closed-world workflow assumption}.
++links. For two records in $\mathcal K$, their pair is positive if they belong to
++the same component and negative otherwise under a \emph{closed-world workflow assumption}.
+ This assumption does not exclude missing cross-component links. A pair touching
+ an unlabeled record is unknown. Accordingly, ``correct'' and ``wrong'' below
+ mean agreement or disagreement with this frozen workflow partition, rather
+@@ -47,8 +47,8 @@
+ Partition precision, recall, and $F_1$ use all unordered predicted pairs in
+ $\mathcal K$ and all positive reference pairs whose endpoints occur in the replay
+ window. In contrast, a merge decision is the directed pair of the finalized
+-request and the first representative of its chosen destination. Write $C$, $W$,
+-and $U$ for correct, wrong, and unknown merge decisions, and $M=C+W+U$.
++request and the first representative of its chosen destination. Let $C$, $W$,
++and $U$ count correct, wrong, and unknown merge decisions, and let $M=C+W+U$.
+ We report
+ \[
+  \fmp_{\rm dec}=\frac{W}{C+W},\qquad
+@@ -67,9 +67,9 @@
+ The actual index has three channels: exact normalized address within service,
+ hundred-block address within service, and token overlap. Each address channel
+ selects a contiguous slice of up to 40 calendar-ordered postings around the
+-query date's insertion point; this is not absolute-distance nearest selection.
+-For an arriving request these are recent entries, whereas deadline
+-rescoring retains the request's original date. The text channel accumulates
++query date's insertion point. This differs from selecting the nearest postings
++by absolute distance. At arrival, these slices contain recent entries;
++deadline rescoring retains the request's original date. The text channel accumulates
+ inverse-document-frequency weights for the eight highest-IDF query tokens,
+ scanning the latest 60 postings per token and retaining up to 60 identities.
+ The deduplicated union can contain up to 140 identities. There is no independently executed dense,
+@@ -85,8 +85,8 @@
+ service, time, and issue state. In the singleton-candidate training replay,
+ issue size is constant at $\log(2)/\log(11)$, the historically named
+ \texttt{service\_rare} slot is a constant nonempty-service indicator, and both
+-unused address-embedding slots are zero. The artifact
+-lists every feature, its transform, and its observed training range. It does not
++unused address-embedding slots are zero. The artifact lists every feature,
++its transform, and its observed training range. It does not
+ describe unused embedding slots as an executed dense retrieval method. Score
+ ties use the lexicographically smallest stable identity key, and token-IDF ties
+ use lexical token order. Index postings are added once, when an identity first
+@@ -96,7 +96,7 @@
+ Let $s^*$ be the best candidate score. Arrival commitment merges when
+ $s^*\geq\tau$ and otherwise creates a new identity. The band policy holds a
+ request when $D>0$ and $\tau\leq s^*<\tau+\delta$. The gate holds it only when this band
+-condition also holds and the best representative is at least $h$ elapsed days
++condition holds and the best representative is at least $h$ elapsed days
+ old. Otherwise it follows arrival commitment. A pending identity contains
+ exactly one uncommitted request. Its timer is scheduled for $a_i+D$; by default
+ it is immediately retrievable. Visibility-off policies retain the same hold
+@@ -155,7 +155,7 @@
+ \textsc{Merge} into that now-final identity; the target timer is canceled.
+ If the later request is itself held, it creates a separate singleton pending
+ identity. A deadline resolution can likewise claim another pending identity.
+-No path carries previously committed members into a different issue. Timers
++Previously committed members never move to a different issue. Timers
+ at a timestamp execute before arrivals at that timestamp, with stable identity
+ order for tied timers and stable record order for tied arrivals. Identities use
+ the key \texttt{I:} followed by their anchoring request identifier.
+@@ -179,9 +179,9 @@
+ cannot emit twice. The capacity test counts actual members before attachment.
+ \end{proof}
+ 
+-This argument applies to the stated algorithm; executable tests and the
+-real-stream output audit below check the released implementation. At month end
+-we drain remaining timers at their exact due times using only records supplied
++This argument concerns the stated algorithm. Executable tests and the
++real-stream output audit below check the released implementation. At month end,
++we drain remaining timers at their exact due times, using only records supplied
+ in that month's replay. No later-month requests are added during this drain.
+ We measure latency as $(c_i-a_i)/86400$ in days and separately summarize all
+ records and held records. Entry into pending, claim finalization, and deadline
+
+--- v0.2.6/related.tex
++++ revised/related.tex
+@@ -1,10 +1,10 @@
+ \section{Related work}
+ \label{sec:related}
+ 
+-Our study connects record linkage, online matching with delays, and streaming
+-systems. These literatures already address uncertain matches, delayed decisions,
+-and evolving results. We examine how selective commitment and the visibility of
+-provisional identities interact in a particular streaming linkage pipeline.
++Work on record linkage, online matching with delays, and streaming systems
++already addresses uncertain matches, delayed decisions, and evolving results.
++We examine how selective commitment and the visibility of provisional identities
++interact in a particular streaming linkage pipeline.
+ 
+ \paragraph{Entity resolution and incremental maintenance.}
+ Duplicate detection addresses multiple representations of the same entity
+@@ -13,42 +13,42 @@
+ earlier materializations when matching rules or data change
+ \cite{Whang2014Incremental}. Gruenheid et al.\ also use new records to correct
+ earlier linkage errors \cite{Gruenheid2014Incremental}. Our protocol fixes the
+-scorer and preserves finalized assignments: its decisions concern when a record
+-becomes final and whether its provisional identity remains retrievable.
++scorer and preserves finalized assignments. It controls when a record becomes
++final and whether its provisional identity remains retrievable.
+ 
+ \paragraph{Progressive processing.}
+ Progressive ER prioritizes useful partial results under limited computation.
+ Pay-as-you-go methods use hints to prioritize likely matches
+-\cite{Whang2013PayAsYouGo}; relational methods adapt resolution plans as resolved
+-relationships supply new evidence \cite{Altowim2014Progressive}; schema-agnostic
++\cite{Whang2013PayAsYouGo}. Relational methods adapt resolution plans as resolved
++relationships supply new evidence \cite{Altowim2014Progressive}. Schema-agnostic
+ methods schedule comparisons over heterogeneous inputs
+ \cite{Simonini2019Progressive}. Maciejewski et al.\ organize the design space into
+-filtering, weighting, scheduling, and matching, and discuss incremental approaches to streams
+-\cite{maciejewski2025}. Thus progressive ER can itself exploit evolving evidence.
++filtering, weighting, scheduling, and matching, and discuss incremental approaches
++to streams \cite{maciejewski2025}. Progressive ER can therefore use evolving evidence.
+ Our internal comparisons hold retrieval settings and the learned scorer constant
+ while varying commitment and provisional visibility. Because policies alter
+ index state, fixed settings do not imply identical realized candidate pairs.
+ 
+ \paragraph{Matching models and workflows.}
+-Magellan supports the wider entity-matching workflow, including exploration,
++Magellan supports the entity-matching workflow, including exploration,
+ labeling, and debugging \cite{konda2016magellan}. DeepMatcher explores neural
+ matching architectures \cite{mudgal2018deepmatcher}, while Ditto fine-tunes
+ pretrained language models for pair classification \cite{li2020ditto}. These
+-works address workflow or representation choices. Our fixed-scorer comparisons
+-evaluate commitment policies within the tested pipeline; they do not establish
+-a ranking of matching architectures.
++works address workflow or representation choices. We hold the scorer fixed to
++compare commitment policies within the tested pipeline. These comparisons do
++not rank matching architectures.
+ 
+ \paragraph{Online matching with delays.}
+ Emek, Kutten, and Wattenhofer study minimum-cost perfect matching with delays in
+ a known metric space \cite{emek2016}. Requests arrive online, may wait to be paired
+ with later arrivals, and are matched without preemption. The objective combines
+ matching distance and waiting time, with competitive guarantees relative to an
+-offline optimum. Commitment timing and irreversibility are thus already central
+-to this model. Our setting differs in its learned scores over heterogeneous
++offline optimum. Commitment timing and irreversibility are already central to
++this model. Our setting differs in its learned scores over heterogeneous
+ records, multi-record issue states, and budgeted retrieval from a changing index.
+ We evaluate linkage quality relative to workflow-derived partitions and measure
+-logged merge operations and latency, rather than a metric matching cost. The contribution
+-is an empirical examination of these system choices, not the introduction of
++logged merge operations and latency, rather than a metric matching cost. Our
++contribution is an empirical study of these system choices, not the introduction of
+ irreversible delayed decisions.
+ 
+ \paragraph{Abstention and deferral.}
+@@ -58,8 +58,8 @@
+ routes selected decisions to an expert \cite{mozannar2020}. Abstention alone need
+ not imply delegation to another actor. In our implementation, an uncertain record
+ remains available to the same linking system, which may act on subsequent arrivals
+-or re-score it when its waiting interval expires. The comparison of visible and
+-invisible pending records tests a concrete state-management choice. It does not
++or re-score it when its waiting interval expires. Comparing visible and invisible
++pending records tests a concrete state-management choice. This comparison does not
+ establish that waiting is generally useful or useless, nor that delayed evidence
+ cannot help individual records.
+ 
+@@ -70,20 +70,20 @@
+ estimates; heuristic watermarks do not certify that all relevant data have
+ arrived. This literature already exposes correctness--latency trade-offs.
+ Our application contract requires emitted merge decisions to remain binding.
+-The experimental question is how to manage uncertain identity
+-state before emission under that contract. This is distinct from claiming that
+-stream-processing systems cannot express delayed or irreversible outputs.
++We ask how to manage uncertain identity state before emission under that
++contract. This question concerns state management, rather than whether
++stream-processing systems can express delayed or irreversible outputs.
+ 
+ \paragraph{Candidate generation and external comparisons.}
+ Blocking and filtering reduce comparison cost while affecting which direct
+ record pairs reach a matcher \cite{papadakis2020,christen2012}. DeepBlocker learns
+ tuple representations for candidate generation \cite{thirumuruganathan2021deepblocker};
+ Sparkly uses lexical top-$k$ TF/IDF blocking \cite{paulsen2023sparkly}.
+-Our address, block, and token retrieval is one concrete choice along this axis.
+-Direct candidate-pair
+-recall and final partition recall are different quantities: transitive merges can
++Our address, block, and token retrieval is one choice of candidate-generation
++procedure. Direct candidate-pair recall and final partition recall are different
++quantities: transitive merges can
+ recover a pair that was never directly compared. We therefore interpret the
+-reported candidate coverage as a property of the measured retrieval procedure,
++reported candidate coverage as a property of the retrieval procedure we measured,
+ not as a proved upper bound on every policy's final recall. Splink uses its own
+ blocking and estimation procedures \cite{splink}, so its comparison is end to
+ end. Our internal policies enforce a true size cap of 20, but this alone does not
+@@ -95,9 +95,9 @@
+ \cite{angelopoulos2024}; adaptive and nonexchangeable conformal methods address
+ settings beyond ordinary exchangeable calibration \cite{gibbs2021,barber2023}.
+ Our threshold calibration and subsequent monthly evaluation are empirical
+-procedures. They do not provide an online guarantee on the false-merge proportion,
+-and temporal drift alone does not establish that all formal calibration methods
+-are inapplicable. Comparisons with threshold policies concern the evaluated
++procedures. They do not provide an online guarantee on the false-merge proportion.
++Temporal drift alone also does not establish that all formal calibration methods
++are inapplicable. Our threshold-policy comparisons concern the evaluated
+ settings and their observed risk--coverage trade-offs.
+ 
+ \paragraph{Evaluation and scope.}
+@@ -108,8 +108,8 @@
+ and entity-level errors \cite{menestrina2010,luo2005}. We report pairwise partition
+ metrics together with decision-level merge errors because the final partition
+ does not describe the sequence of emitted actions. These measures are
+-complementary; record-averaged measures are not generally insensitive to erroneous
+-merges. Our conclusions concern the observed streams, their labeling procedures,
++complementary; record-averaged measures can also be sensitive to erroneous merges.
++Our conclusions concern the observed streams, their labeling procedures,
+ and the tested configurations. Aggregate lag-bin changes and policy differences
+ describe associations; they do not by themselves identify a causal decomposition
+ of the benefit of deferral.
+
+--- v0.2.6/results.tex
++++ revised/results.tex
+@@ -25,11 +25,11 @@
+ $[\MGateCutLow,\MGateCutHigh]$ and $[\JGateCutLow,\JGateCutHigh]$.
+ The band--cutoff intervals include zero: May $0.0067$
+ $[-0.0128,0.0261]$ and July $0.0045$ $[-0.0002,0.0093]$.
+-Thus the stronger evidence for a residual over this cutoff concerns the gate.
++The evidence of improvement beyond this cutoff is therefore stronger for the gate.
+ 
+ On May, hidden Band minus Arrival is $0.0007$, with interval
+ $[-0.0132,0.0145]$. Hidden Gate minus Arrival is $0.0101$, with interval
+-$[-0.0024,0.0227]$. These are imprecise contrasts, not equivalence tests.
++$[-0.0024,0.0227]$. These contrasts are imprecise and do not test equivalence.
+ Visible minus hidden effects are $0.0336$ $[0.0185,0.0488]$ for Band and
+ $0.0422$ $[0.0323,0.0520]$ for Gate. Visibility alters both candidates and
+ claim times, so these differences do not isolate retrieval from waiting.
+@@ -38,15 +38,15 @@
+ with paired 95\% interval $[0.0036,0.0081]$;
+ all five fit differences are positive. Visible Gate adds
+ $0.0266$ $[0.0212,0.0321]$ over hidden Gate.
+-The hidden contrast also changes selection, deadline re-scoring, and later
+-state, so it is not a pure waiting effect.
++The hidden contrast also changes selection, deadline re-scoring, and the state
++encountered later, so it does not isolate the effect of waiting.
+ 
+ \input{tables/v2_logit}
+-Scorer dependence is substantial (\Cref{tab:logit}). With logistic scores,
++The results depend substantially on the scorer (\Cref{tab:logit}). With logistic scores,
+ Band lowers $F_1$ in both months. Gate exceeds Cutoff on May by $0.0253$, but
+ falls below it on July by $0.0077$. A common numerical band width need not
+ represent the same uncertainty across differently calibrated scorers. These
+-single-fit checks bound generality; the boosted ordering is not a
++single-fit checks limit generalization; the boosted ordering is not a
+ scorer-independent property of deferred commitment.
+ 
+ \subsection{Calibration and threshold alternatives}
+@@ -71,8 +71,8 @@
+ recall $0.4454$). The selected boosted threshold exceeds the budget on May
+ (FMP $0.4362$). In the complete May grid, $.15$ satisfies the volume rule and
+ has FMP $0.3979$, recall $0.3944$, and $F_1=0.4147$.
+-Thus threshold adjustment is a viable observed alternative; no impossibility
+-claim follows from this grid. FMP is nonmonotonic: raising $\tau$ from $.5$
++Threshold adjustment is therefore a viable alternative on this observed grid;
++the grid supports no impossibility claim. FMP is nonmonotonic: raising $\tau$ from $.5$
+ to $.7$ changes May FMP from $0.3287$ to $0.3650$. At $.99$, only four May
+ merges remain, one adjudicable and wrong; it fails the volume rule. March's
+ logistic $.99$ point makes no merges and has undefined decision FMP.
+@@ -96,10 +96,10 @@
+ \label{fig:mechanism}
+ \end{figure*}
+ 
+-\Cref{tab:denominators} shows why decision FMP needs its denominators.
++\Cref{tab:denominators} shows why decision FMP must be read with its denominators.
+ On May, Band increases adjudicable-merge coverage from $28.73\%$ to $32.74\%$
+ while reducing the absolute adjudicable count from 2,391 to 2,248; Gate has
+-2,358. On the common sources adjudicable under both policies, May FMP changes
++2,358. For common sources adjudicable under both policies, May FMP changes
+ from $0.3911$ to $0.3122$ for Band ($n=1,874$), and from $0.3929$ to $0.3380$
+ for Gate ($n=2,092$). July gives $0.3907$ to $0.2872$ ($n=1,894$) and
+ $0.4034$ to $0.3472$ ($n=2,169$), respectively. A pooled service-by-target-age
+@@ -117,13 +117,13 @@
+ and neither-positive sets for every lag bin, with separate target-age bins
+ for wrong operations.
+ 
+-The trigger audit further limits an arrival-evidence explanation. May Band
++The trigger audit further limits an explanation based on evidence from new arrivals. May Band
+ finalizes 1,316 pending targets by claim: 662 claims originate at a new arrival
+ and 654 at another request's deadline. Gate's 611 claims split 542/69.
+ Among Band's 512 newly recovered positive pairs, the later endpoint's
+ operation is arrival-claim for 58, deadline-claim for 26, its own deadline for
+ 50, and immediate output for 378. Gate's 506 split 36/2/14/454.
+-These event associations describe the realized execution; they do not identify
++These associations describe events in the realized execution; they do not identify
+ a causal mediation effect of new evidence.
+ 
+ \subsection{Candidates: direct coverage and relaxed bounds}
+@@ -131,16 +131,16 @@
+ Actual scored query--representative pairs cover only a fraction of reference
+ positive pairs (\Cref{tab:candidates}). This fraction is not a ceiling on
+ partition recall, because transitive attachment can recover unscored pairs.
+-The union of actual representative edges gives an undirected graph. Within
++The union of actual representative edges forms an undirected graph. Within
+ each connected component, a gold-aware construction of pure connected groups
+-of at most 20 gives a feasible static lower bound. A combinatorial upper bound
++of at most 20 yields a feasible static lower bound. A combinatorial upper bound
+ distributes each gold label into groups of size 20 while relaxing connectivity
+ within those groups. The fully uncapped reachability bound is 1.0 in both
+ months. Neither bound is an exact online oracle; both ignore arrival order.
+ They are conditional on each policy's realized graph, not on all possible
+ retrieval histories.
+ 
+-Freezing Arrival's recorded candidate rows gives a separate diagnostic.
++Freezing Arrival's recorded candidate rows provides a separate diagnostic.
+ Static threshold selection yields May $F_1=0.4177$; adding the ten-day
+ age filter to those same rows gives $0.4003$. This differs from the adaptive
+ cutoff replay, which can change later representatives and candidates.
+@@ -160,7 +160,7 @@
+ 
+ The one-fit May delay sensitivity gives Band $F_1$ of $0.4304$ at $D=3$
+ and $0.4203$ at $D=14$; Gate gives $0.4462$ and $0.4437$.
+-Held median, p95, and maximum equal the chosen deadline in all four runs,
++The median, p95, and maximum held-request delays equal the chosen deadline in all four runs,
+ with zero overruns. Longer permitted waiting is not uniformly beneficial.
+ April's one-fit sensitivity is also nonmonotonic: band widths $.3,.5,.7$
+ give $F_1=.4821,.4753,.4169$. Cutoffs 5/10/14 days give
+@@ -169,7 +169,7 @@
+ 
+ \input{tables/v3_resources}
+ \Cref{tab:resources} reports the same trace-enabled May runs. The all-request
+-mean uses 35,915 requests; held means use 5,740 Band and 1,867 Gate requests
++mean covers 35,915 requests; held-request means cover 5,740 Band and 1,867 Gate requests
+ (``--'' denotes an empty held set). Peak pending is a request count, not memory
+ usage. Wall and process CPU time include candidate-snapshot construction,
+ serialization/writes, final close/flush, and the end-of-window timer drain;
+
+--- v0.2.6/setup.tex
++++ revised/setup.tex
+@@ -6,13 +6,13 @@
+ \cite{sandiego311}. The archived export contains 429,924 requests and 57,463
+ parent-link fields, of which 56,153 resolve within the snapshot. About 20.3\% of
+ requests participate in the linked domain. The closed-request sampling frame
+-can underrepresent unresolved cases, and a final export does not prove that
++can underrepresent unresolved cases, and a final export does not establish that
+ every description or address field was unchanged after arrival. Scoring uses
+ only the designated request fields, excluding closure/status fields.
+ We build the reference components from the complete snapshot, including links
+ that may have become available after the training period. Link-creation times
+-are unavailable. Thus this is retrospective weak supervision; chronological
+-feature replay and a fixed-model causal audit do not certify historical label
++are unavailable. The labels therefore provide retrospective weak supervision.
++Chronological feature replay and a fixed-model causal audit do not certify historical label
+ availability or a faithful prospective deployment. Legitimate training information
+ and train--test separation are broader leakage concerns
+ \cite{kaufman2012,kapoor2023} than the fixed-model output-prefix property tested here.
+@@ -25,13 +25,13 @@
+ request identifier. The artifact records this convention and the raw-file checksum.
+ 
+ \paragraph{Training.}
+-January--February supplies 71,923 records. A fixed candidate replay uses the
++January--February contains 71,923 records. A fixed candidate replay uses the
+ first 22,000, retains each weak negative candidate with probability 0.35 using
+ sampling seed 13, and produces
+ 441,455 training pairs, including 3,080 positives. Equal known components are
+ positive; all other sampled pairs, including unknown ones, are treated as
+-negative for fitting. This noisy-label convention is distinct from evaluation,
+-which leaves pairs outside the known domain unadjudicated. All policies share
++negative for fitting. This noisy-label convention differs from evaluation:
++pairs outside the known domain remain unadjudicated. All policies share
+ these training pairs. The scorer uses stochastic gradient boosting
+ \cite{friedman2002} with 160 trees, learning rate 0.1,
+ depth 3, subsample 0.5, and minimum leaf size 20. We refit it with seeds
+@@ -45,15 +45,15 @@
+ least 100 adjudicable merges. Among volume-eligible points with decision FMP at most 0.40, we
+ maximize positive-pair recall, breaking ties by higher $F_1$ and then higher
+ $\tau$. If none is feasible, the rule selects the minimum observed FMP among
+-volume-eligible points, breaking ties by higher recall, $F_1$, and then $\tau$,
+-and reports infeasibility. This finite-grid rule assumes
++volume-eligible points, breaking ties by higher recall, $F_1$, and then $\tau$.
++In that case, it also reports infeasibility. This finite-grid rule assumes
+ no monotonic relationship: changing a threshold changes later identity states.
+ Zero-merge runs are not successful calibration solutions. The 0.40 budget is
+ a chosen workflow-proxy constraint, not a production safety guarantee.
+ 
+ \paragraph{Selection record and evaluation windows.}
+-Historical band, gate, and cutoff choices were influenced by already-viewed
+-experiments. In particular, the old April cutoff sweep had five seeds for
++Historical band, gate, and cutoff choices were influenced by experiments
++already examined. The old April cutoff sweep had five seeds for
+ $X=5,10$ but only three for $X=14$; its selection script excluded the incomplete
+ candidate. It did not establish a complete April argmax at $X=10$.
+ Original first-view and freeze times cannot be recovered and remain marked
+@@ -63,7 +63,7 @@
+ For the repaired implementation we froze the full experiment protocol before
+ viewing its outcomes on 27 October 2026. We retain $\delta=.5$, $D=7$ days,
+ $h=5$ days, and cutoff $X=10$ from historical exploration. March calibrates the
+-new model-specific threshold; that choice is persisted before any revised
++new model-specific threshold; that choice is recorded before any revised
+ May/July quality run. May remains exploratory. A metadata search found no
+ earlier July quality outputs, so July supplies a newly frozen retrospective
+ validation of the gate--cutoff comparison. It is not prospective deployment
+@@ -84,7 +84,7 @@
+ over cities, label acquisition, or the historical policy-selection process.
+ 
+ \paragraph{Version separation.}
+-The historical engine could move previously committed members and processed
++The historical engine could move previously committed members. It processed
+ nominal deadlines only at later arrivals or at window termination. It also
+ double-counted the first member in its issue-size counter. We therefore retrain
+ all scorers after fixing the counter and report the repaired implementation as
