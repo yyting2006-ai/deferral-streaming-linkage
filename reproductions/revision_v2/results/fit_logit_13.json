@@ -1,0 +1,22 @@
+{
+  "family": "logit",
+  "seed": 13,
+  "fit_seconds": 6.83913430001121,
+  "model_sha256": "ebcb8265f6c83372fdb1645c6bf7c170e6b41633d4b69c379cda34f08391828b",
+  "finished_utc": "2026-10-27T07:11:51.396673+00:00",
+  "cache_identity": {
+    "family": "logit",
+    "seed": 13,
+    "protocol_sha256": "cc4852c85a4c1a6178b0002573999fa073c69226e52bcca612668b9fc333aaaa",
+    "training_features_sha256": "f351580e1a7c0a70f2664b926c56c6f9a9e2916c10dc6c1d471c858823eb627a",
+    "sources": {
+      "psid/methods.py": "d662d38eec647962cdaa4472ed9fd7ae53737827b2a765540229aae7180dfee6",
+      "psid/train_cand.py": "ff3ec3e52a102f6712dcc2acaf08be95c130b03140fa5c64ded7bc19d26a7581",
+      "psid/schema.py": "4571e28f284bd5fd11d5143ac7ffbc04f812a93e684882ad486ae1fde3be0b45",
+      "experiments/e11d_gbdt.py": "8201bd4770ef9d890da9d178363b14c368165fada35b8bb8df5cfc8dbe6eee0a",
+      "experiments/logit_scorer.py": "2fbd980f73706f0f40b8153617f9285f05a9ec7b92302daf62c9902a5c7b2699"
+    }
+  },
+  "cache_identity_backfilled_at_utc": "2026-10-27T07:13:56.671054+00:00",
+  "cache_provenance_note": "Added after fit during runner hardening; validated model SHA256, unchanged prepared training source hashes and protocol SHA256, and feature file modification time preceding fit start. Original fit timestamp and checksum preserved."
+}

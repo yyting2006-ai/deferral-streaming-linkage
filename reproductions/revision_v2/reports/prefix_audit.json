@@ -1,0 +1,145 @@
+{
+  "design": "Complete independently time-filtered emission-prefix suffix-rotation probe",
+  "record_count": 8153,
+  "cutoff_count": 3,
+  "normal_pass_count": 3,
+  "leaky_detected_count": 3,
+  "baseline_emissions": 8153,
+  "leaky_baseline_emissions": 8153,
+  "common_state_sha256": "cedd7d8723ff107cd13f21b4e2a9a00ee1baa21b3c2a1c35efc0ecb48c7f8bfc",
+  "input_stream_sha256": "28db2bf7d81ed10abca2086d3a1dfb7e1bad442934475ea5ec4c832ee215aa65",
+  "immutable_state": {
+    "model_sha256": "5dd33db59751efcd59e425a44044d723b12d4e8450ad7b5905417725d7148712",
+    "data_pickle_sha256": "d4fbd8eab5a591ed007460fe15f03fda0a704d29b5117a0e8ae9593c8e5df28d",
+    "protocol_sha256": "cc4852c85a4c1a6178b0002573999fa073c69226e52bcca612668b9fc333aaaa",
+    "engine_sha256": "d24d2ae93952c53c3267b702cc3a9c352698e4fbe7c5755b64c429eb2a442c42",
+    "probe_sha256": "6d9d27cf182a599c866d3750f7432e02beb4615760f04e077a90b8bb69f8ad17",
+    "timezone": "Interpret naive San Diego timestamps as America/Los_Angeles, convert to UTC; month windows selected by original local calendar; features use UTC calendar",
+    "seed": 13,
+    "config": {
+      "window_days": 60,
+      "k_candidates": 60,
+      "use_text": true,
+      "t_merge": 0.0358,
+      "t_pending": 0,
+      "pending_absorbs": false,
+      "max_cluster": 20,
+      "prior_merge": 0.0
+    },
+    "policy": {
+      "delta": 0.5,
+      "D": 7,
+      "defer_rule": "gate",
+      "stale_min": 5
+    },
+    "policy_name": "gate5"
+  },
+  "leaky_baseline_future_statistics": {
+    "time_weighted_mean_description_words": 13.15301207568848,
+    "records_used": 8153,
+    "weight_definition": "1 + seconds since first stream arrival"
+  },
+  "positive_control": "Full-stream time-weighted mean description length adjusts text-similarity weight during actual scorer calls; complete engine replay, no output-log edits.",
+  "interpretation": "Three nested temporal probes are not independent decisions and do not constitute a universal proof.",
+  "probes": [
+    {
+      "cutoff_utc": "2024-05-02T18:51:00+00:00",
+      "input_prefix_records": 2040,
+      "normal": {
+        "valid_comparison": true,
+        "equal": true,
+        "cutoff_utc": "2024-05-02T18:51:00+00:00",
+        "a_prefix_count": 2040,
+        "b_prefix_count": 2040,
+        "first_different_index_0": null,
+        "compared_fields": "length, order, absolute emission time, object, action, target and payload"
+      },
+      "leaky_positive_control": {
+        "valid_comparison": true,
+        "equal": false,
+        "cutoff_utc": "2024-05-02T18:51:00+00:00",
+        "a_prefix_count": 2040,
+        "b_prefix_count": 2040,
+        "first_different_index_0": 2,
+        "compared_fields": "length, order, absolute emission time, object, action, target and payload"
+      },
+      "leaky_decision_difference": {
+        "equal_time_object_action_target": true,
+        "different_aligned_rows": 0,
+        "length_difference": 0
+      },
+      "leaky_future_statistics": {
+        "time_weighted_mean_description_words": 13.278283453752278,
+        "records_used": 8153,
+        "weight_definition": "1 + seconds since first stream arrival"
+      },
+      "altered_stream_sha256": "50b73e4a5b70cb15213705c931d066af0c7038f4425bd2427541b5257b9b7a13"
+    },
+    {
+      "cutoff_utc": "2024-05-04T01:56:00+00:00",
+      "input_prefix_records": 4077,
+      "normal": {
+        "valid_comparison": true,
+        "equal": true,
+        "cutoff_utc": "2024-05-04T01:56:00+00:00",
+        "a_prefix_count": 4077,
+        "b_prefix_count": 4077,
+        "first_different_index_0": null,
+        "compared_fields": "length, order, absolute emission time, object, action, target and payload"
+      },
+      "leaky_positive_control": {
+        "valid_comparison": true,
+        "equal": false,
+        "cutoff_utc": "2024-05-04T01:56:00+00:00",
+        "a_prefix_count": 4077,
+        "b_prefix_count": 4077,
+        "first_different_index_0": 2,
+        "compared_fields": "length, order, absolute emission time, object, action, target and payload"
+      },
+      "leaky_decision_difference": {
+        "equal_time_object_action_target": true,
+        "different_aligned_rows": 0,
+        "length_difference": 0
+      },
+      "leaky_future_statistics": {
+        "time_weighted_mean_description_words": 13.18514698217531,
+        "records_used": 8153,
+        "weight_definition": "1 + seconds since first stream arrival"
+      },
+      "altered_stream_sha256": "682f01d3bf8f67976ada845034e7e0d7490190ec1c3706642addff732135ca5f"
+    },
+    {
+      "cutoff_utc": "2024-05-06T18:12:00+00:00",
+      "input_prefix_records": 6118,
+      "normal": {
+        "valid_comparison": true,
+        "equal": true,
+        "cutoff_utc": "2024-05-06T18:12:00+00:00",
+        "a_prefix_count": 6114,
+        "b_prefix_count": 6114,
+        "first_different_index_0": null,
+        "compared_fields": "length, order, absolute emission time, object, action, target and payload"
+      },
+      "leaky_positive_control": {
+        "valid_comparison": true,
+        "equal": false,
+        "cutoff_utc": "2024-05-06T18:12:00+00:00",
+        "a_prefix_count": 6112,
+        "b_prefix_count": 6112,
+        "first_different_index_0": 2,
+        "compared_fields": "length, order, absolute emission time, object, action, target and payload"
+      },
+      "leaky_decision_difference": {
+        "equal_time_object_action_target": false,
+        "different_aligned_rows": 1,
+        "length_difference": 0
+      },
+      "leaky_future_statistics": {
+        "time_weighted_mean_description_words": 13.18524677387218,
+        "records_used": 8153,
+        "weight_definition": "1 + seconds since first stream arrival"
+      },
+      "altered_stream_sha256": "1fc22928f930fe5974d8607f62647bd51b2157f9e38f3a395fd031cb394d4526"
+    }
+  ]
+}

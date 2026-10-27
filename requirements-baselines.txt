@@ -1,0 +1,7 @@
+# Optional retained external-baseline scripts; not needed by E37.
+# Current API/environment pins, not evidence of unrecorded historical versions.
+-r requirements.txt
+pandas==2.3.3
+splink==5.0.0
+duckdb==2.0.0
+recordlinkage==0.16

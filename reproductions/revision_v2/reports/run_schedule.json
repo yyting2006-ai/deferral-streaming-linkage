@@ -1,0 +1,1256 @@
+{
+  "scheduled_before_execution_at_utc": "2026-10-27T07:22:59.374147+00:00",
+  "selection_sha256": "62d3458e91f732a402b19e6f6171555b5a887e2fe99b6cd4173515738fd185e7",
+  "jobs": [
+    {
+      "run_id": "May_gbt_s1_arrival",
+      "family": "gbt",
+      "seed": 1,
+      "window": "May",
+      "arm": "arrival",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s1_band",
+      "family": "gbt",
+      "seed": 1,
+      "window": "May",
+      "arm": "band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s1_gate5",
+      "family": "gbt",
+      "seed": 1,
+      "window": "May",
+      "arm": "gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s1_cutoff10",
+      "family": "gbt",
+      "seed": 1,
+      "window": "May",
+      "arm": "cutoff10",
+      "policy": {
+        "delta": 0,
+        "max_lag": 10
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s1_invisible_band",
+      "family": "gbt",
+      "seed": 1,
+      "window": "May",
+      "arm": "invisible_band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s1_invisible_gate5",
+      "family": "gbt",
+      "seed": 1,
+      "window": "May",
+      "arm": "invisible_gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s2_arrival",
+      "family": "gbt",
+      "seed": 2,
+      "window": "May",
+      "arm": "arrival",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s2_band",
+      "family": "gbt",
+      "seed": 2,
+      "window": "May",
+      "arm": "band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s2_gate5",
+      "family": "gbt",
+      "seed": 2,
+      "window": "May",
+      "arm": "gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s2_cutoff10",
+      "family": "gbt",
+      "seed": 2,
+      "window": "May",
+      "arm": "cutoff10",
+      "policy": {
+        "delta": 0,
+        "max_lag": 10
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s2_invisible_band",
+      "family": "gbt",
+      "seed": 2,
+      "window": "May",
+      "arm": "invisible_band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s2_invisible_gate5",
+      "family": "gbt",
+      "seed": 2,
+      "window": "May",
+      "arm": "invisible_gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s3_arrival",
+      "family": "gbt",
+      "seed": 3,
+      "window": "May",
+      "arm": "arrival",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s3_band",
+      "family": "gbt",
+      "seed": 3,
+      "window": "May",
+      "arm": "band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s3_gate5",
+      "family": "gbt",
+      "seed": 3,
+      "window": "May",
+      "arm": "gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s3_cutoff10",
+      "family": "gbt",
+      "seed": 3,
+      "window": "May",
+      "arm": "cutoff10",
+      "policy": {
+        "delta": 0,
+        "max_lag": 10
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s3_invisible_band",
+      "family": "gbt",
+      "seed": 3,
+      "window": "May",
+      "arm": "invisible_band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s3_invisible_gate5",
+      "family": "gbt",
+      "seed": 3,
+      "window": "May",
+      "arm": "invisible_gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s4_arrival",
+      "family": "gbt",
+      "seed": 4,
+      "window": "May",
+      "arm": "arrival",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s4_band",
+      "family": "gbt",
+      "seed": 4,
+      "window": "May",
+      "arm": "band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s4_gate5",
+      "family": "gbt",
+      "seed": 4,
+      "window": "May",
+      "arm": "gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s4_cutoff10",
+      "family": "gbt",
+      "seed": 4,
+      "window": "May",
+      "arm": "cutoff10",
+      "policy": {
+        "delta": 0,
+        "max_lag": 10
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s4_invisible_band",
+      "family": "gbt",
+      "seed": 4,
+      "window": "May",
+      "arm": "invisible_band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s4_invisible_gate5",
+      "family": "gbt",
+      "seed": 4,
+      "window": "May",
+      "arm": "invisible_gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "May_gbt_s13_arrival",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "arrival",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.0358,
+      "trace": true
+    },
+    {
+      "run_id": "May_gbt_s13_band",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7
+      },
+      "tau": 0.0358,
+      "trace": true
+    },
+    {
+      "run_id": "May_gbt_s13_gate5",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358,
+      "trace": true
+    },
+    {
+      "run_id": "May_gbt_s13_cutoff10",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "cutoff10",
+      "policy": {
+        "delta": 0,
+        "max_lag": 10
+      },
+      "tau": 0.0358,
+      "trace": true
+    },
+    {
+      "run_id": "May_gbt_s13_invisible_band",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "invisible_band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": true
+    },
+    {
+      "run_id": "May_gbt_s13_invisible_gate5",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "invisible_gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": true
+    },
+    {
+      "run_id": "May_logit_s13_arrival",
+      "family": "logit",
+      "seed": 13,
+      "window": "May",
+      "arm": "arrival",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.2
+    },
+    {
+      "run_id": "May_logit_s13_band",
+      "family": "logit",
+      "seed": 13,
+      "window": "May",
+      "arm": "band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7
+      },
+      "tau": 0.2
+    },
+    {
+      "run_id": "May_logit_s13_gate5",
+      "family": "logit",
+      "seed": 13,
+      "window": "May",
+      "arm": "gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.2
+    },
+    {
+      "run_id": "May_logit_s13_cutoff10",
+      "family": "logit",
+      "seed": 13,
+      "window": "May",
+      "arm": "cutoff10",
+      "policy": {
+        "delta": 0,
+        "max_lag": 10
+      },
+      "tau": 0.2
+    },
+    {
+      "run_id": "July_gbt_s1_arrival",
+      "family": "gbt",
+      "seed": 1,
+      "window": "July",
+      "arm": "arrival",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s1_band",
+      "family": "gbt",
+      "seed": 1,
+      "window": "July",
+      "arm": "band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s1_gate5",
+      "family": "gbt",
+      "seed": 1,
+      "window": "July",
+      "arm": "gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s1_cutoff10",
+      "family": "gbt",
+      "seed": 1,
+      "window": "July",
+      "arm": "cutoff10",
+      "policy": {
+        "delta": 0,
+        "max_lag": 10
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s1_invisible_band",
+      "family": "gbt",
+      "seed": 1,
+      "window": "July",
+      "arm": "invisible_band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s1_invisible_gate5",
+      "family": "gbt",
+      "seed": 1,
+      "window": "July",
+      "arm": "invisible_gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s2_arrival",
+      "family": "gbt",
+      "seed": 2,
+      "window": "July",
+      "arm": "arrival",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s2_band",
+      "family": "gbt",
+      "seed": 2,
+      "window": "July",
+      "arm": "band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s2_gate5",
+      "family": "gbt",
+      "seed": 2,
+      "window": "July",
+      "arm": "gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s2_cutoff10",
+      "family": "gbt",
+      "seed": 2,
+      "window": "July",
+      "arm": "cutoff10",
+      "policy": {
+        "delta": 0,
+        "max_lag": 10
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s2_invisible_band",
+      "family": "gbt",
+      "seed": 2,
+      "window": "July",
+      "arm": "invisible_band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s2_invisible_gate5",
+      "family": "gbt",
+      "seed": 2,
+      "window": "July",
+      "arm": "invisible_gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s3_arrival",
+      "family": "gbt",
+      "seed": 3,
+      "window": "July",
+      "arm": "arrival",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s3_band",
+      "family": "gbt",
+      "seed": 3,
+      "window": "July",
+      "arm": "band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s3_gate5",
+      "family": "gbt",
+      "seed": 3,
+      "window": "July",
+      "arm": "gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s3_cutoff10",
+      "family": "gbt",
+      "seed": 3,
+      "window": "July",
+      "arm": "cutoff10",
+      "policy": {
+        "delta": 0,
+        "max_lag": 10
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s3_invisible_band",
+      "family": "gbt",
+      "seed": 3,
+      "window": "July",
+      "arm": "invisible_band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s3_invisible_gate5",
+      "family": "gbt",
+      "seed": 3,
+      "window": "July",
+      "arm": "invisible_gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s4_arrival",
+      "family": "gbt",
+      "seed": 4,
+      "window": "July",
+      "arm": "arrival",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s4_band",
+      "family": "gbt",
+      "seed": 4,
+      "window": "July",
+      "arm": "band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s4_gate5",
+      "family": "gbt",
+      "seed": 4,
+      "window": "July",
+      "arm": "gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s4_cutoff10",
+      "family": "gbt",
+      "seed": 4,
+      "window": "July",
+      "arm": "cutoff10",
+      "policy": {
+        "delta": 0,
+        "max_lag": 10
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s4_invisible_band",
+      "family": "gbt",
+      "seed": 4,
+      "window": "July",
+      "arm": "invisible_band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s4_invisible_gate5",
+      "family": "gbt",
+      "seed": 4,
+      "window": "July",
+      "arm": "invisible_gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    {
+      "run_id": "July_gbt_s13_arrival",
+      "family": "gbt",
+      "seed": 13,
+      "window": "July",
+      "arm": "arrival",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.0358,
+      "trace": true
+    },
+    {
+      "run_id": "July_gbt_s13_band",
+      "family": "gbt",
+      "seed": 13,
+      "window": "July",
+      "arm": "band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7
+      },
+      "tau": 0.0358,
+      "trace": true
+    },
+    {
+      "run_id": "July_gbt_s13_gate5",
+      "family": "gbt",
+      "seed": 13,
+      "window": "July",
+      "arm": "gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358,
+      "trace": true
+    },
+    {
+      "run_id": "July_gbt_s13_cutoff10",
+      "family": "gbt",
+      "seed": 13,
+      "window": "July",
+      "arm": "cutoff10",
+      "policy": {
+        "delta": 0,
+        "max_lag": 10
+      },
+      "tau": 0.0358,
+      "trace": true
+    },
+    {
+      "run_id": "July_gbt_s13_invisible_band",
+      "family": "gbt",
+      "seed": 13,
+      "window": "July",
+      "arm": "invisible_band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": true
+    },
+    {
+      "run_id": "July_gbt_s13_invisible_gate5",
+      "family": "gbt",
+      "seed": 13,
+      "window": "July",
+      "arm": "invisible_gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5,
+        "visible": false
+      },
+      "tau": 0.0358,
+      "trace": true
+    },
+    {
+      "run_id": "July_logit_s13_arrival",
+      "family": "logit",
+      "seed": 13,
+      "window": "July",
+      "arm": "arrival",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.2
+    },
+    {
+      "run_id": "July_logit_s13_band",
+      "family": "logit",
+      "seed": 13,
+      "window": "July",
+      "arm": "band",
+      "policy": {
+        "delta": 0.5,
+        "D": 7
+      },
+      "tau": 0.2
+    },
+    {
+      "run_id": "July_logit_s13_gate5",
+      "family": "logit",
+      "seed": 13,
+      "window": "July",
+      "arm": "gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.2
+    },
+    {
+      "run_id": "July_logit_s13_cutoff10",
+      "family": "logit",
+      "seed": 13,
+      "window": "July",
+      "arm": "cutoff10",
+      "policy": {
+        "delta": 0,
+        "max_lag": 10
+      },
+      "tau": 0.2
+    },
+    {
+      "run_id": "May_gbt_s13_tau0.01",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "tau0.01",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.01,
+      "retain_events": false
+    },
+    {
+      "run_id": "May_gbt_s13_tau0.02",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "tau0.02",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.02,
+      "retain_events": false
+    },
+    {
+      "run_id": "May_gbt_s13_tau0.0358",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "tau0.0358",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.0358,
+      "retain_events": false
+    },
+    {
+      "run_id": "May_gbt_s13_tau0.05",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "tau0.05",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.05,
+      "retain_events": false
+    },
+    {
+      "run_id": "May_gbt_s13_tau0.07",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "tau0.07",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.07,
+      "retain_events": false
+    },
+    {
+      "run_id": "May_gbt_s13_tau0.1",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "tau0.1",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.1,
+      "retain_events": false
+    },
+    {
+      "run_id": "May_gbt_s13_tau0.15",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "tau0.15",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.15,
+      "retain_events": false
+    },
+    {
+      "run_id": "May_gbt_s13_tau0.2",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "tau0.2",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.2,
+      "retain_events": false
+    },
+    {
+      "run_id": "May_gbt_s13_tau0.3",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "tau0.3",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.3,
+      "retain_events": false
+    },
+    {
+      "run_id": "May_gbt_s13_tau0.5",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "tau0.5",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.5,
+      "retain_events": false
+    },
+    {
+      "run_id": "May_gbt_s13_tau0.7",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "tau0.7",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.7,
+      "retain_events": false
+    },
+    {
+      "run_id": "May_gbt_s13_tau0.9",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "tau0.9",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.9,
+      "retain_events": false
+    },
+    {
+      "run_id": "May_gbt_s13_tau0.99",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "tau0.99",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.99,
+      "retain_events": false
+    },
+    {
+      "run_id": "May_gbt_s13_band_D3",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "band_D3",
+      "policy": {
+        "delta": 0.5,
+        "D": 3
+      },
+      "tau": 0.0358
+    },
+    {
+      "run_id": "May_gbt_s13_band_D14",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "band_D14",
+      "policy": {
+        "delta": 0.5,
+        "D": 14
+      },
+      "tau": 0.0358
+    },
+    {
+      "run_id": "May_gbt_s13_gate5_D3",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "gate5_D3",
+      "policy": {
+        "delta": 0.5,
+        "D": 3,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358
+    },
+    {
+      "run_id": "May_gbt_s13_gate5_D14",
+      "family": "gbt",
+      "seed": 13,
+      "window": "May",
+      "arm": "gate5_D14",
+      "policy": {
+        "delta": 0.5,
+        "D": 14,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358
+    },
+    {
+      "run_id": "April_gbt_s13_band_delta0.3",
+      "family": "gbt",
+      "seed": 13,
+      "window": "April",
+      "arm": "band_delta0.3",
+      "policy": {
+        "delta": 0.3,
+        "D": 7
+      },
+      "tau": 0.0358
+    },
+    {
+      "run_id": "April_gbt_s13_band_delta0.5",
+      "family": "gbt",
+      "seed": 13,
+      "window": "April",
+      "arm": "band_delta0.5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7
+      },
+      "tau": 0.0358
+    },
+    {
+      "run_id": "April_gbt_s13_band_delta0.7",
+      "family": "gbt",
+      "seed": 13,
+      "window": "April",
+      "arm": "band_delta0.7",
+      "policy": {
+        "delta": 0.7,
+        "D": 7
+      },
+      "tau": 0.0358
+    },
+    {
+      "run_id": "April_gbt_s13_gate_h2",
+      "family": "gbt",
+      "seed": 13,
+      "window": "April",
+      "arm": "gate_h2",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 2
+      },
+      "tau": 0.0358
+    },
+    {
+      "run_id": "April_gbt_s13_gate_h3",
+      "family": "gbt",
+      "seed": 13,
+      "window": "April",
+      "arm": "gate_h3",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 3
+      },
+      "tau": 0.0358
+    },
+    {
+      "run_id": "April_gbt_s13_gate_h5",
+      "family": "gbt",
+      "seed": 13,
+      "window": "April",
+      "arm": "gate_h5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358
+    },
+    {
+      "run_id": "April_gbt_s13_cutoff5",
+      "family": "gbt",
+      "seed": 13,
+      "window": "April",
+      "arm": "cutoff5",
+      "policy": {
+        "delta": 0,
+        "max_lag": 5
+      },
+      "tau": 0.0358
+    },
+    {
+      "run_id": "April_gbt_s13_cutoff10",
+      "family": "gbt",
+      "seed": 13,
+      "window": "April",
+      "arm": "cutoff10",
+      "policy": {
+        "delta": 0,
+        "max_lag": 10
+      },
+      "tau": 0.0358
+    },
+    {
+      "run_id": "April_gbt_s13_cutoff14",
+      "family": "gbt",
+      "seed": 13,
+      "window": "April",
+      "arm": "cutoff14",
+      "policy": {
+        "delta": 0,
+        "max_lag": 14
+      },
+      "tau": 0.0358
+    }
+  ]
+}

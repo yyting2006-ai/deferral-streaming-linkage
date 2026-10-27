@@ -1,0 +1,22 @@
+stage,order,component,detail
+1,1,San Diego 311,2024 requests
+1,2,Jan–Feb,Fit scorer
+1,3,March,Threshold calibration
+1,4,May,Exploratory analysis
+1,5,July,Frozen validation
+2,1,Arrival fields,"Text, service,
+address and time"
+2,2,Candidate routes,"Address, block, token"
+2,3,Pair features,21 fixed features
+2,4,Pair scorer,GBT or logistic
+2,5,Best candidate,Score and identity
+3,1,Arrival,Commit merge or new
+3,2,Band / gate,Visible pending record
+3,3,Resolve pending,Claim or 7-day timer
+3,4,One final event,Immutable NEW / MERGE
+3,5,Controls,Hidden pending; cutoff
+4,1,Paired quality,5 scorer seeds
+4,2,Risk–recall,Full threshold grid
+4,3,Mechanism,Pair-set changes
+4,4,Causality,Complete event prefixes
+4,5,Resources,Latency and pending

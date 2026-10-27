@@ -1,0 +1,128 @@
+{
+  "job": {
+    "run_id": "March_logit_s13_tau0.02",
+    "family": "logit",
+    "seed": 13,
+    "window": "March",
+    "arm": "tau0.02",
+    "policy": {
+      "delta": 0
+    },
+    "tau": 0.02,
+    "retain_events": false
+  },
+  "finished_utc": "2026-10-27T07:19:24.549744+00:00",
+  "metrics": {
+    "n_records": 34818,
+    "n_known": 6238,
+    "known_rate": 0.17916,
+    "pred_pairs": 9544,
+    "tp": 3217,
+    "fp": 6327,
+    "n_pos": 6112,
+    "precision": 0.33707,
+    "recall": 0.526342,
+    "f1": 0.410961,
+    "fmp": 0.66293,
+    "merge_rate": 0.71145,
+    "max_pred_cluster": 20,
+    "capped": false
+  },
+  "decision": {
+    "decisions": 10992,
+    "dec_correct": 1157,
+    "dec_wrong": 1198,
+    "dec_unverifiable": 8637,
+    "dec_fmp": 0.508705,
+    "dec_precision": 0.491295,
+    "dec_coverage": 0.214247
+  },
+  "protocol_summary": {
+    "protocol": "causal-event-v2",
+    "time_standard": "UTC; elapsed 86400-second days",
+    "policy": {
+      "delta": 0.0,
+      "D": 7.0,
+      "visible": true,
+      "defer_rule": "band",
+      "stale_min": 5.0,
+      "max_lag": null,
+      "tau": 0.02,
+      "max_cluster": 20
+    },
+    "n_records": 34818,
+    "n_events": 34818,
+    "n_pending": 0,
+    "n_deferred": 0,
+    "deferred_share": 0.0,
+    "peak_pending": 0,
+    "trigger_counts": {
+      "arrival": 34818
+    },
+    "action_counts": {
+      "NEW": 23826,
+      "MERGE": 10992
+    },
+    "deadline_resolutions": 0,
+    "claim_finalizations": 0,
+    "monthend_finalizations": 0,
+    "all_record_latency_days": {
+      "n": 34818,
+      "mean": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "held_record_latency_days": {
+      "n": 0,
+      "mean": 0.0,
+      "median": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "max_cluster_size": 20,
+    "unique_finalizations": true,
+    "complete": true,
+    "finished": true
+  },
+  "cache_identity": {
+    "job": {
+      "run_id": "March_logit_s13_tau0.02",
+      "family": "logit",
+      "seed": 13,
+      "window": "March",
+      "arm": "tau0.02",
+      "policy": {
+        "delta": 0
+      },
+      "tau": 0.02,
+      "retain_events": false
+    },
+    "protocol_sha256": "cc4852c85a4c1a6178b0002573999fa073c69226e52bcca612668b9fc333aaaa",
+    "preparation_manifest_sha256": "f42f2f2d1f9d2215243886779a2bc09e255d822978628c36d5e107140390a286",
+    "model_sha256": "ebcb8265f6c83372fdb1645c6bf7c170e6b41633d4b69c379cda34f08391828b",
+    "sources": {
+      "psid/causal.py": "d24d2ae93952c53c3267b702cc3a9c352698e4fbe7c5755b64c429eb2a442c42",
+      "psid/methods.py": "d662d38eec647962cdaa4472ed9fd7ae53737827b2a765540229aae7180dfee6",
+      "psid/schema.py": "4571e28f284bd5fd11d5143ac7ffbc04f812a93e684882ad486ae1fde3be0b45",
+      "psid/metrics.py": "2aef85d27fd2b377bde29832af24d56f83ee3acb3dae427aa21df0062cdb2b63",
+      "psid/decision_metrics.py": "4a5aba2cd5f5b3720b527f6eb1509b21b2c850b9b958c0abaad36c6c11e418f3",
+      "psid/gold.py": "be1fe0f85a1de5a721f8fb9bee595ec410769e1c3a9da88d8e8ea746c170708c"
+    }
+  },
+  "undefined_metric_encoding": "null means the metric denominator is zero; it is not a zero score",
+  "candidate_trace": {
+    "enabled": false,
+    "rows": 0,
+    "candidate_instances": 0
+  },
+  "runtime": {
+    "replay_wall_seconds": 90.48036859999411,
+    "process_cpu_seconds": 89.5625,
+    "drain_seconds": 3.900029696524143e-06,
+    "trace_io_seconds": 0.0,
+    "arrival_mean_ms": 2.5980823165548115,
+    "arrival_p95_ms": 4.259660013485701,
+    "measurement_note": "Concurrent local CPU workers; wall time includes trace serialization when enabled. Arrival timing excludes serialization but includes due timers and snapshot construction. These are not isolated throughput benchmarks."
+  }
+}

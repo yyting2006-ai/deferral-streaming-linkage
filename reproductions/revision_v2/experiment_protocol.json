@@ -1,0 +1,202 @@
+{
+  "schema": 1,
+  "frozen_at_utc": "2026-10-27T07:08:51.1519324Z",
+  "status": "protocol frozen before revised outcome inspection",
+  "implementation": "CausalClusterer v2: immutable NEW/MERGE, UTC exact deadlines, max cluster 20, stable lexical ties, Issue.n starts at 0",
+  "timezone": "Interpret naive San Diego timestamps as America/Los_Angeles, convert to UTC; month windows selected by original local calendar; features use UTC calendar",
+  "training": {
+    "window": [
+      "2024-01-01",
+      "2024-02-29"
+    ],
+    "max_records": 22000,
+    "pair_sampling_seed": 13,
+    "negative_keep_rate": 0.35,
+    "label_rule": "same known workflow component positive; remaining sampled candidates treated as negative (weak supervision, not verified operational nonmatches)",
+    "features": 21,
+    "gbt_seeds": [
+      1,
+      2,
+      3,
+      4,
+      13
+    ],
+    "gbt": {
+      "n_estimators": 160,
+      "learning_rate": 0.1,
+      "max_depth": 3,
+      "subsample": 0.5,
+      "min_samples_leaf": 20
+    },
+    "logit": {
+      "C": 1,
+      "solver": "lbfgs",
+      "max_iter": 4000,
+      "standardize": true,
+      "seed": 13
+    }
+  },
+  "threshold": {
+    "window": "March",
+    "model_seed": 13,
+    "grid": [
+      0.01,
+      0.02,
+      0.0358,
+      0.05,
+      0.07,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.5,
+      0.7,
+      0.9,
+      0.99
+    ],
+    "selection": "For each model family choose arrival threshold with highest certified positive-pair recall among points with decision proxy FMP <= 0.40, MERGE >= 1% of all records, and >= 100 adjudicable MERGEs. Break ties by higher F1 then higher threshold. If none feasible choose lowest proxy FMP among volume-eligible points, report infeasibility; never assume monotonicity.",
+    "risk_budget": 0.4,
+    "min_merge_fraction": 0.01,
+    "min_adjudicable_merges": 100
+  },
+  "policies": {
+    "arrival": {
+      "delta": 0
+    },
+    "band": {
+      "delta": 0.5,
+      "D": 7
+    },
+    "gate5": {
+      "delta": 0.5,
+      "D": 7,
+      "defer_rule": "gate",
+      "stale_min": 5
+    },
+    "cutoff10": {
+      "delta": 0,
+      "max_lag": 10
+    },
+    "invisible_band": {
+      "delta": 0.5,
+      "D": 7,
+      "visible": false
+    },
+    "invisible_gate5": {
+      "delta": 0.5,
+      "D": 7,
+      "defer_rule": "gate",
+      "stale_min": 5,
+      "visible": false
+    }
+  },
+  "selection_provenance": "Band delta .5, gate h5, cutoff X10, D7 inherited from already viewed historical experiments; not new independent April selections. March threshold is recalibrated after implementation repair. May is exploratory. July is a newly frozen retrospective validation; no claim of prospective preregistration.",
+  "windows": {
+    "March": [
+      "2024-03-01",
+      "2024-03-31"
+    ],
+    "April": [
+      "2024-04-01",
+      "2024-04-30"
+    ],
+    "May": [
+      "2024-05-01",
+      "2024-05-31"
+    ],
+    "July": [
+      "2024-07-01",
+      "2024-07-31"
+    ],
+    "audit": [
+      "2024-05-01",
+      "2024-05-07"
+    ]
+  },
+  "core": {
+    "windows": [
+      "May",
+      "July"
+    ],
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      13
+    ],
+    "arms": [
+      "arrival",
+      "band",
+      "gate5",
+      "cutoff10",
+      "invisible_band",
+      "invisible_gate5"
+    ]
+  },
+  "secondary": {
+    "logit": {
+      "windows": [
+        "May",
+        "July"
+      ],
+      "arms": [
+        "arrival",
+        "band",
+        "gate5",
+        "cutoff10"
+      ],
+      "seed": 13
+    },
+    "threshold_curve": {
+      "window": "May",
+      "seed": 13,
+      "model": "gbt",
+      "grid": "same as March"
+    },
+    "deadline": {
+      "window": "May",
+      "seed": 13,
+      "arms": [
+        "band",
+        "gate5"
+      ],
+      "days": [
+        3,
+        14
+      ]
+    },
+    "april_grid": {
+      "window": "April",
+      "seed": 13,
+      "band_delta": [
+        0.3,
+        0.5,
+        0.7
+      ],
+      "gate_h": [
+        2,
+        3,
+        5
+      ],
+      "cutoff": [
+        5,
+        10,
+        14
+      ],
+      "role": "fully enumerated development sensitivity, not selection of July primary comparison"
+    }
+  },
+  "analysis": {
+    "confidence": "Paired seed mean differences with 95% t intervals (df=4) on five shared scorer seeds; reflects fit-seed variability only.",
+    "mechanism": "Both band and gate seed13 May+July pair gains/losses and directed wrong sets; trigger split, all-event denominators, common-source and service/age-stratified sensitivity.",
+    "candidate": "Actual scored candidate snapshots, transitive graph relaxed upper bounds and cap-aware feasible static lower bound, frozen candidate comparisons clearly separated from causal end-to-end runs.",
+    "audit": "Same initial state/model; output prefixes at identical UTC cutoff; ordered complete finalization events; three suffix perturbations and deliberately future-dependent inference positive control.",
+    "privacy": "raw records, event IDs, trained models and Louisville annotations remain in local private directory; only aggregate outputs/code may publish."
+  },
+  "runtime": {
+    "workers": 6,
+    "threads_per_worker": 1,
+    "device": "CPU"
+  }
+}

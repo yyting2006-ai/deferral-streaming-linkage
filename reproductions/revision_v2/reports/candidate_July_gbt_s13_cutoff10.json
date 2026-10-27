@@ -1,0 +1,94 @@
+{
+  "job": {
+    "run_id": "July_gbt_s13_cutoff10",
+    "family": "gbt",
+    "seed": 13,
+    "window": "July",
+    "arm": "cutoff10",
+    "policy": {
+      "delta": 0,
+      "max_lag": 10
+    },
+    "tau": 0.0358,
+    "trace": true
+  },
+  "trace_sha256": "ae984271461900250c4a04a3a6d233e2e7ca2b57fbdbb325515243a3c063cd55",
+  "candidate_graph": {
+    "record_count": 37372,
+    "candidate_calls": 37372,
+    "scored_pairs_with_repeats": 1838577,
+    "gold_positive_pairs": 6411,
+    "direct_positive_pairs": 1849,
+    "direct_positive_pair_coverage": 0.28841054437685226,
+    "phases": {
+      "arrival": {
+        "candidate_calls": 37372,
+        "scored_pairs_with_repeats": 1838577,
+        "unique_direct_positive_pairs": 1849
+      }
+    },
+    "deadline_new_direct_positive_pairs": 0,
+    "cluster_cap": 20,
+    "representative_graph": {
+      "edges": 1838577,
+      "connected_components": 2,
+      "unconstrained_reachable_positive_pairs": 6411,
+      "unconstrained_recall_upper_bound": 1.0,
+      "cap_aware_positive_pair_upper_bound": 6391,
+      "cap_aware_recall_upper_bound": 0.9968803618780222,
+      "feasible_graph_greedy_positive_pairs": 2708,
+      "feasible_graph_greedy_recall": 0.42239900171580097,
+      "greedy_equals_upper_bound": false
+    },
+    "membership_expanded_graph": {
+      "edges": 2142792,
+      "connected_components": 2,
+      "unconstrained_reachable_positive_pairs": 6411,
+      "unconstrained_recall_upper_bound": 1.0,
+      "cap_aware_positive_pair_upper_bound": 6391,
+      "cap_aware_recall_upper_bound": 0.9968803618780222,
+      "feasible_graph_greedy_positive_pairs": 3894,
+      "feasible_graph_greedy_recall": 0.6073935423490875,
+      "greedy_equals_upper_bound": false
+    },
+    "interpretation": {
+      "direct": "Unique query--representative pairs actually scored by this policy.",
+      "reachable": "Transitive graph upper bound, ignoring online timing and cluster cap.",
+      "capped_upper": "Connectivity-relaxed combinatorial bound; not an exact oracle.",
+      "feasible": "Gold-aware static graph construction; not an online-policy guarantee.",
+      "scope": "All edges conditional on this policy's realized candidate snapshots."
+    }
+  },
+  "frozen_candidate_comparison": {
+    "design": "Conditional static post-processing of one frozen candidate timeline",
+    "candidate_trace_rows": 37372,
+    "cluster_cap": 20,
+    "arms": [
+      {
+        "selector": "threshold",
+        "threshold": 0.0358,
+        "cutoff_days": null,
+        "accepted_edge_unions": 7195,
+        "true_positive_pairs": 2848,
+        "predicted_known_pairs": 5591,
+        "gold_positive_pairs": 6411,
+        "precision": 0.509390091218029,
+        "recall": 0.44423646856964594,
+        "f1": 0.47458756873854363
+      },
+      {
+        "selector": "threshold_and_age_cutoff",
+        "threshold": 0.0358,
+        "cutoff_days": 10,
+        "accepted_edge_unions": 7195,
+        "true_positive_pairs": 2848,
+        "predicted_known_pairs": 5591,
+        "gold_positive_pairs": 6411,
+        "precision": 0.509390091218029,
+        "recall": 0.44423646856964594,
+        "f1": 0.47458756873854363
+      }
+    ],
+    "limitation": "No retrieval feedback, pending-state or waiting counterfactual; not an end-to-end policy result."
+  }
+}

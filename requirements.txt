@@ -1,9 +1,10 @@
-# Versions observed in the environment used for this revision's checks.
-# Complete raw-data replay has not been revalidated in a fresh environment.
+# Corrected E37 suite, complete-prefix audit, analyses and Louisville verification.
+# Python 3.11; versions observed in the revision environment.
+# Pins are not a claim of fresh-environment or cross-platform validation.
 numpy==2.4.6
-pandas==2.3.3
 scipy==1.17.0
 scikit-learn==1.8.0
-splink==5.0.0
-duckdb==2.0.0
-recordlinkage==0.16
+joblib==1.5.3
+threadpoolctl==3.6.0
+# Needed on Windows when no system IANA timezone database is available.
+tzdata==2025.3

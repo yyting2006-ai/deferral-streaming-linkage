@@ -1,0 +1,66 @@
+{
+  "ab_all_provisional_rows": {
+    "records": 327,
+    "pairs": 53301,
+    "both_positive": 90,
+    "a_positive_b_negative": 7,
+    "a_negative_b_positive": 279,
+    "both_negative": 52925,
+    "raw_pair_agreement": 0.9946342470122512,
+    "positive_pair_dice": 0.38626609442060084,
+    "adjusted_rand_index": 0.38449214832185824
+  },
+  "ab_excluding_either_pending": {
+    "records": 258,
+    "pairs": 33153,
+    "both_positive": 77,
+    "a_positive_b_negative": 1,
+    "a_negative_b_positive": 161,
+    "both_negative": 32914,
+    "raw_pair_agreement": 0.9951135643833138,
+    "positive_pair_dice": 0.4873417721518987,
+    "adjusted_rand_index": 0.4855184582756183
+  },
+  "lag_analysis": {
+    "records": 292,
+    "issues": 226,
+    "buckets": {
+      "0-1": {
+        "pairs": 537,
+        "same": 43,
+        "rate": 0.08007448789571694,
+        "issue_bootstrap_q025": 0.03880597014925373,
+        "issue_bootstrap_q975": 0.13636363636363635,
+        "valid_draws": 4000
+      },
+      "7-13": {
+        "pairs": 639,
+        "same": 38,
+        "rate": 0.0594679186228482,
+        "issue_bootstrap_q025": 0.010986616868969812,
+        "issue_bootstrap_q975": 0.10580163043478262,
+        "valid_draws": 4000
+      },
+      "2-3": {
+        "pairs": 366,
+        "same": 18,
+        "rate": 0.04918032786885246,
+        "issue_bootstrap_q025": 0.015561695214408922,
+        "issue_bootstrap_q975": 0.08024804001081373,
+        "valid_draws": 4000
+      },
+      "4-6": {
+        "pairs": 398,
+        "same": 35,
+        "rate": 0.08793969849246232,
+        "issue_bootstrap_q025": 0.02006521739130435,
+        "issue_bootstrap_q975": 0.1677962115034812,
+        "valid_draws": 4000
+      }
+    },
+    "waves": {
+      "1": 157,
+      "2": 135
+    }
+  }
+}

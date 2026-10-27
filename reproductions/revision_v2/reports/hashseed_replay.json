@@ -1,0 +1,74 @@
+{
+  "design": "Same immutable model/config/data in two independent Python processes",
+  "pythonhashseeds": [
+    0,
+    1
+  ],
+  "policy_name": "band",
+  "identical_complete_event_log": true,
+  "compared_fields": "entire ordered event JSON including timestamps, action, target, score and payload",
+  "record_count": 8153,
+  "runs": [
+    {
+      "pythonhashseed": "0",
+      "record_count": 8153,
+      "emission_count": 8153,
+      "event_sha256": "8fe921080c0582518e48db45cccfcc6fef5bce3e4b78311b65a2ac424a409bd8",
+      "immutable_state": {
+        "model_sha256": "5dd33db59751efcd59e425a44044d723b12d4e8450ad7b5905417725d7148712",
+        "data_pickle_sha256": "d4fbd8eab5a591ed007460fe15f03fda0a704d29b5117a0e8ae9593c8e5df28d",
+        "protocol_sha256": "cc4852c85a4c1a6178b0002573999fa073c69226e52bcca612668b9fc333aaaa",
+        "engine_sha256": "d24d2ae93952c53c3267b702cc3a9c352698e4fbe7c5755b64c429eb2a442c42",
+        "probe_sha256": "6d9d27cf182a599c866d3750f7432e02beb4615760f04e077a90b8bb69f8ad17",
+        "timezone": "Interpret naive San Diego timestamps as America/Los_Angeles, convert to UTC; month windows selected by original local calendar; features use UTC calendar",
+        "seed": 13,
+        "config": {
+          "window_days": 60,
+          "k_candidates": 60,
+          "use_text": true,
+          "t_merge": 0.0358,
+          "t_pending": 0,
+          "pending_absorbs": false,
+          "max_cluster": 20,
+          "prior_merge": 0.0
+        },
+        "policy": {
+          "delta": 0.5,
+          "D": 7
+        },
+        "policy_name": "band"
+      }
+    },
+    {
+      "pythonhashseed": "1",
+      "record_count": 8153,
+      "emission_count": 8153,
+      "event_sha256": "8fe921080c0582518e48db45cccfcc6fef5bce3e4b78311b65a2ac424a409bd8",
+      "immutable_state": {
+        "model_sha256": "5dd33db59751efcd59e425a44044d723b12d4e8450ad7b5905417725d7148712",
+        "data_pickle_sha256": "d4fbd8eab5a591ed007460fe15f03fda0a704d29b5117a0e8ae9593c8e5df28d",
+        "protocol_sha256": "cc4852c85a4c1a6178b0002573999fa073c69226e52bcca612668b9fc333aaaa",
+        "engine_sha256": "d24d2ae93952c53c3267b702cc3a9c352698e4fbe7c5755b64c429eb2a442c42",
+        "probe_sha256": "6d9d27cf182a599c866d3750f7432e02beb4615760f04e077a90b8bb69f8ad17",
+        "timezone": "Interpret naive San Diego timestamps as America/Los_Angeles, convert to UTC; month windows selected by original local calendar; features use UTC calendar",
+        "seed": 13,
+        "config": {
+          "window_days": 60,
+          "k_candidates": 60,
+          "use_text": true,
+          "t_merge": 0.0358,
+          "t_pending": 0,
+          "pending_absorbs": false,
+          "max_cluster": 20,
+          "prior_merge": 0.0
+        },
+        "policy": {
+          "delta": 0.5,
+          "D": 7
+        },
+        "policy_name": "band"
+      }
+    }
+  ],
+  "scope": "One fixed model and real weekly stream; not a cross-platform numerical equivalence claim."
+}

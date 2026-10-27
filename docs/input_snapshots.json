@@ -2,11 +2,19 @@
   "san_diego_2024": {
     "file": "get_it_done_requests_closed_2024_datasd.csv",
     "bytes": 135976733,
-    "sha256": "19ee8a3bee5ecf9c8e60a6110fdfd86848259d94d5869b3a8f136740f6a3d69f"
+    "sha256": "19ee8a3bee5ecf9c8e60a6110fdfd86848259d94d5869b3a8f136740f6a3d69f",
+    "member": "SanDiegoGetItDone/closed2024/get_it_done_requests_closed_2024_datasd.csv",
+    "release_url": "https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.0/get_it_done_requests_closed_2024_datasd.zip",
+    "zip_bytes": 36663283,
+    "zip_sha256": "95430bad0d8b3d66c1ee22141d8167771a6c21569e7e297672748e6760418a83"
   },
   "chicago_2026q1": {
     "file": "chicago311_2026q1_six_fields.csv",
     "bytes": 47943071,
-    "sha256": "9549aa995038885e5277e8aacb96dc5497d0c2263fcd2cec3f05b3feaa8a2ae0"
+    "sha256": "9549aa995038885e5277e8aacb96dc5497d0c2263fcd2cec3f05b3feaa8a2ae0",
+    "member": "Chicago311/2026Q1/chicago311_2026q1_six_fields.csv",
+    "release_url": "https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.0/chicago311_2026q1_six_fields.zip",
+    "zip_bytes": 5833405,
+    "zip_sha256": "af091a0d6fc66e224a5f1750e405dac3246f92a6111d511c4a0f38228d2801b0"
   }
 }

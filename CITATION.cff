@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code or released aggregate evidence, cite this software version. No paper DOI has been assigned in this artifact."
+title: "What Does Deferral Buy? Streaming Linkage Research Artifact"
+type: software
+version: 0.2.0
+date-released: '2026-10-27'
+url: "https://github.com/yyting2006-ai/deferral-streaming-linkage"
+repository-code: "https://github.com/yyting2006-ai/deferral-streaming-linkage"
+license: MIT
+authors:
+  - family-names: You
+    given-names: Tingrui
+  - family-names: Wu
+    given-names: Jiayang
+  - family-names: Zhang
+    given-names: Na
+  - family-names: Xiong
+    given-names: Ling
+  - family-names: Li
+    given-names: Jimei

@@ -1,36 +1,75 @@
-# Input data and snapshot verification
+# Inputs, snapshot verification and released derivatives
 
-Raw request text, street addresses and record-level assignments are obtained locally from their source portals. They are not included in this repository. The original input digests are recorded in `input_snapshots.json`.
+The author authorized release of the two existing public San Diego and Chicago input snapshots as versioned GitHub Release assets. They are separate downloads, not CSV files committed to Git. Original municipal source terms still apply. Private Louisville source renderings and annotation workbooks, fitted models, and record-level replay logs are not released. The Louisville derivative below uses randomized ids and omits source-identifying fields. Archive/member sizes and hashes are recorded in [input_snapshots.json](input_snapshots.json).
 
-## San Diego
+Release download verification: pending maintainer confirmation after the `v0.2.0` assets are uploaded. Local archive/member hashes have been verified; this status is not a claim of a successful public download.
 
+## San Diego: corrected primary experiment
+
+- Preferred snapshot: [San Diego archived CSV ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.0/get_it_done_requests_closed_2024_datasd.zip).
 - Source: [City of San Diego Get It Done](https://data.sandiego.gov/datasets/get-it-done-311/).
-- Direct yearly file: <https://seshat.datasd.org/get_it_done_requests_closed/get_it_done_requests_closed_2024_datasd.csv>.
-- Local path: `data/SanDiegoGetItDone/closed2024/get_it_done_requests_closed_2024_datasd.csv`.
-- Historical snapshot: 135976733 bytes; SHA-256 `19ee8a3bee5ecf9c8e60a6110fdfd86848259d94d5869b3a8f136740f6a3d69f`.
-- Fields read: `service_request_id`, `service_request_parent_id`, `date_requested`, `service_name`, `service_name_detail`, `street_address`, `zipcode`, `public_description`, `lat`, `lng`.
+- Direct file: [closed 2024 export](https://seshat.datasd.org/get_it_done_requests_closed/get_it_done_requests_closed_2024_datasd.csv).
+- Relative input path: `SanDiegoGetItDone/closed2024/get_it_done_requests_closed_2024_datasd.csv`.
+- Archived size: 135,976,733 bytes.
+- SHA-256: `19ee8a3bee5ecf9c8e60a6110fdfd86848259d94d5869b3a8f136740f6a3d69f`.
+- Fields: `service_request_id`, `service_request_parent_id`, `date_requested`, `service_name`, `service_name_detail`, `street_address`, `zipcode`, `public_description`, `lat`, `lng`.
 
-During package preparation on 2026-10-27, an HTTP HEAD request to the direct file returned 403. The package does not claim a freshly verified public download. If automated access fails, use the portal export and then `python fetch_data.py san_diego_2024 --verify-only`. A current export may differ from the historical digest.
+Using the default ignored `data/` directory:
 
-Fit the scorer on January–February 2024; March calibrates the merge threshold; April is the selector sweep; May and June provide the reported evaluation windows. The loader creates an undirected component closure from resolved parent links. Unlinked records are outside the certified evaluation domain; they are not automatically negative singleton labels.
+```text
+python fetch_data.py san_diego_2024 --source release
+python fetch_data.py san_diego_2024 --verify-only
+```
 
-## Chicago
+The default source is the versioned Release ZIP. The fetcher verifies its recorded ZIP hash and size, requires exactly the expected CSV member, rejects traversal/additional/special members, and verifies the extracted CSV hash and size before moving it to the input path. It does not overwrite an existing CSV.
 
+For the original source fallback, run `python fetch_data.py san_diego_2024 --source portal`. On 27 October 2026 the direct portal's HTTP HEAD request returned 403. If portal access fails, use a manual export and verify it locally. Changed portal content or ordering can fail the archived digest; preserve a mismatch separately and do not call it an exact snapshot reproduction. The Release path preserves the archived bytes independently of portal mutability, subject to actual asset availability confirmed above.
+
+Corrected E37 fits on the first 22,000 sorted January--February requests, calibrates in March, reports April sensitivity, and evaluates fixed policies on May and July. Month membership uses original local calendar dates. Naive timestamps are interpreted as `America/Los_Angeles` and converted to UTC; ordering and deadlines use UTC. Historical E26 also has a June replication, which retains its historical implementation label.
+
+Parent links form undirected components over the retrospective annual export. These are workflow labels, not verified physical-incident identity. Evaluation labels only records participating in resolved links; cross-component negatives rely on a closed-world workflow assumption. Unlinked records remain unknown in evaluation. Training separately treats remaining sampled candidates, including unknown pairs, as weak negatives. The export does not establish when each link became available, so request-date separation does not prove that labels were known at a historical deployment cutoff.
+
+## Chicago: retained transfer evidence
+
+- Preferred snapshot: [Chicago archived six-field CSV ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.0/chicago311_2026q1_six_fields.zip).
 - Source: [Chicago 311 Service Requests](https://data.cityofchicago.org/Service-Requests/311-Service-Requests/v6vf-nfxy).
-- Local path: `data/Chicago311/2026Q1/chicago311_2026q1_six_fields.csv`.
-- Extract `created_date >= 2026-01-01T00:00:00` and `< 2026-04-01T00:00:00`, selecting `sr_number,parent_sr_number,created_date,sr_type,street_address,duplicate`.
-- Historical six-column file: 47943071 bytes; SHA-256 `9549aa995038885e5277e8aacb96dc5497d0c2263fcd2cec3f05b3feaa8a2ae0`.
+- Relative path: `Chicago311/2026Q1/chicago311_2026q1_six_fields.csv`.
+- Filter: `created_date >= 2026-01-01T00:00:00` and `< 2026-04-01T00:00:00`.
+- Columns: `sr_number,parent_sr_number,created_date,sr_type,street_address,duplicate`.
+- Archived size: 47,943,071 bytes.
+- SHA-256: `9549aa995038885e5277e8aacb96dc5497d0c2263fcd2cec3f05b3feaa8a2ae0`.
 
-The portal may change its data or CSV ordering. The fetcher offers a current ordered six-column extract, then checks the historical hash; it does not assert byte-identical reproduction if that check fails. January–February train the scorer; March 1–7 and March 8–14 are the transfer-check windows. The selected extract has no free-text field.
+```text
+python fetch_data.py chicago_2026q1 --source release
+python fetch_data.py chicago_2026q1 --verify-only
+```
 
-## Louisville
+The default Release ZIP supplies the archived bytes with the same strict archive/member verification as San Diego. `--source portal` instead requests the current ordered six-column export, whose content or ordering may differ; a mismatch is not exact reproduction. Historical transfer uses January--February training and March 1--7 / March 8--14 checks. The extract lacks free text. Chicago is not silently included in corrected San Diego E37; a new Chicago replay needs an explicitly specified protocol.
 
-Source: [Louisville Metro 311 Service Requests 2024](https://catalog.data.gov/dataset/louisville-metro-ky-metro-311-service-requests-2024). The study additionally uses a privacy-reviewed rendering and human adjudications for June 3–9 and June 10–16. Downloading the city source alone cannot reconstruct those annotations. The included `results/e35b_louisville.json` contains aggregate records, cluster and lag-bucket counts; no individual labels, request identifiers, addresses or narratives are redistributed here.
+## Louisville: anonymous numerical-reanalysis derivative
 
-## Local directory override
+City source: [Louisville Metro 311 Service Requests 2024](https://catalog.data.gov/dataset/louisville-metro-ky-metro-311-service-requests-2024). The study also used A/B clustering and an adjudication workbook for two June waves. Original requests and private workbooks are not bundled.
 
-PowerShell: `$env:PSID_DATA_DIR='D:/your-local-inputs'`.
+The author authorized the minimal derivative in [`derived_data/louisville/`](../derived_data/louisville/). It contains 327 random node ids, relabelled A/B clusters, pending flags, coarse waves, final labels or unknown status, and 1,940 precomputed eligible pair edges with lag bins. There are 292 confirmed final records and 35 unadjudicable records. Original identifiers, dates, service labels, addresses, narratives and annotator identities are omitted.
 
-POSIX shell: `export PSID_DATA_DIR=/your/local/inputs`.
+```text
+python -m analysis.reproduce_louisville --verify --out build/louisville_reanalysis.json
+```
 
-The chosen directory must contain the San Diego and Chicago relative paths shown above. All downloaded data stay under the ignored `data/` directory by default.
+The script independently recomputes agreement counts, positive-pair Dice, adjusted Rand index, four lag-bin rates, wave breakdown and issue-resampling intervals without downloads/private inputs. Eligible edges were selected locally from service agreement and address/narrative token overlap. Those omitted fields prevent independent reconstruction of candidate selection. This is numerical reanalysis conditional on the graph, not a claim that all annotation/preprocessing steps are independently reproducible. Unknown final labels are not singleton negatives. See the [annotation, limitations and rights statement](../derived_data/louisville/README.md).
+
+## Local paths and private outputs
+
+The loader defaults to repository `data/`. Override it consistently:
+
+```powershell
+$env:PSID_DATA_DIR = 'D:/municipal-inputs'
+python fetch_data.py san_diego_2024 --data-dir 'D:/municipal-inputs' --verify-only
+```
+
+```bash
+export PSID_DATA_DIR=/absolute/path/to/municipal-inputs
+python fetch_data.py san_diego_2024 --data-dir "$PSID_DATA_DIR" --verify-only
+```
+
+The selected directory must contain the listed relative paths. The fetcher uses its own `--data-dir`, so supply it explicitly when overriding the loader. Keep new E37 runs outside the repository. Their `private/` folders contain record identities, complete candidate membership and models; do not release them. Frozen protocols, reviewed aggregate JSON/CSV and manifests belong in `reproductions/revision_v2/`.

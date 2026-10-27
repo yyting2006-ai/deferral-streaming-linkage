@@ -28,7 +28,10 @@ class Issue:
     iid: str
     created: float           # day ordinal (float)
     last: float
-    n: int = 1
+    # Empty on construction; absorb() counts the first record exactly once.
+    # Changing this from the historical value 1 changes issue_size features.
+    # The corrected protocol therefore requires freshly built training pairs.
+    n: int = 0
     reps: List[str] = field(default_factory=list)        # representative rids (<=3)
     addr_keys: Set[str] = field(default_factory=set)
     block_keys: Set[str] = field(default_factory=set)
@@ -157,12 +160,12 @@ class PrefixIndex:
                 seen.add(iid); out.append(iid)
         if use_text:
             scored: Dict[str, float] = {}
-            top = sorted(set(tokens), key=lambda t: -self.idf_of(t))[:8]
+            top = sorted(set(tokens), key=lambda t: (-self.idf_of(t), t))[:8]
             for tok in top:
                 w = self.idf_of(tok)
                 for iid, _day in self.postings.get(tok, ())[-k:]:
                     scored[iid] = scored.get(iid, 0.0) + w
-            for iid, _ in sorted(scored.items(), key=lambda kv: -kv[1])[:k]:
+            for iid, _ in sorted(scored.items(), key=lambda kv: (-kv[1], kv[0]))[:k]:
                 if iid not in seen:
                     seen.add(iid); out.append(iid)
         return out
@@ -355,6 +358,7 @@ class PrefixClusterer:
         cfg = self.cfg
         best_issue: Optional[Issue] = None
         best_score = -1.0
+        usable.sort(key=lambda item: item[0].iid)
         if usable:
             feats = np.stack([pair_features(rec, tokens, char3, iss, rep,
                                            self._tokens(rep.rid, rep),
@@ -452,6 +456,7 @@ class LeakyRetrievalClusterer(PrefixClusterer):
                 usable.append((issue, rep))
         self.by_rid.setdefault(rec.rid, rec)
         best_issue, best_score = None, -1.0
+        usable.sort(key=lambda item: item[0].iid)
         if usable:
             feats = np.stack([pair_features(rec, tokens, char3, iss, rep,
                                            self._tokens(rep.rid, rep),
@@ -542,7 +547,7 @@ class StaticClusterer:
                     b = group[j]
                     if b.day - a.day > win:
                         break
-                    iv = Issue(iid="tmp", created=a.day, last=a.day)
+                    iv = Issue(iid="tmp", created=a.day, last=a.day, n=1)
                     f = pair_features(b, tok[b.rid], c3[b.rid], iv, a,
                                       tok[a.rid], c3[a.rid])
                     s = float(self.scorer(f.reshape(1, -1))[0])

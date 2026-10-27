@@ -1,0 +1,136 @@
+{
+  "job": {
+    "run_id": "July_gbt_s2_gate5",
+    "family": "gbt",
+    "seed": 2,
+    "window": "July",
+    "arm": "gate5",
+    "policy": {
+      "delta": 0.5,
+      "D": 7,
+      "defer_rule": "gate",
+      "stale_min": 5
+    },
+    "tau": 0.0358,
+    "trace": false
+  },
+  "finished_utc": "2026-10-27T07:36:05.447046+00:00",
+  "metrics": {
+    "n_records": 37372,
+    "n_known": 6699,
+    "known_rate": 0.17925,
+    "pred_pairs": 5427,
+    "tp": 3002,
+    "fp": 2425,
+    "n_pos": 6411,
+    "precision": 0.55316,
+    "recall": 0.468258,
+    "f1": 0.50718,
+    "fmp": 0.44684,
+    "merge_rate": 0.63502,
+    "max_pred_cluster": 20,
+    "capped": false
+  },
+  "decision": {
+    "decisions": 7718,
+    "dec_correct": 1599,
+    "dec_wrong": 811,
+    "dec_unverifiable": 5308,
+    "dec_fmp": 0.336515,
+    "dec_precision": 0.663485,
+    "dec_coverage": 0.312257
+  },
+  "protocol_summary": {
+    "protocol": "causal-event-v2",
+    "time_standard": "UTC; elapsed 86400-second days",
+    "policy": {
+      "delta": 0.5,
+      "D": 7.0,
+      "visible": true,
+      "defer_rule": "gate",
+      "stale_min": 5.0,
+      "max_lag": null,
+      "tau": 0.0358,
+      "max_cluster": 20
+    },
+    "n_records": 37372,
+    "n_events": 37372,
+    "n_pending": 0,
+    "n_deferred": 2147,
+    "deferred_share": 0.05744942737878626,
+    "peak_pending": 619,
+    "trigger_counts": {
+      "arrival": 35225,
+      "claim": 675,
+      "deadline": 1472
+    },
+    "action_counts": {
+      "NEW": 29654,
+      "MERGE": 7718
+    },
+    "deadline_resolutions": 1472,
+    "claim_finalizations": 675,
+    "monthend_finalizations": 614,
+    "all_record_latency_days": {
+      "n": 37372,
+      "mean": 0.298915669187865,
+      "median": 0.0,
+      "p95": 0.5079166666666424,
+      "max": 7.0
+    },
+    "held_record_latency_days": {
+      "n": 2147,
+      "mean": 5.203109636184857,
+      "median": 7.0,
+      "p95": 7.0,
+      "max": 7.0
+    },
+    "max_cluster_size": 20,
+    "unique_finalizations": true,
+    "complete": true,
+    "finished": true
+  },
+  "cache_identity": {
+    "job": {
+      "run_id": "July_gbt_s2_gate5",
+      "family": "gbt",
+      "seed": 2,
+      "window": "July",
+      "arm": "gate5",
+      "policy": {
+        "delta": 0.5,
+        "D": 7,
+        "defer_rule": "gate",
+        "stale_min": 5
+      },
+      "tau": 0.0358,
+      "trace": false
+    },
+    "protocol_sha256": "cc4852c85a4c1a6178b0002573999fa073c69226e52bcca612668b9fc333aaaa",
+    "preparation_manifest_sha256": "f42f2f2d1f9d2215243886779a2bc09e255d822978628c36d5e107140390a286",
+    "model_sha256": "106f1e10d6d43b5ca035a85e1237f64ebcec7a5f46ac986f38f8dbc7dca93505",
+    "sources": {
+      "psid/causal.py": "d24d2ae93952c53c3267b702cc3a9c352698e4fbe7c5755b64c429eb2a442c42",
+      "psid/methods.py": "d662d38eec647962cdaa4472ed9fd7ae53737827b2a765540229aae7180dfee6",
+      "psid/schema.py": "4571e28f284bd5fd11d5143ac7ffbc04f812a93e684882ad486ae1fde3be0b45",
+      "psid/metrics.py": "2aef85d27fd2b377bde29832af24d56f83ee3acb3dae427aa21df0062cdb2b63",
+      "psid/decision_metrics.py": "4a5aba2cd5f5b3720b527f6eb1509b21b2c850b9b958c0abaad36c6c11e418f3",
+      "psid/gold.py": "be1fe0f85a1de5a721f8fb9bee595ec410769e1c3a9da88d8e8ea746c170708c"
+    }
+  },
+  "undefined_metric_encoding": "null means the metric denominator is zero; it is not a zero score",
+  "candidate_trace": {
+    "enabled": false,
+    "rows": 0,
+    "candidate_instances": 0
+  },
+  "runtime": {
+    "replay_wall_seconds": 99.86750670004403,
+    "process_cpu_seconds": 98.828125,
+    "drain_seconds": 1.6570488000288606,
+    "trace_io_seconds": 0.0,
+    "arrival_mean_ms": 2.6273508991934698,
+    "arrival_p95_ms": 4.491944977780804,
+    "measurement_note": "Concurrent local CPU workers; wall time includes trace serialization when enabled. Arrival timing excludes serialization but includes due timers and snapshot construction. These are not isolated throughput benchmarks."
+  }
+}

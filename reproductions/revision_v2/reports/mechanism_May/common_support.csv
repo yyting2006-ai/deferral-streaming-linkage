@@ -1,0 +1,11 @@
+arm,total_merge,known_merge,wrong_merge,correct_merge,unknown_merge,fmp,comparison,support,arm_known_merge_total,retained_fraction
+arrival,1874,1874,733,1141,0,0.3911419423692636,band_vs_arrival,same_source_known_merge,2391,0.7837724801338353
+band,1874,1874,585,1289,0,0.3121664887940235,band_vs_arrival,same_source_known_merge,2248,0.8336298932384342
+arrival,2092,2092,822,1270,0,0.39292543021032506,gate5_vs_arrival,same_source_known_merge,2391,0.8749477206189878
+gate5,2092,2092,707,1385,0,0.33795411089866156,gate5_vs_arrival,same_source_known_merge,2358,0.8871925360474979
+arrival,2106,2106,857,1249,0,0.4069325735992403,cutoff10_vs_arrival,same_source_known_merge,2391,0.8808030112923463
+cutoff10,2106,2106,804,1302,0,0.3817663817663818,cutoff10_vs_arrival,same_source_known_merge,2295,0.9176470588235294
+arrival,2185,2185,940,1245,0,0.4302059496567506,invisible_band_vs_arrival,same_source_known_merge,2391,0.9138435800920117
+invisible_band,2185,2185,923,1262,0,0.42242562929061783,invisible_band_vs_arrival,same_source_known_merge,2326,0.9393809114359415
+arrival,2317,2317,987,1330,0,0.4259818731117825,invisible_gate5_vs_arrival,same_source_known_merge,2391,0.9690506064408198
+invisible_gate5,2317,2317,970,1347,0,0.41864479930945186,invisible_gate5_vs_arrival,same_source_known_merge,2391,0.9690506064408198

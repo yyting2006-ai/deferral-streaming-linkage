@@ -1,0 +1,67 @@
+{
+  "frozen_at_utc": "2026-10-27T07:22:42.331291+00:00",
+  "protocol_sha256": "cc4852c85a4c1a6178b0002573999fa073c69226e52bcca612668b9fc333aaaa",
+  "rule": "For each model family choose arrival threshold with highest certified positive-pair recall among points with decision proxy FMP <= 0.40, MERGE >= 1% of all records, and >= 100 adjudicable MERGEs. Break ties by higher F1 then higher threshold. If none feasible choose lowest proxy FMP among volume-eligible points, report infeasibility; never assume monotonicity.",
+  "families": {
+    "gbt": {
+      "tau": 0.0358,
+      "risk_feasible": true,
+      "selected_run_id": "March_gbt_s13_tau0.0358",
+      "metrics": {
+        "n_records": 34818,
+        "n_known": 6238,
+        "known_rate": 0.17916,
+        "pred_pairs": 6695,
+        "tp": 2987,
+        "fp": 3708,
+        "n_pos": 6112,
+        "precision": 0.446154,
+        "recall": 0.488711,
+        "f1": 0.466464,
+        "fmp": 0.553846,
+        "merge_rate": 0.64796,
+        "max_pred_cluster": 20,
+        "capped": false
+      },
+      "decision": {
+        "decisions": 7683,
+        "dec_correct": 1302,
+        "dec_wrong": 863,
+        "dec_unverifiable": 5518,
+        "dec_fmp": 0.398614,
+        "dec_precision": 0.601386,
+        "dec_coverage": 0.281791
+      }
+    },
+    "logit": {
+      "tau": 0.2,
+      "risk_feasible": true,
+      "selected_run_id": "March_logit_s13_tau0.2",
+      "metrics": {
+        "n_records": 34818,
+        "n_known": 6238,
+        "known_rate": 0.17916,
+        "pred_pairs": 5959,
+        "tp": 2722,
+        "fp": 3237,
+        "n_pos": 6112,
+        "precision": 0.456788,
+        "recall": 0.445353,
+        "f1": 0.450998,
+        "fmp": 0.543212,
+        "merge_rate": 0.55242,
+        "max_pred_cluster": 20,
+        "capped": false
+      },
+      "decision": {
+        "decisions": 5616,
+        "dec_correct": 1171,
+        "dec_wrong": 746,
+        "dec_unverifiable": 3699,
+        "dec_fmp": 0.38915,
+        "dec_precision": 0.61085,
+        "dec_coverage": 0.341346
+      }
+    }
+  }
+}

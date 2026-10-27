@@ -1,0 +1,16 @@
+comparison,variable,weighting,shared_strata,pooled_support,baseline_retained,other_retained,baseline_total,other_total,baseline_fmp_standardized,other_fmp_standardized,difference
+band_vs_arrival,service,pooled_known_merge_distribution_on_shared_strata,50,4717,2512,2205,2516,2208,0.43844590968489966,0.29409109384823906,-0.1443548158366606
+band_vs_arrival,target_age,pooled_known_merge_distribution_on_shared_strata,4,4724,2516,2208,2516,2208,0.42816170932719005,0.29479020171396264,-0.1333715076132274
+band_vs_arrival,service_x_target_age,pooled_known_merge_distribution_on_shared_strata,80,4650,2488,2162,2516,2208,0.4339290678429182,0.308778359425552,-0.1251507084173662
+gate5_vs_arrival,service,pooled_known_merge_distribution_on_shared_strata,53,4891,2515,2376,2516,2377,0.43712106969496894,0.3547963532805895,-0.08232471641437944
+gate5_vs_arrival,target_age,pooled_known_merge_distribution_on_shared_strata,4,4893,2516,2377,2516,2377,0.40593143324424213,0.3677122556147827,-0.03821917762945942
+gate5_vs_arrival,service_x_target_age,pooled_known_merge_distribution_on_shared_strata,94,4874,2507,2367,2516,2377,0.40639103185624303,0.3771727980025265,-0.029218233853716524
+cutoff10_vs_arrival,service,pooled_known_merge_distribution_on_shared_strata,51,4826,2513,2313,2516,2313,0.43717287416789574,0.37353711948963153,-0.06363575467826421
+cutoff10_vs_arrival,target_age,pooled_known_merge_distribution_on_shared_strata,3,4826,2513,2313,2516,2313,0.40339320683223806,0.3941099146375236,-0.009283292194714465
+cutoff10_vs_arrival,service_x_target_age,pooled_known_merge_distribution_on_shared_strata,95,4818,2505,2313,2516,2313,0.40639983405874475,0.3945832164263655,-0.011816617632379234
+invisible_band_vs_arrival,service,pooled_known_merge_distribution_on_shared_strata,53,4940,2515,2425,2516,2427,0.44044572318506253,0.41373076747898035,-0.026714955706082177
+invisible_band_vs_arrival,target_age,pooled_known_merge_distribution_on_shared_strata,4,4943,2516,2427,2516,2427,0.4878196224963933,0.37824652122871255,-0.10957310126768077
+invisible_band_vs_arrival,service_x_target_age,pooled_known_merge_distribution_on_shared_strata,76,4836,2478,2358,2516,2427,0.4872177739939789,0.3856750229557989,-0.10154275103818
+invisible_gate5_vs_arrival,service,pooled_known_merge_distribution_on_shared_strata,54,4985,2516,2469,2516,2471,0.4379821727128338,0.4142234200408554,-0.02375875267197841
+invisible_gate5_vs_arrival,target_age,pooled_known_merge_distribution_on_shared_strata,4,4987,2516,2471,2516,2471,0.4443549419968594,0.40829648518306105,-0.03605845681379832
+invisible_gate5_vs_arrival,service_x_target_age,pooled_known_merge_distribution_on_shared_strata,96,4963,2509,2454,2516,2471,0.44032607886395303,0.41219117187811594,-0.028134906985837094

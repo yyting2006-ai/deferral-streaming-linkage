@@ -1,0 +1,15 @@
+arm,total_merge,known_merge,wrong_merge,correct_merge,unknown_merge,fmp,operation,raw_trigger,latency_mean
+arrival,8322,2391,1043,1348,5931,0.4362191551652028,immediate,arrival,0.0
+band,654,114,37,77,540,0.32456140350877194,claim_at_deadline,deadline,7.0
+band,662,347,73,274,315,0.21037463976945245,claim_on_arrival,arrival,0.0
+band,3121,601,175,426,2520,0.2911813643926789,deadline,deadline,7.0
+band,2430,1186,435,751,1244,0.36677908937605397,immediate,arrival,0.0
+gate5,69,15,7,8,54,0.4666666666666667,claim_at_deadline,deadline,7.0
+gate5,542,226,62,164,316,0.2743362831858407,claim_on_arrival,arrival,0.0
+gate5,1148,229,84,145,919,0.36681222707423583,deadline,deadline,7.0
+gate5,6056,1888,657,1231,4168,0.3479872881355932,immediate,arrival,0.0
+cutoff10,7333,2295,898,1397,5038,0.39128540305010895,immediate,arrival,0.0
+invisible_band,5595,1381,722,659,4214,0.5228095582910934,deadline,deadline,7.0
+invisible_band,2052,945,275,670,1107,0.291005291005291,immediate,arrival,0.0
+invisible_gate5,2528,727,470,257,1801,0.6464924346629987,deadline,deadline,7.0
+invisible_gate5,5701,1664,544,1120,4037,0.3269230769230769,immediate,arrival,0.0

@@ -1,0 +1,36 @@
+{
+  "performed_at_utc": "2026-10-27T07:13:56.672086+00:00",
+  "scope": "Six initial fits completed before cache_identity checks were added; this is explicitly post-fit provenance reconciliation.",
+  "verified": [
+    {
+      "family": "gbt",
+      "seed": 1,
+      "model_sha256": "135e23c78059a445b069fcd4b107c8f3307414e66faacde44363846af73df4f6"
+    },
+    {
+      "family": "gbt",
+      "seed": 13,
+      "model_sha256": "5dd33db59751efcd59e425a44044d723b12d4e8450ad7b5905417725d7148712"
+    },
+    {
+      "family": "gbt",
+      "seed": 2,
+      "model_sha256": "106f1e10d6d43b5ca035a85e1237f64ebcec7a5f46ac986f38f8dbc7dca93505"
+    },
+    {
+      "family": "gbt",
+      "seed": 3,
+      "model_sha256": "bbe9b2809197622e181238d318a1414d4bac5fbf1277335a7a0fafeb2e88b3e1"
+    },
+    {
+      "family": "gbt",
+      "seed": 4,
+      "model_sha256": "077ea5033587b9b660d4bd34741685853b8057266e21ccc2adec1df5f8196995"
+    },
+    {
+      "family": "logit",
+      "seed": 13,
+      "model_sha256": "ebcb8265f6c83372fdb1645c6bf7c170e6b41633d4b69c379cda34f08391828b"
+    }
+  ]
+}

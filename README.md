@@ -1,74 +1,73 @@
 # What Does Deferral Buy?
 
-Research artifact for *What Does Deferral Buy? Measuring Provisional Identity in Streaming Linkage*. The package contains the replay implementation, recorded aggregate results, table reconstruction and a timestamp-aware emission-prefix comparator.
+Research artifact for *What Does Deferral Buy? Measuring Provisional Identity in Streaming Linkage*. The current entry point is [`experiments/e37_revision_suite.py`](experiments/e37_revision_suite.py), using the corrected causal event engine. It emits one immutable final `NEW` or `MERGE` per observed record, executes deadlines at their exact UTC times, and enforces a cluster cap of 20 actual records.
 
-## Quick verification
+Read the [algorithm](docs/algorithm.md), [complete protocol](docs/causal_protocol.md), [reproduction instructions](docs/REPRODUCE.md), and [data specifications](docs/DATA.md).
 
-Use Python 3.11. These checks do not require downloading municipal records:
+![Corrected study workflow](reproductions/revision_v2/figures/fig1_workflow.png)
 
-```bash
+[ARTIFACT.md](ARTIFACT.md) maps each corrected result and figure to its inputs and reproduction command. Software citation metadata are in [CITATION.cff](CITATION.cff); no manuscript DOI or acceptance status is asserted.
+
+## Checks without municipal source files
+
+Use Python 3.11. The pinned dependencies include `tzdata`, required for named-timezone conversion on Windows installations without a system timezone database. No GPU or model API is required.
+
+```text
 python -m pip install -r requirements.txt
-python analysis/make_tables.py
-python analysis/check_results.py
-python -m unittest discover -s audit -p 'test_*.py' -v
-python -m unittest discover -s tests -p 'test_*.py' -v
-python analysis/verify_manifest.py
+python -m unittest discover -s tests -p "test_*.py" -v
+python -m unittest discover -s audit -p "test_*.py" -v
+python -m analysis.reproduce_louisville --verify --out build/louisville_reanalysis.json
+python -m analysis.verify_manifest
 ```
 
-`make_tables.py` rebuilds the LaTeX tables from the saved aggregate JSONs. `check_results.py` reports paired seed effects and checks the counts used in the mechanism analysis. The synthetic audit tests exercise additional/missing emissions, emission timestamps, ordering, targets and shared randomness. Their success is not a real-data certification of output-prefix safety.
+The Louisville check independently recomputes agreement counts, lag-bin rates, and issue-resampling summaries from the released anonymous graph. It requires no original workbooks, request text, exact dates, or city identifiers. Its [data README](derived_data/louisville/README.md) explains that candidate eligibility was precomputed locally and cannot be reconstructed from this graph.
 
-## Optional data figures
+Synthetic protocol/comparator tests and a release-file checksum check have different purposes from a real-stream prefix audit. Consult the corresponding aggregate report for an empirical result; code availability or successful synthetic tests do not establish that every scheduled experiment completed.
 
-Install the optional plotting dependency with python -m pip install -r requirements-figures.txt, then run python analysis/make_figures.py. The script reconstructs both data figures from 92 saved aggregate observations in analysis/figure_data, checks every value against its recorded numeric summary, and exports PDF/SVG/PNG/TIFF under build/figures. Build outputs are ignored by Git.
+## Corrected experiment and saved evidence
 
-~~~bash
-python -m pip install -r requirements-figures.txt
-python analysis/make_figures.py
-~~~
+The corrected release evidence belongs under [`reproductions/revision_v2/`](reproductions/revision_v2/): the frozen `experiment_protocol.json`, aggregate `results/`, and `reports/`. A run schedule records planned jobs; result files record completed jobs. In `reports/results_summary.json`, `complete_core` and `missing_core` report actual matched-seed coverage. Do not infer completion from the schedule alone.
 
-The generator uses only NumPy and Matplotlib; no external style-library code is bundled or required. Its local geometry check covers axes bounds and overlap. Text layout, font availability and complete visual quality still need visual inspection on a new platform. Arial is used when available, otherwise DejaVu Sans.
+For a new run, copy only the frozen protocol into a **new directory outside this repository**. Obtain and verify the San Diego snapshot, then execute:
 
-## Contents
+```text
+python experiments/e37_revision_suite.py prepare --run-dir /absolute/path/to/new-run
+python experiments/e37_revision_suite.py fit --run-dir /absolute/path/to/new-run --workers 6
+python experiments/e37_revision_suite.py calibrate --run-dir /absolute/path/to/new-run --workers 6
+python experiments/e37_revision_suite.py suite --run-dir /absolute/path/to/new-run --workers 6
+python -m analysis.summarize_revision --run-dir /absolute/path/to/new-run --mechanism
+python -m analysis.candidate_analysis --run-dir /absolute/path/to/new-run
+python -m analysis.revision_audit --run-dir /absolute/path/to/new-run --policy gate5 --mode probe
+python -m analysis.revision_audit --run-dir /absolute/path/to/new-run --policy gate5 --mode determinism
+```
 
-| Directory | Contents |
+[REPRODUCE.md](docs/REPRODUCE.md) provides Windows/POSIX setup, expected outputs, cache checks, and interpretation. The two author-authorized public municipal input snapshots are supplied as versioned GitHub Release assets. New model files, complete replay events and candidate traces remain private; only reviewed aggregates are released from new runs. Concurrent wall times include instrumentation and are not isolated throughput measurements.
+
+The snapshot fetcher defaults to the versioned `v0.2.0` Release archives for San Diego and Chicago. It checks the archive hash, extracts only the expected member, then verifies the CSV hash. `--source portal` uses the original portal as a fallback; the San Diego direct portal returned HTTP 403 during preparation. See [DATA.md](docs/DATA.md) for the archive URLs, download-verification status, original sources and limits.
+
+## Historical release
+
+The [`v0.1.0` tag](https://github.com/yyting2006-ai/deferral-streaming-linkage/tree/v0.1.0) preserves historical E26 code and aggregate evidence. Current `psid/methods.py` fixes the initial member count and tie ordering; invoking old E26 from the current checkout is therefore **not an equivalent historical replay**. Use a separate `v0.1.0` checkout for historical code.
+
+Historical limitations include day-batched/late-flush deadlines, duplicate source merge rows, a destination counter instead of an enforced post-merge membership cap, incomplete selection provenance, and absent complete timestamped finalization logs. Those outputs remain historical diagnostics; they do not certify the corrected protocol. Recovered historical JSONs are in top-level `results/`; reconstruction notes are in `analysis/evidence/`. The older figure generator reproduces historical observations, not the corrected experiment.
+
+## Repository map
+
+| Path | Contents |
 |---|---|
-| `psid/` | Record schema, loaders, candidate retrieval, pair scoring and metrics |
-| `experiments/` | Replay, ablation and external-baseline entry points |
-| `results/` | Recorded aggregate results; no record-level assignments or request text |
-| `analysis/` | Table regeneration and aggregate consistency checks |
-| `audit/` | Complete emission-prefix comparator and synthetic fault tests |
-| `tests/` | Synthetic data-loader and gold/metric smoke tests |
-| `docs/` | Input specifications, snapshot digests and replay instructions |
-| `tables/` | Generated LaTeX tables |
+| `psid/causal.py` | Corrected UTC event engine and final-output schema |
+| `psid/` | Schema, loaders, retrieval, scoring features and metrics |
+| `experiments/e37_revision_suite.py` | Preparation, fitting, calibration and corrected replay suite |
+| `reproductions/revision_v2/` | Frozen protocol and released corrected aggregate evidence |
+| `analysis/` | Matched-seed, mechanism/candidate analyses, real-stream audit and checks |
+| `audit/` | Complete emission-prefix comparator and fault-injection tests |
+| `tests/` | Synthetic engine, loader, analysis and provenance regression tests |
+| `derived_data/louisville/` | Authorized anonymous issue graph and verification targets |
+| `docs/` | Algorithm, full configuration, data access and reproduction instructions |
+| `results/`, `tables/`, `analysis/evidence/` | Historical evidence and reconstruction materials |
 
-## Replaying the primary experiment
+## Dependencies and rights
 
-The analysis/evidence directory contains the revised matched-seed statistics, merge-count denominators, set differences, selection completeness and findings.
+`requirements.txt` covers the corrected suite, analyses, audit and Louisville verification. `requirements-baselines.txt` adds retained external-baseline dependencies; `requirements-figures.txt` adds Matplotlib for corrected and historical vector figures. Observed installed versions do not establish a fresh-environment or cross-platform validation.
 
-Obtain the public San Diego input using [the data instructions](docs/DATA.md). `PSID_DATA_DIR` can override the default `data/` directory.
-
-```bash
-python fetch_data.py san_diego_2024
-mkdir replays
-python experiments/e26_decision_timing.py --window may --seed 1 --deltas 0,0.5 --deadlines 7 --fresh --out replays/may_seed1.json
-```
-
-This command fits the scorer on January–February and replays May. The delta-zero arm is arrival-time commitment; delta 0.5 is the score-band deferral policy. [REPRODUCE.md](docs/REPRODUCE.md) lists the remaining policy settings and comparisons. The downloadable portal is mutable: the fetcher checks the recorded snapshot digest and fails on a mismatch, rather than treating a different snapshot as an exact reproduction.
-
-## Verification scope
-
-The replay uses a destination-counter limit of 20 to screen eligible targets. Its counter is not exact post-merge membership, and the merge operation does not enforce a post-merge size ceiling. Some stored sweeps exceed 20 members. The Splink capped-component comparison separately enforces a true component cap of 20; these controls are not identical.
-
-The Splink comparison table reports observed maximum cluster size after projection onto the workflow-labelled evaluation domain K. Its pipeline values are 19 in both arms; these are not full-stream cluster-size bounds. The native/capped Splink maxima use the same labelled-domain metric.
-
-The historical candidate index combines exact-address and block channels conditioned on service with IDF-token scoring. The implementation and revised evidence notes define the measured retrieval procedure. Earlier conceptual illustrations showed five retrieval channels that are not implemented by this code.
-
-The local preparation verified table reconstruction, aggregate consistency and synthetic tests. It did not rerun the complete city/seed grid or recreate the historical environment in a new virtual environment. The frozen per-seed effects measure scorer-fitting variation conditional on a city and window. Several selector settings were examined using May before their April sweep; the artifact preserves those exploratory results.
-
-The measured implementation advances deadlines on arriving-day changes and an end-of-window flush. A nominal D=7 setting has a saved maximum latency of 14 days; it is not a hard seven-day delivery guarantee. In the seed-13 band log, 571 source records appear more than once, with 722 extra merge rows and up to six rows for one record. Logged merge operations therefore cannot be interpreted as independently certified, irreversible final commits. Complete timestamped finalization logs are absent.
-
-The Louisville human-label analysis is represented by aggregate counts. The privacy-reviewed record rendering and adjudication materials are not in this package, so that analysis cannot be independently rerun from this package alone. The original pair-log audit is retained as historical code/results; the complete comparator requires timestamped emission logs that the historical replay did not retain. These limitations remain open for a complete EA&B reproducibility submission.
-
-## License
-
-The code is released under the existing project MIT license (`LICENSE`). Municipal source data remain subject to their portals' terms. This repository does not redistribute the raw municipal request records.
+Code uses the existing [MIT license](LICENSE). Municipal data remain subject to their source terms. The author authorized the two public San Diego/Chicago snapshots as Release assets; private Louisville source renderings, annotation workbooks, models and replay logs are not included. The Louisville derivative's [rights statement](derived_data/louisville/README.md) does not grant rights in omitted third-party source material.
