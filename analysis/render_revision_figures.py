@@ -319,7 +319,7 @@ def threshold_curve(exp, run, protocol):
         ax.set_xlabel("Known-MERGE proxy FMP")
         panel(ax,letter,window+" · "+("calibration" if window=="March" else "exploratory"))
         axes_style(ax)
-    axes[0].set_ylabel("Certified positive-pair recall")
+    axes[0].set_ylabel("Workflow-positive pair recall")
     handles=[Line2D([],[],marker="o",color=COLORS["band"],lw=1,markersize=4),
              Line2D([],[],marker="^",color=COLORS["gate5"],lw=1,markersize=4),
              Line2D([],[],marker="s",color=INK,markerfacecolor="none",ls="none",markersize=6),

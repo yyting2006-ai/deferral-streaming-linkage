@@ -1,0 +1,40 @@
+[
+  {
+    "window": "July",
+    "family": "gbt",
+    "arm_a": "invisible_gate5",
+    "arm_b": "arrival",
+    "n_pairs": 5,
+    "mean_difference": 0.005829427164994095,
+    "ci95_low": 0.00360065259104108,
+    "ci95_high": 0.00805820173894711,
+    "positive_differences": 5,
+    "seed_differences": [
+      0.004331820271200326,
+      0.005981089007555784,
+      0.008003071492933056,
+      0.007082139449157143,
+      0.003749015604124162
+    ],
+    "scope": "paired pointwise t interval; fixed-stream fit variability"
+  },
+  {
+    "window": "July",
+    "family": "gbt",
+    "arm_a": "gate5",
+    "arm_b": "invisible_gate5",
+    "n_pairs": 5,
+    "mean_difference": 0.026649243961730885,
+    "ci95_low": 0.02118163898482379,
+    "ci95_high": 0.032116848938637976,
+    "positive_differences": 5,
+    "seed_differences": [
+      0.02054438502882744,
+      0.024043916403687693,
+      0.03153768606204521,
+      0.029633594608893532,
+      0.027486637705200545
+    ],
+    "scope": "paired pointwise t interval; fixed-stream fit variability"
+  }
+]

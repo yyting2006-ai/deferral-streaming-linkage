@@ -1,0 +1,21 @@
+contrast,seed,arm,tp,fp,n_positive,f1_recomputed,source
+invisible_gate5 - arrival,1,invisible_gate5,3288,4059,6411,0.4779764500654165,reproductions/revision_v2/results/July_gbt_s1_invisible_gate5.json
+invisible_gate5 - arrival,1,arrival,3464,4752,6411,0.4736446297942162,reproductions/revision_v2/results/July_gbt_s1_arrival.json
+invisible_gate5 - arrival,2,invisible_gate5,3352,4113,6411,0.4831363505332949,reproductions/revision_v2/results/July_gbt_s2_invisible_gate5.json
+invisible_gate5 - arrival,2,arrival,3462,4638,6411,0.4771552615257391,reproductions/revision_v2/results/July_gbt_s2_arrival.json
+invisible_gate5 - arrival,3,invisible_gate5,3313,4186,6411,0.4763479511143063,reproductions/revision_v2/results/July_gbt_s3_invisible_gate5.json
+invisible_gate5 - arrival,3,arrival,3414,4754,6411,0.4683448796213732,reproductions/revision_v2/results/July_gbt_s3_arrival.json
+invisible_gate5 - arrival,4,invisible_gate5,3336,4339,6411,0.4736617918500639,reproductions/revision_v2/results/July_gbt_s4_invisible_gate5.json
+invisible_gate5 - arrival,4,arrival,3396,4750,6411,0.46657965240090676,reproductions/revision_v2/results/July_gbt_s4_arrival.json
+invisible_gate5 - arrival,13,invisible_gate5,3222,4284,6411,0.46303082560896747,reproductions/revision_v2/results/July_gbt_s13_invisible_gate5.json
+invisible_gate5 - arrival,13,arrival,3319,4723,6411,0.4592818100048433,reproductions/revision_v2/results/July_gbt_s13_arrival.json
+gate5 - invisible_gate5,1,gate5,2949,2471,6411,0.49852083509424394,reproductions/revision_v2/results/July_gbt_s1_gate5.json
+gate5 - invisible_gate5,1,invisible_gate5,3288,4059,6411,0.4779764500654165,reproductions/revision_v2/results/July_gbt_s1_invisible_gate5.json
+gate5 - invisible_gate5,2,gate5,3002,2425,6411,0.5071802669369826,reproductions/revision_v2/results/July_gbt_s2_gate5.json
+gate5 - invisible_gate5,2,invisible_gate5,3352,4113,6411,0.4831363505332949,reproductions/revision_v2/results/July_gbt_s2_invisible_gate5.json
+gate5 - invisible_gate5,3,gate5,3011,2435,6411,0.5078856371763515,reproductions/revision_v2/results/July_gbt_s3_gate5.json
+gate5 - invisible_gate5,3,invisible_gate5,3313,4186,6411,0.4763479511143063,reproductions/revision_v2/results/July_gbt_s3_invisible_gate5.json
+gate5 - invisible_gate5,4,gate5,2940,2332,6411,0.5032953864589574,reproductions/revision_v2/results/July_gbt_s4_gate5.json
+gate5 - invisible_gate5,4,invisible_gate5,3336,4339,6411,0.4736617918500639,reproductions/revision_v2/results/July_gbt_s4_invisible_gate5.json
+gate5 - invisible_gate5,13,gate5,2858,2384,6411,0.490517463314168,reproductions/revision_v2/results/July_gbt_s13_gate5.json
+gate5 - invisible_gate5,13,invisible_gate5,3222,4284,6411,0.46303082560896747,reproductions/revision_v2/results/July_gbt_s13_invisible_gate5.json

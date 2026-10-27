@@ -1,0 +1,195 @@
+{
+  "review_item": "Round 2 N01",
+  "executed_at_utc": "2026-10-27T09:24:25.279233+00:00",
+  "protocol_sha256": "4ad46450cc07c5c1cb7f73fe4e9a9774549ea3774bae1128a06ee3e3e16a8d1a",
+  "protocol": {
+    "frozen_at_utc": "2026-10-27T09:21:32.233804+00:00",
+    "review_item": "Round 2 N01",
+    "scope": "targeted coverage extension; no model refit",
+    "window_local": [
+      "2024-05-01",
+      "2024-05-31"
+    ],
+    "cutoff_utc": "2024-05-20T07:00:00+00:00",
+    "cutoff_local": "2024-05-20T00:00:00-07:00",
+    "cutoff_selection": "Fixed calendar date before the supplemental replay; no outcome-adaptive selection",
+    "timezone": "Interpret naive San Diego timestamps as America/Los_Angeles, convert to UTC; month windows selected by original local calendar; features use UTC calendar",
+    "seed": 13,
+    "initial_state": "empty",
+    "model": "existing corrected-protocol GBT seed13",
+    "config": {
+      "window_days": 60,
+      "k_candidates": 60,
+      "use_text": true,
+      "t_merge": 0.0358,
+      "t_pending": 0,
+      "pending_absorbs": false,
+      "max_cluster": 20,
+      "prior_merge": 0.0
+    },
+    "policy": {
+      "delta": 0.5,
+      "D": 7,
+      "defer_rule": "gate",
+      "stale_min": 5
+    },
+    "policy_name": "gate5",
+    "perturbation": "Rotate all strictly later records across suffix arrival timestamps by max(1, floor(suffix_count/3)); preserve complete input prefix and suffix multiset",
+    "comparisons": "independently filter both complete emission logs at the same inclusive UTC cutoff; compare length, order, all fields and payloads",
+    "coverage_requirements": {
+      "min_stream_span_days": 14,
+      "min_suffix_records": 2,
+      "min_deadline_rescoring_calls_before_cutoff": 1,
+      "min_equal_time_deadline_arrival_timestamps": 1,
+      "deadline_calls_during_finish_before_cutoff": 0,
+      "timer_first_violations": 0
+    },
+    "runtime": {
+      "device": "CPU",
+      "workers": 1,
+      "threads": 1,
+      "candidate_snapshot_writes": false,
+      "monthend_drain": true
+    },
+    "inputs_sha256": {
+      "data_May.pkl": "1f97b373700d8cf8c3e726338b6971d07608dc955d8101f2cd34f11e961f1bf0",
+      "model_gbt_13.pkl": "5dd33db59751efcd59e425a44044d723b12d4e8450ad7b5905417725d7148712",
+      "experiment_protocol.json": "cc4852c85a4c1a6178b0002573999fa073c69226e52bcca612668b9fc333aaaa",
+      "calibration_selection.json": "62d3458e91f732a402b19e6f6171555b5a887e2fe99b6cd4173515738fd185e7",
+      "prior_prefix_audit.json": "7525a19f65551be1c74c02fb2094e7293471753c9799c4c7529e7f94514a63d7",
+      "prior_May_gate5_events.pkl": "872f585a06e4ec59449fa0a2e93e989edae98aff52a2ab451180b815c6816f94"
+    },
+    "sources_sha256": {
+      "psid/causal.py": "d24d2ae93952c53c3267b702cc3a9c352698e4fbe7c5755b64c429eb2a442c42",
+      "psid/methods.py": "d662d38eec647962cdaa4472ed9fd7ae53737827b2a765540229aae7180dfee6",
+      "psid/schema.py": "4571e28f284bd5fd11d5143ac7ffbc04f812a93e684882ad486ae1fde3be0b45",
+      "analysis/revision_audit.py": "6d9d27cf182a599c866d3750f7432e02beb4615760f04e077a90b8bb69f8ad17",
+      "audit/compare_prefix.py": "227041d83001c857e628417b368b60f7b8aa3eadf391c4473ffac00651c7f7b7",
+      "analysis/round2_prefix_audit.py": "95aa396f21b633e4c2acbe0cd7ba3f1490253ecec3459775bb1674486f8bd3b3"
+    },
+    "interpretation": "One targeted post-deadline real-stream probe; prior three probes and future-input positive controls remain unchanged; not a universal nonanticipation proof"
+  },
+  "record_count": 35915,
+  "stream_span_days": 30.98472222222222,
+  "first_arrival_utc": "2024-05-01T07:17:00+00:00",
+  "last_arrival_utc": "2024-06-01T06:55:00+00:00",
+  "cutoff_utc": "2024-05-20T07:00:00+00:00",
+  "input_prefix_records": 21683,
+  "perturbable_suffix_records": 14232,
+  "input_prefix_sha256": "58c02466d84f0fe773bfd957329e038ed1dbc27bb132d67a3fc08e5bb4b22f89",
+  "input_stream_sha256": "8d841e825edbd56ab341e6d31f71ca52aa26007c5f690bfb291d130aadcb2220",
+  "altered_stream_sha256": "7b09ff55c2774feccf7a4686974fad368d425cc82e164fd77eb583d4948bb401",
+  "common_state_sha256": "87db56f1cb1e8709984e5297897939f2b3c7bb6019d7800ae9540ae9c8437c1b",
+  "comparison": {
+    "valid_comparison": true,
+    "equal": true,
+    "cutoff_utc": "2024-05-20T07:00:00+00:00",
+    "a_prefix_count": 21328,
+    "b_prefix_count": 21328,
+    "first_different_index_0": null,
+    "compared_fields": "length, order, absolute emission time, object, action, target and payload"
+  },
+  "baseline_prefix": {
+    "output_count": 21328,
+    "trigger_counts": {
+      "arrival": 20961,
+      "claim": 229,
+      "deadline": 138
+    },
+    "deadline_events_at_exact_due": 138,
+    "deadline_wait_days": [
+      7.0
+    ],
+    "first_deadline_utc": "2024-05-13T17:33:00+00:00",
+    "last_deadline_utc": "2024-05-20T03:34:00+00:00",
+    "complete_prefix_sha256": "f23da7dc95154abdef6437d124d2d96273711d4262bb195d6fe53713da5c5254"
+  },
+  "rotated_prefix": {
+    "output_count": 21328,
+    "trigger_counts": {
+      "arrival": 20961,
+      "claim": 229,
+      "deadline": 138
+    },
+    "deadline_events_at_exact_due": 138,
+    "deadline_wait_days": [
+      7.0
+    ],
+    "first_deadline_utc": "2024-05-13T17:33:00+00:00",
+    "last_deadline_utc": "2024-05-20T03:34:00+00:00",
+    "complete_prefix_sha256": "f23da7dc95154abdef6437d124d2d96273711d4262bb195d6fe53713da5c5254"
+  },
+  "baseline_scheduling_prefix": {
+    "scoring_calls": 21821,
+    "arrival_calls": 21683,
+    "deadline_rescoring_calls": 138,
+    "deadline_calls_during_finish": 0,
+    "equal_time_deadline_arrival_timestamps": 96,
+    "equal_time_deadline_calls": 98,
+    "timer_first_violations": 0,
+    "deadline_calls_with_equal_or_future_arrival_visible": 0
+  },
+  "rotated_scheduling_prefix": {
+    "scoring_calls": 21821,
+    "arrival_calls": 21683,
+    "deadline_rescoring_calls": 138,
+    "deadline_calls_during_finish": 0,
+    "equal_time_deadline_arrival_timestamps": 96,
+    "equal_time_deadline_calls": 98,
+    "timer_first_violations": 0,
+    "deadline_calls_with_equal_or_future_arrival_visible": 0
+  },
+  "baseline_complete_output_count": 35915,
+  "rotated_complete_output_count": 35915,
+  "requirements": {
+    "complete_prefix_equal": true,
+    "actual_deadline_rescoring_in_prefix": true,
+    "deadline_events_match_rescoring_calls": true,
+    "deadline_events_at_exact_seven_day_due": true,
+    "prefix_deadlines_precede_monthend_drain": true,
+    "actual_equal_time_timer_arrival_coverage": true,
+    "timer_first_order_preserved": true,
+    "deadline_scorer_has_no_equal_or_future_arrival": true,
+    "prefix_trigger_and_schedule_counts_equal": true,
+    "instrumented_baseline_matches_previous_complete_event_log": true,
+    "original_audit_unchanged": true,
+    "both_replays_complete_and_unique": true
+  },
+  "pass": true,
+  "runtime": {
+    "baseline": {
+      "wall_seconds": 75.8520528000081,
+      "process_cpu_seconds": 74.8125,
+      "includes_monthend_drain": true,
+      "candidate_snapshot_writes": false,
+      "includes_final_event_and_witness_file_serialization": false
+    },
+    "rotated": {
+      "wall_seconds": 80.55189189995872,
+      "process_cpu_seconds": 79.484375,
+      "includes_monthend_drain": true,
+      "candidate_snapshot_writes": false,
+      "includes_final_event_and_witness_file_serialization": false
+    },
+    "measurement_note": "One local worker, one library thread; includes lightweight scheduling witness and drain. Not a production throughput benchmark."
+  },
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "pointer_bits": 64,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0",
+    "seeded_scorer_witness_sha256": "4d756868a2535d6449a3b7e740ce34dadc669c133af6c898248c35deb3ac4699"
+  },
+  "private_evidence_sha256": {
+    "baseline_events.json": "3262cdafb2d0ed185974e1072e59fd69411084193a6023cefebee3da492d33fb",
+    "baseline_scheduling.json": "a3ec4208b21a193ae7c5f469e82675a7a636a62f0a873e8057c25bf479781a79",
+    "baseline_summary.json": "01a3024e0ce31c97e6702f1f991ec526bae5327aa7d184b0ae74c9ead3849d1e",
+    "rotated_events.json": "e2438179f04a7303969a9b59887f8fb1ad8810736dcf36497b5a3f83cd99f824",
+    "rotated_scheduling.json": "ed52f95955365ceed8a32b2941f0eb7c3188ea61834a73761fd9f34bc0b80b43",
+    "rotated_summary.json": "42d0b6b588d7f413adc22d6b74cf8d939e0aaa3277e07116ae242cb8d1c9859d"
+  },
+  "claim_count_definition": "claim counts the pending target's NEW finalization; the claimant has its own arrival or deadline trigger",
+  "interpretation": "One targeted post-deadline real-stream probe; prior three probes and future-input positive controls remain unchanged; not a universal nonanticipation proof"
+}

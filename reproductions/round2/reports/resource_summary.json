@@ -1,0 +1,236 @@
+{
+  "review_item": "N03",
+  "status": "closed with existing measurements",
+  "no_experiments_rerun": true,
+  "scope": "May 2024, GBT seed 13; four trace-enabled policies from the same frozen suite",
+  "rows": [
+    {
+      "run_id": "May_gbt_s13_arrival",
+      "policy": "Arrival",
+      "window": "May",
+      "scorer": "gbt",
+      "seed": 13,
+      "n_records": 35915,
+      "held_n": 0,
+      "mean_wait_all_days": 0.0,
+      "mean_wait_held_days": null,
+      "max_wait_days": 0.0,
+      "peak_pending": 0,
+      "wall_seconds": 100.1228121999884,
+      "cpu_seconds": 99.078125,
+      "trace_io_seconds": 6.487335501180496,
+      "drain_seconds": 2.8999638743698597e-06,
+      "monthend_finalizations": 0,
+      "candidate_trace_enabled": true,
+      "candidate_snapshot_rows": 35915,
+      "candidate_instances": 2043172,
+      "source_file": "results/May_gbt_s13_arrival.json",
+      "source_sha256": "60aca9d314855a592a891953720afcd70bdd0b75bc58d5ad3e7183d615940778"
+    },
+    {
+      "run_id": "May_gbt_s13_band",
+      "policy": "Band",
+      "window": "May",
+      "scorer": "gbt",
+      "seed": 13,
+      "n_records": 35915,
+      "held_n": 5740,
+      "mean_wait_all_days": 0.9654211138954631,
+      "mean_wait_held_days": 6.040609635114209,
+      "max_wait_days": 7.0,
+      "peak_pending": 1259,
+      "wall_seconds": 113.80036329996074,
+      "cpu_seconds": 112.640625,
+      "trace_io_seconds": 7.196952405443881,
+      "drain_seconds": 2.8509456000174396,
+      "monthend_finalizations": 1172,
+      "candidate_trace_enabled": true,
+      "candidate_snapshot_rows": 40339,
+      "candidate_instances": 2281052,
+      "source_file": "results/May_gbt_s13_band.json",
+      "source_sha256": "bb9bc2f1588c6d6572b8ed442d742734c31a3afe2860062daa0a5b2e2a9e5260"
+    },
+    {
+      "run_id": "May_gbt_s13_gate5",
+      "policy": "Gate",
+      "window": "May",
+      "scorer": "gbt",
+      "seed": 13,
+      "n_records": 35915,
+      "held_n": 1867,
+      "mean_wait_all_days": 0.2660868640462821,
+      "mean_wait_held_days": 5.118644736059037,
+      "max_wait_days": 7.0,
+      "peak_pending": 509,
+      "wall_seconds": 104.66103459999431,
+      "cpu_seconds": 103.53125,
+      "trace_io_seconds": 6.72887900454225,
+      "drain_seconds": 1.4589436000096612,
+      "monthend_finalizations": 508,
+      "candidate_trace_enabled": true,
+      "candidate_snapshot_rows": 37171,
+      "candidate_instances": 2109220,
+      "source_file": "results/May_gbt_s13_gate5.json",
+      "source_sha256": "07d247ec2b6fe161a420125bf720f88644db32250018827e579521c45ccd76ad"
+    },
+    {
+      "run_id": "May_gbt_s13_cutoff10",
+      "policy": "Cutoff",
+      "window": "May",
+      "scorer": "gbt",
+      "seed": 13,
+      "n_records": 35915,
+      "held_n": 0,
+      "mean_wait_all_days": 0.0,
+      "mean_wait_held_days": null,
+      "max_wait_days": 0.0,
+      "peak_pending": 0,
+      "wall_seconds": 85.64047099999152,
+      "cpu_seconds": 84.703125,
+      "trace_io_seconds": 6.714393199072219,
+      "drain_seconds": 2.5999615900218487e-06,
+      "monthend_finalizations": 0,
+      "candidate_trace_enabled": true,
+      "candidate_snapshot_rows": 35915,
+      "candidate_instances": 1758445,
+      "source_file": "results/May_gbt_s13_cutoff10.json",
+      "source_sha256": "1b95d0fc8a23791af802b6ef9689e702cbab88d2e3f9edc17efecb0e0dd2e2b0"
+    }
+  ],
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0",
+    "workers": 6,
+    "threads_per_worker": 1,
+    "device": "CPU",
+    "cpu_model_and_ram": "Not recorded in the original measurement manifest."
+  },
+  "shared_cache_identity": {
+    "protocol_sha256": "cc4852c85a4c1a6178b0002573999fa073c69226e52bcca612668b9fc333aaaa",
+    "preparation_manifest_sha256": "f42f2f2d1f9d2215243886779a2bc09e255d822978628c36d5e107140390a286",
+    "model_sha256": "5dd33db59751efcd59e425a44044d723b12d4e8450ad7b5905417725d7148712",
+    "sources": {
+      "psid/causal.py": "d24d2ae93952c53c3267b702cc3a9c352698e4fbe7c5755b64c429eb2a442c42",
+      "psid/methods.py": "d662d38eec647962cdaa4472ed9fd7ae53737827b2a765540229aae7180dfee6",
+      "psid/schema.py": "4571e28f284bd5fd11d5143ac7ffbc04f812a93e684882ad486ae1fde3be0b45",
+      "psid/metrics.py": "2aef85d27fd2b377bde29832af24d56f83ee3acb3dae427aa21df0062cdb2b63",
+      "psid/decision_metrics.py": "4a5aba2cd5f5b3720b527f6eb1509b21b2c850b9b958c0abaad36c6c11e418f3",
+      "psid/gold.py": "be1fe0f85a1de5a721f8fb9bee595ec410769e1c3a9da88d8e8ea746c170708c"
+    }
+  },
+  "checks": {
+    "May_gbt_s13_arrival": {
+      "schedule_matches": true,
+      "normalized_csv_matches": true,
+      "all_mean_times_n_equals_held_mean_times_held_n": true,
+      "public_aggregate_matches": true,
+      "events": {
+        "checked": true,
+        "source_sha256": "c2f7d663540ea8e62a8a3928d59fbb6131ba3e74218621ed56a69ccf36ce2b8d",
+        "n_events": 35915,
+        "held_n": 0,
+        "elapsed_waits_recomputed_from_timestamps": true,
+        "latency_and_trigger_counts_match": true,
+        "peak_pending_source": "Recorded engine counter, not inferred from output timing."
+      }
+    },
+    "May_gbt_s13_band": {
+      "schedule_matches": true,
+      "normalized_csv_matches": true,
+      "all_mean_times_n_equals_held_mean_times_held_n": true,
+      "public_aggregate_matches": true,
+      "events": {
+        "checked": true,
+        "source_sha256": "0aaee078ae5f96371d0294e6db37f180aefe236ffc722a6fa9c34e957a1dc829",
+        "n_events": 35915,
+        "held_n": 5740,
+        "elapsed_waits_recomputed_from_timestamps": true,
+        "latency_and_trigger_counts_match": true,
+        "peak_pending_source": "Recorded engine counter, not inferred from output timing."
+      }
+    },
+    "May_gbt_s13_gate5": {
+      "schedule_matches": true,
+      "normalized_csv_matches": true,
+      "all_mean_times_n_equals_held_mean_times_held_n": true,
+      "public_aggregate_matches": true,
+      "events": {
+        "checked": true,
+        "source_sha256": "872f585a06e4ec59449fa0a2e93e989edae98aff52a2ab451180b815c6816f94",
+        "n_events": 35915,
+        "held_n": 1867,
+        "elapsed_waits_recomputed_from_timestamps": true,
+        "latency_and_trigger_counts_match": true,
+        "peak_pending_source": "Recorded engine counter, not inferred from output timing."
+      }
+    },
+    "May_gbt_s13_cutoff10": {
+      "schedule_matches": true,
+      "normalized_csv_matches": true,
+      "all_mean_times_n_equals_held_mean_times_held_n": true,
+      "public_aggregate_matches": true,
+      "events": {
+        "checked": true,
+        "source_sha256": "f5858ea7f53ab0818af652bdc884760391dae950227ef6bac549a676599b4c16",
+        "n_events": 35915,
+        "held_n": 0,
+        "elapsed_waits_recomputed_from_timestamps": true,
+        "latency_and_trigger_counts_match": true,
+        "peak_pending_source": "Recorded engine counter, not inferred from output timing."
+      }
+    }
+  },
+  "measurement_boundaries": {
+    "included_wall_and_cpu": [
+      "on_record processing and due timers",
+      "candidate-snapshot construction",
+      "JSONL trace serialization and writes",
+      "end-of-window finish timer drain",
+      "final trace drain and writer close/flush"
+    ],
+    "excluded_wall_and_cpu": [
+      "input/model loading",
+      "model fitting",
+      "initial empty-state/writer setup",
+      "post-replay metric computation",
+      "events pickle and result JSON persistence"
+    ],
+    "trace_io_seconds": "Sum of timed CandidateTraceWriter.drain calls: JSON serialization, writes, counting and clearing; excludes the separately executed final close/flush, which is in total wall/CPU.",
+    "drain_seconds": "Time in cl.finish(), including deadline scoring and snapshot construction; the subsequent trace write is outside drain_seconds but inside total wall/CPU.",
+    "disk_note": "No fsync or physical-device latency measurement; trace time is application-level serialization/write-call time.",
+    "waiting": "emitted_at minus arrival_at divided by 86400; mean all uses 35915 requests, mean held uses each policy's n_deferred; empty held set is null rather than a measured zero.",
+    "peak_pending": "Recorded maximum number of live pending request singletons; not memory bytes.",
+    "capacity_note": "Six-worker shared CPU measurements do not estimate isolated single-core or deployment service capacity."
+  },
+  "source_code": {
+    "experiments/e37_revision_suite.py": {
+      "sha256": "a0600ad3ebd1879e01e1c9b88688d7b458e10cee560dd855f7a0957cf5ca98b3",
+      "line_locators": {
+        "load_data": 129,
+        "open_trace": 134,
+        "start_wall_cpu": 135,
+        "arrival": 138,
+        "finish_drain": 141,
+        "close_trace": 145,
+        "end_wall_cpu": 146,
+        "compute_metrics": 147,
+        "save_events": 154
+      }
+    },
+    "analysis/candidate_analysis.py": {
+      "sha256": "68eb9b015a34386dc90f37463beff7911c6ff87718017e2790259b7e685de3e6"
+    },
+    "psid/causal.py": {
+      "sha256": "d24d2ae93952c53c3267b702cc3a9c352698e4fbe7c5755b64c429eb2a442c42"
+    }
+  },
+  "source_inputs": {
+    "experiment_protocol.json": "cc4852c85a4c1a6178b0002573999fa073c69226e52bcca612668b9fc333aaaa",
+    "reports/preparation_manifest.json": "f42f2f2d1f9d2215243886779a2bc09e255d822978628c36d5e107140390a286",
+    "reports/run_schedule.json": "90f98733414d1e488f931ad26f69b42e5a8dd2a2d702ded4337f65a5e364e323",
+    "reports/normalized_results.csv": "2dd97c51931ec41fb8d24675b5faab1b1d79c1261ce3c5303ae587055ef62ee9"
+  }
+}

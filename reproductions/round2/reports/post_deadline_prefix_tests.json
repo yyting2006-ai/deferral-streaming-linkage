@@ -1,0 +1,19 @@
+{
+  "scope": "Round 2 N01 targeted audit coverage and existing causal-prefix regression tests",
+  "python": "CPython 3.11.9 64-bit; existing scientific environment",
+  "working_directory": "github_artifact repository root",
+  "commands": [
+    {"command": "python -m unittest discover -s tests -p test_round2_prefix_audit.py -v", "tests": 5, "result": "PASS"},
+    {"command": "python -m unittest discover -s tests -p test_revision_audit.py -v", "tests": 8, "result": "PASS"},
+    {"command": "python -m unittest discover -s tests -p test_causal.py -v", "tests": 23, "result": "PASS"}
+  ],
+  "total_tests_passed": 36,
+  "coverage": [
+    "Count arrival/claim/deadline outputs by inclusive absolute cutoff and exclude later drain events",
+    "Reject unknown output trigger categories",
+    "Check timer-before-arrival order at equal timestamps using scorer-entry calls, including arrivals with no immediate final output",
+    "Detect equal-time/future-arrival visibility at deadline scoring",
+    "Identify whether a pre-cutoff deadline actually came from finish/drain"
+  ],
+  "invocation_note": "An initial unittest module-name invocation could not import tests because that directory is not a package; corrected to the discovery commands above. No algorithm or tests were changed to address that invocation error."
+}

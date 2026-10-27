@@ -1,0 +1,67 @@
+{
+  "frozen_at_utc": "2026-10-27T09:21:32.233804+00:00",
+  "review_item": "Round 2 N01",
+  "scope": "targeted coverage extension; no model refit",
+  "window_local": [
+    "2024-05-01",
+    "2024-05-31"
+  ],
+  "cutoff_utc": "2024-05-20T07:00:00+00:00",
+  "cutoff_local": "2024-05-20T00:00:00-07:00",
+  "cutoff_selection": "Fixed calendar date before the supplemental replay; no outcome-adaptive selection",
+  "timezone": "Interpret naive San Diego timestamps as America/Los_Angeles, convert to UTC; month windows selected by original local calendar; features use UTC calendar",
+  "seed": 13,
+  "initial_state": "empty",
+  "model": "existing corrected-protocol GBT seed13",
+  "config": {
+    "window_days": 60,
+    "k_candidates": 60,
+    "use_text": true,
+    "t_merge": 0.0358,
+    "t_pending": 0,
+    "pending_absorbs": false,
+    "max_cluster": 20,
+    "prior_merge": 0.0
+  },
+  "policy": {
+    "delta": 0.5,
+    "D": 7,
+    "defer_rule": "gate",
+    "stale_min": 5
+  },
+  "policy_name": "gate5",
+  "perturbation": "Rotate all strictly later records across suffix arrival timestamps by max(1, floor(suffix_count/3)); preserve complete input prefix and suffix multiset",
+  "comparisons": "independently filter both complete emission logs at the same inclusive UTC cutoff; compare length, order, all fields and payloads",
+  "coverage_requirements": {
+    "min_stream_span_days": 14,
+    "min_suffix_records": 2,
+    "min_deadline_rescoring_calls_before_cutoff": 1,
+    "min_equal_time_deadline_arrival_timestamps": 1,
+    "deadline_calls_during_finish_before_cutoff": 0,
+    "timer_first_violations": 0
+  },
+  "runtime": {
+    "device": "CPU",
+    "workers": 1,
+    "threads": 1,
+    "candidate_snapshot_writes": false,
+    "monthend_drain": true
+  },
+  "inputs_sha256": {
+    "data_May.pkl": "1f97b373700d8cf8c3e726338b6971d07608dc955d8101f2cd34f11e961f1bf0",
+    "model_gbt_13.pkl": "5dd33db59751efcd59e425a44044d723b12d4e8450ad7b5905417725d7148712",
+    "experiment_protocol.json": "cc4852c85a4c1a6178b0002573999fa073c69226e52bcca612668b9fc333aaaa",
+    "calibration_selection.json": "62d3458e91f732a402b19e6f6171555b5a887e2fe99b6cd4173515738fd185e7",
+    "prior_prefix_audit.json": "7525a19f65551be1c74c02fb2094e7293471753c9799c4c7529e7f94514a63d7",
+    "prior_May_gate5_events.pkl": "872f585a06e4ec59449fa0a2e93e989edae98aff52a2ab451180b815c6816f94"
+  },
+  "sources_sha256": {
+    "psid/causal.py": "d24d2ae93952c53c3267b702cc3a9c352698e4fbe7c5755b64c429eb2a442c42",
+    "psid/methods.py": "d662d38eec647962cdaa4472ed9fd7ae53737827b2a765540229aae7180dfee6",
+    "psid/schema.py": "4571e28f284bd5fd11d5143ac7ffbc04f812a93e684882ad486ae1fde3be0b45",
+    "analysis/revision_audit.py": "6d9d27cf182a599c866d3750f7432e02beb4615760f04e077a90b8bb69f8ad17",
+    "audit/compare_prefix.py": "227041d83001c857e628417b368b60f7b8aa3eadf391c4473ffac00651c7f7b7",
+    "analysis/round2_prefix_audit.py": "95aa396f21b633e4c2acbe0cd7ba3f1490253ecec3459775bb1674486f8bd3b3"
+  },
+  "interpretation": "One targeted post-deadline real-stream probe; prior three probes and future-input positive controls remain unchanged; not a universal nonanticipation proof"
+}

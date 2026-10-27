@@ -1,0 +1,31 @@
+{
+  "review_items": [
+    "N04 figure terminology",
+    "N05 manuscript figure mapping"
+  ],
+  "change": "Y-axis label changed from Certified positive-pair recall to Workflow-positive pair recall; all geometry and numerical inputs unchanged.",
+  "backend": "Python 3.11.9 / Matplotlib 3.10.8",
+  "reuse_level": "Exact reuse with label replacement only",
+  "dimensions_mm": [
+    180,
+    96
+  ],
+  "source_rows": 39,
+  "source_data_identical_to_released": true,
+  "source_data_sha256": "245b06f9affad3ef1a588aa123ad3fb2b8d36271673ecf42c90ea94f22c2d0ec",
+  "exclusions_changed": false,
+  "transformations_changed": false,
+  "data_regeneration_scope": [
+    "fig3_risk_recall"
+  ],
+  "alignment": "PASS: zero warnings/failures, 1.5 pt tolerance",
+  "pdf_text": "Minimum rendered glyph 8 pt, no glyph below 7 pt audit threshold",
+  "collision": "PASS: zero warnings/failures/clipping findings",
+  "visual_review": {
+    "panel_a": "March calibration: both scorer curves, marker encodings, label and axes clear; no clipping or overlap.",
+    "panel_b": "May exploratory: original GBT threshold-order curve and selected-threshold outline intact; axes clear.",
+    "whole_figure": "Longer workflow-positive y-axis label fits within declared canvas; legend, threshold-choice note and omissions note readable.",
+    "uncertainty": "Descriptive fixed-stream curves from one fitted scorer per family; no independent threshold replicates or error bars."
+  },
+  "source_preflight_warning": "TIFF absent is acceptable: native PDF/SVG are authoritative manuscript graphics and PNG is a 600 dpi preview."
+}

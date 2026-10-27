@@ -40,12 +40,31 @@ and a new full run.
 | Pair gain/loss and wrong-operation differences | `reports/mechanism_May/`, `mechanism_July/` | Full local replay, then `--mechanism` |
 | Direct coverage and graph bounds | `reports/candidate_*.json` | Full local replay, then candidate analysis |
 | Real-stream prefix and hash-seed controls | `reports/prefix_audit.json`, `hashseed_replay.json` | Audit commands in REPRODUCE.md |
-| Figures 1–4 | `figures/*.pdf`, `*.svg`, `*.png`, `*.source_data.csv` | Figure command below |
+| Manuscript Figures 2–5 | `figures/*.pdf`, `*.svg`, `*.png`, `*.source_data.csv` | Figure command below |
 | Louisville agreement and lag rates | `derived_data/louisville/expected_summary.json` | Independent derivative check above |
 
-Paths in this table are relative to `reproductions/revision_v2/`, except the
-Louisville derivative. Generate all four vector/raster figures from released
-inputs with:
+Paths in the results table are relative to `reproductions/revision_v2/`, except
+the Louisville derivative. The current five-figure manuscript maps to these
+stable source filenames; the numeric filename prefixes are retained for
+reproducibility:
+
+| Manuscript figure number | Figure content | Source filename / prefix | Verification or regeneration |
+|---|---|---|---|
+| Figure 1 | Selected deferred path | `docs/paper/figures/fig0_concept.png` | AI-assisted concept schematic; checked against the state-transition algorithm for singleton pending state, target NEW before claimant MERGE, arrival/deadline claim triggers, deadline NEW/MERGE alternatives, and immutable final outputs. |
+| Figure 2 | Research design | `reproductions/revision_v2/figures/fig1_workflow` | `analysis.render_revision_figures --figures workflow` |
+| Figure 3 | Main comparison | `reproductions/revision_v2/figures/fig2_main_comparison` | `analysis.render_revision_figures --figures main` |
+| Figure 4 | Threshold risk–recall curves | `reproductions/revision_v2/figures/fig3_risk_recall` | `analysis.render_revision_figures --figures threshold` |
+| Figure 5 | Pair-set changes | `reproductions/revision_v2/figures/fig4_mechanism` | `analysis.render_revision_figures --figures mechanism` |
+
+Paths in the figure mapping are relative to the repository root. Figures 2–5
+have PDF, SVG, PNG and Source Data CSV exports under their listed prefixes.
+Figure 1 is illustrative, not a data plot; its [exact generation prompts](docs/paper/figures/fig0_concept.prompt.txt)
+and [provenance and internal semantic review](docs/paper/figures/fig0_concept.provenance.json)
+accompany the image, and its manuscript caption discloses the AI assistance.
+The published `v0.2.0` and `v0.2.1` tags remain fixed; this mapping documents the
+current manuscript numbering without renaming the source files.
+
+Generate all four vector/raster figures from released inputs with:
 
 ```text
 python -m pip install -r requirements-figures.txt
@@ -58,6 +77,24 @@ Without those helpers, geometry QA is explicitly marked unavailable. Numerical
 regeneration and source-data export still run. Font fallback and PDF metadata can
 change file hashes across platforms; compare source values and geometry rather
 than requiring byte-identical figure output.
+
+## Post-deadline audit and reporting supplement
+
+The [v0.2.2 supplement](reproductions/round2/README.md) adds a complete-May
+suffix-perturbation check at a cutoff after 138 actual seven-day deadline
+re-scorings. It records full-prefix comparison, arrival/claim/deadline counts,
+equal-time scheduling checks and the frozen protocol. It also exposes the July
+hidden-Gate contrasts and the existing-run resource table. The original 120
+replay results and the weekly audit remain separate and unchanged.
+
+The resource table is reproducible from public aggregates:
+
+```text
+python -m analysis.round2_resources --run-dir reproductions/revision_v2 --code-root . --out-dir build/round2_resources
+```
+
+The supplement README provides the cache/model prerequisites and freeze/run
+commands for the new audit. The manuscript is [available here](docs/paper/README.md).
 
 ## Full reconstruction
 
