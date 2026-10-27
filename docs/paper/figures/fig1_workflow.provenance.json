@@ -1,0 +1,30 @@
+{
+  "figure": "Manuscript Figure 2: study design",
+  "asset": "fig1_workflow.png",
+  "generation_method": "Built-in ImageGen; complete artistic redraw using the preceding workflow and Figure 1 as references",
+  "generated_date": "2026-10-27",
+  "sha256": "6e28d0db59e5df727ae14b99c97821a216bdc7918b4b3a855bb9aaf7218eb886",
+  "dimensions_px": [
+    1831,
+    859
+  ],
+  "prompt_file": "fig1_workflow.prompt.txt",
+  "purpose": "Illustrative research-workflow schematic; contains no empirical result plot",
+  "source_evidence": [
+    "analysis/render_revision_figures.py: workflow labels",
+    "Manuscript protocol and setup"
+  ],
+  "review": {
+    "kind": "Internal semantic review by an independent subagent and primary agent",
+    "status": "passed",
+    "checks": [
+      "Jan-Feb fit; March calibration; May exploratory; July frozen retrospective validation",
+      "Address, block and token retrieval; 21 fixed features",
+      "One visible pending singleton",
+      "Claim or seven-day deadline; immutable NEW/MERGE",
+      "Hidden pending and ten-day cutoff controls",
+      "Five primary scorer seeds; threshold, mechanism, causality and resource evidence"
+    ],
+    "scope": "Selector predicates and claim event ordering remain detailed in Figure 1, the algorithms and body text."
+  }
+}

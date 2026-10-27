@@ -2,7 +2,9 @@
 
 This release contains the corrected CPU implementation, 120 completed aggregate
 replays, six fit-provenance reports, the frozen protocol, full matched-seed
-summaries, mechanism and candidate diagnostics, and four reproducible figures.
+summaries, mechanism and candidate diagnostics, and three reproducible empirical
+figures. Two AI-assisted schematics illustrate the current manuscript; the
+earlier code-generated workflow remains available for regeneration.
 The original San Diego and Chicago municipal snapshots are separate `v0.2.0`
 Release ZIP assets. Their availability and public-download verification status
 are tracked in [DATA.md](docs/DATA.md).
@@ -40,7 +42,7 @@ and a new full run.
 | Pair gain/loss and wrong-operation differences | `reports/mechanism_May/`, `mechanism_July/` | Full local replay, then `--mechanism` |
 | Direct coverage and graph bounds | `reports/candidate_*.json` | Full local replay, then candidate analysis |
 | Real-stream prefix and hash-seed controls | `reports/prefix_audit.json`, `hashseed_replay.json` | Audit commands in REPRODUCE.md |
-| Manuscript Figures 2–5 | `figures/*.pdf`, `*.svg`, `*.png`, `*.source_data.csv` | Figure command below |
+| Manuscript Figures 3–5 and historical workflow | `figures/*.pdf`, `*.svg`, `*.png`, `*.source_data.csv` | Figure command below |
 | Louisville agreement and lag rates | `derived_data/louisville/expected_summary.json` | Independent derivative check above |
 
 Paths in the results table are relative to `reproductions/revision_v2/`, except
@@ -51,20 +53,30 @@ reproducibility:
 | Manuscript figure number | Figure content | Source filename / prefix | Verification or regeneration |
 |---|---|---|---|
 | Figure 1 | Selected deferred path | `docs/paper/figures/fig0_concept.png` | AI-assisted concept schematic; checked against the state-transition algorithm for singleton pending state, target NEW before claimant MERGE, arrival/deadline claim triggers, deadline NEW/MERGE alternatives, and immutable final outputs. |
-| Figure 2 | Research design | `reproductions/revision_v2/figures/fig1_workflow` | `analysis.render_revision_figures --figures workflow` |
+| Figure 2 | Research design | `docs/paper/figures/fig1_workflow.png` | AI-assisted workflow schematic; checked against the current temporal protocol, retrieval channels and causal state machine. |
 | Figure 3 | Main comparison | `reproductions/revision_v2/figures/fig2_main_comparison` | `analysis.render_revision_figures --figures main` |
 | Figure 4 | Threshold risk–recall curves | `reproductions/revision_v2/figures/fig3_risk_recall` | `analysis.render_revision_figures --figures threshold` |
 | Figure 5 | Pair-set changes | `reproductions/revision_v2/figures/fig4_mechanism` | `analysis.render_revision_figures --figures mechanism` |
 
-Paths in the figure mapping are relative to the repository root. Figures 2–5
-have PDF, SVG, PNG and Source Data CSV exports under their listed prefixes.
-Figure 1 is illustrative, not a data plot; its [exact generation prompts](docs/paper/figures/fig0_concept.prompt.txt)
-and [provenance and internal semantic review](docs/paper/figures/fig0_concept.provenance.json)
-accompany the image, and its manuscript caption discloses the AI assistance.
-The published `v0.2.0` and `v0.2.1` tags remain fixed; this mapping documents the
-current manuscript numbering without renaming the source files.
+Paths in the figure mapping are relative to the repository root. Figures 3–5
+are code-generated empirical figures with PDF, SVG, PNG and Source Data CSV
+exports under their listed prefixes. Figures 1–2 are illustrative AI-assisted
+schematics. Their exact prompts and provenance accompany each image:
+[Figure 1 prompts](docs/paper/figures/fig0_concept.prompt.txt),
+[Figure 1 provenance](docs/paper/figures/fig0_concept.provenance.json),
+[Figure 2 prompts](docs/paper/figures/fig1_workflow.prompt.txt), and
+[Figure 2 provenance](docs/paper/figures/fig1_workflow.provenance.json).
+Both manuscript captions disclose the AI assistance.
 
-Generate all four vector/raster figures from released inputs with:
+The earlier structured workflow remains at
+`reproductions/revision_v2/figures/fig1_workflow` and is regenerated with
+`analysis.render_revision_figures --figures workflow`; it is no longer the
+current manuscript Figure 2. The published `v0.2.0`, `v0.2.1` and `v0.2.2` tags
+remain fixed. The current paper and source ZIP are linked from the
+[manuscript page](docs/paper/README.md).
+
+Generate the three empirical figures and the historical structured workflow
+from released inputs with:
 
 ```text
 python -m pip install -r requirements-figures.txt

@@ -1,7 +1,8 @@
-# Manuscript and concept illustration
+# Manuscript and illustrations
 
 [Paper PDF](main.pdf) · [Figure 1 PNG](figures/fig0_concept.png) ·
-[LaTeX source ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.2/pvldb_revision_source.zip)
+[Figure 2 PNG](figures/fig1_workflow.png) ·
+[LaTeX source ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.3/pvldb_revision_source.zip)
 
 The manuscript has 12 pages, five figures, seven tables and two algorithms.
 It includes a real-stream post-deadline prefix check, July hidden-Gate contrasts,
@@ -14,7 +15,18 @@ provides the corresponding evidence and reproduction commands.
 Figure 1 on page 2 is an AI-assisted concept illustration of the selected
 deferred path. Its [exact prompts](figures/fig0_concept.prompt.txt) and
 [provenance](figures/fig0_concept.provenance.json) accompany the image; the caption
-states its scope. The four scientific figures retain their source data.
+states its scope.
+
+![Study design](figures/fig1_workflow.png)
+
+Figure 2 is an AI-assisted study-design schematic covering the temporal
+protocol, actual retrieval channels, commitment policies and evidence. Its
+[exact prompt](figures/fig1_workflow.prompt.txt) and
+[provenance](figures/fig1_workflow.provenance.json) record generation and internal
+semantic review. Both illustrations are disclosed in their manuscript captions.
+Figures 3–5 are code-generated empirical plots with released source data.
+The earlier [structured workflow](../../reproductions/revision_v2/figures/fig1_workflow.png)
+remains reproducible through `analysis.render_revision_figures --figures workflow`.
 
 The public ZIP contains complete LaTeX compilation inputs, figures, tables,
 prompts, bibliography, unmodified official template files and a checksum
