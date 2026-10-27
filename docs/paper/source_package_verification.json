@@ -1,6 +1,6 @@
 {
-  "source_zip_sha256": "ea1503dafd024cc8a32e616d3c6324876b65648c3e880158801dc67ceaef8a70",
-  "manifest_files_verified": 34,
+  "source_zip_sha256": "c00ab58e281b09c305e6bc58d4f5dcde1ad5bd08acf41b3033d53c207a180166",
+  "manifest_files_verified": 36,
   "isolated_source_build": "passed",
   "pages": 13,
   "page_text_equal_to_delivered_pdf": true,
@@ -9,7 +9,7 @@
   "overfull_boxes": 0,
   "undefined_references": 0,
   "public_source_text_scan": "passed",
-  "pdf_sha256": "9325452e264d2d8069486b404fd474353c58ebf5ed79beac0fa559e314e1c431",
+  "pdf_sha256": "ee0f5673b392a4cc93c6739f6fe0f934bfbfec43c7d4a48764effeae017df931",
   "concept_png_sha256": "fdebceb6371eb848d92b8bb3f5feadefe1fe2dce85dca7533156e78447c3a3d1",
   "workflow_png_sha256": "0d55613111e22451243dc2b4933b0dfe8b7a213aa7cce77b657d93ef8785f68d"
 }
