@@ -1,0 +1,57 @@
+{
+  "positive_pairs_by_lag": [
+    {
+      "bucket": "<=1d",
+      "both": 1612,
+      "base_only": 462,
+      "defer_only": 418,
+      "neither": 1652,
+      "n": 4144,
+      "delta_recall": -0.0106
+    },
+    {
+      "bucket": "1-7d",
+      "both": 817,
+      "base_only": 287,
+      "defer_only": 199,
+      "neither": 1395,
+      "n": 2698,
+      "delta_recall": -0.0326
+    },
+    {
+      "bucket": "8-30d",
+      "both": 164,
+      "base_only": 144,
+      "defer_only": 20,
+      "neither": 576,
+      "n": 904,
+      "delta_recall": -0.1372
+    }
+  ],
+  "wrong_merges_by_lag": [
+    {
+      "bucket": "<=1d",
+      "wrong_base": 259,
+      "wrong_defer": 239,
+      "delta": -20
+    },
+    {
+      "bucket": "1-7d",
+      "wrong_base": 307,
+      "wrong_defer": 373,
+      "delta": 66
+    },
+    {
+      "bucket": "8-30d",
+      "wrong_base": 508,
+      "wrong_defer": 200,
+      "delta": -308
+    },
+    {
+      "bucket": ">30d",
+      "wrong_base": 0,
+      "wrong_defer": 0,
+      "delta": 0
+    }
+  ]
+}

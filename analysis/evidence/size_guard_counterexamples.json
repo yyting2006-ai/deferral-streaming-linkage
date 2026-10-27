@@ -1,0 +1,44 @@
+[
+  {
+    "file": "e26_april_s4.json",
+    "row_index_0": 2,
+    "delta": 0.7,
+    "deadline_days": 7.0,
+    "projected_maximum": 26
+  },
+  {
+    "file": "e26_control_blanket.json",
+    "row_index_0": 0,
+    "delta": 1.0,
+    "deadline_days": 7.0,
+    "projected_maximum": 48
+  },
+  {
+    "file": "e26_sv_s14_i1.json",
+    "row_index_0": 0,
+    "delta": 1.0,
+    "deadline_days": 7.0,
+    "projected_maximum": 21
+  },
+  {
+    "file": "e26_sv_s3_i2.json",
+    "row_index_0": 0,
+    "delta": 1.0,
+    "deadline_days": 7.0,
+    "projected_maximum": 43
+  },
+  {
+    "file": "e26_sv_s7_i2.json",
+    "row_index_0": 0,
+    "delta": 1.0,
+    "deadline_days": 7.0,
+    "projected_maximum": 35
+  },
+  {
+    "file": "e26_sv_s7_i5.json",
+    "row_index_0": 0,
+    "delta": 1.0,
+    "deadline_days": 7.0,
+    "projected_maximum": 35
+  }
+]

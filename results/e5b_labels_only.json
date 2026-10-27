@@ -1,0 +1,90 @@
+{
+  "source": "louisville_two_week_clusters.csv",
+  "rows": 327,
+  "cohorts": {
+    "ALL": {
+      "n_records": 327,
+      "pos_pairs_A": 97,
+      "pos_pairs_B": 369,
+      "pos_pairs_final": 372,
+      "A_vs_B": {
+        "observed_agreement": 0.9946,
+        "kappa": 0.3845
+      },
+      "A_vs_final": {
+        "tp": 97,
+        "fp": 0,
+        "fn": 275,
+        "precision": 1.0,
+        "recall": 0.2608,
+        "f1": 0.4136,
+        "n_pairs": 42486
+      },
+      "B_vs_final": {
+        "tp": 365,
+        "fp": 4,
+        "fn": 7,
+        "precision": 0.9892,
+        "recall": 0.9812,
+        "f1": 0.9852,
+        "n_pairs": 42486
+      }
+    },
+    "dev_week1": {
+      "n_records": 169,
+      "pos_pairs_A": 22,
+      "pos_pairs_B": 52,
+      "pos_pairs_final": 57,
+      "A_vs_B": {
+        "observed_agreement": 0.9972,
+        "kappa": 0.4583
+      },
+      "A_vs_final": {
+        "tp": 22,
+        "fp": 0,
+        "fn": 35,
+        "precision": 1.0,
+        "recall": 0.386,
+        "f1": 0.557,
+        "n_pairs": 12246
+      },
+      "B_vs_final": {
+        "tp": 52,
+        "fp": 0,
+        "fn": 5,
+        "precision": 1.0,
+        "recall": 0.9123,
+        "f1": 0.9541,
+        "n_pairs": 12246
+      }
+    },
+    "confirm_week2": {
+      "n_records": 158,
+      "pos_pairs_A": 33,
+      "pos_pairs_B": 145,
+      "pos_pairs_final": 144,
+      "A_vs_B": {
+        "observed_agreement": 0.9908,
+        "kappa": 0.3568
+      },
+      "A_vs_final": {
+        "tp": 33,
+        "fp": 0,
+        "fn": 111,
+        "precision": 1.0,
+        "recall": 0.2292,
+        "f1": 0.3729,
+        "n_pairs": 9045
+      },
+      "B_vs_final": {
+        "tp": 143,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.9862,
+        "recall": 0.9931,
+        "f1": 0.9896,
+        "n_pairs": 9045
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "pairs_completeness": 0.6878,
+  "gold_positive_pairs": 7746,
+  "proposed": 5328,
+  "candidate_pairs": 733308,
+  "candidates_per_record": 20.42,
+  "oracle": {
+    "tau": 0.99,
+    "merges": 3,
+    "correct": 0,
+    "wrong": 0,
+    "unverifiable": 3,
+    "coverage": 0.0,
+    "fmp_point": 0.0,
+    "fmp_worst": 1.0,
+    "fmp_best": 0.0
+  },
+  "alpha": 0.2
+}

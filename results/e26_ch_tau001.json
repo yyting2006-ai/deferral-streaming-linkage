@@ -1,0 +1,32 @@
+{
+  "city": "chicago",
+  "window": "dev",
+  "test": [
+    "2026-03-01",
+    "2026-03-07"
+  ],
+  "seed": 13,
+  "tau": 0.01,
+  "rows": [
+    {
+      "tau": 0.01,
+      "delta": 0.0,
+      "deadline_days": 0.0,
+      "visible": true,
+      "pair_precision": 0.570281,
+      "pair_recall": 0.377158,
+      "pair_f1": 0.454037,
+      "n_pos": 1506,
+      "max_pred_cluster": 17,
+      "dec_fmp": 0.460674,
+      "decisions": 4494,
+      "dec_precision": 0.539326,
+      "dec_coverage": 0.079217,
+      "n_deferred": 0,
+      "deferred_share": 0.0,
+      "latency_mean": 0.0,
+      "latency_max": 0,
+      "ms_per_record": 2.108
+    }
+  ]
+}

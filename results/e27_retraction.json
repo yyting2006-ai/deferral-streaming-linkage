@@ -1,0 +1,42 @@
+{
+  "city": "san_diego",
+  "window": "may",
+  "test": [
+    "2024-05-01",
+    "2024-05-31"
+  ],
+  "tau": 0.0358,
+  "seed": 13,
+  "rows": [
+    {
+      "policy": "revision",
+      "revisit_days": 7.0,
+      "pair_precision": 0.373059,
+      "pair_recall": 0.362897,
+      "pair_f1": 0.367908,
+      "dec_fmp": 0.47106,
+      "decisions": 8627,
+      "dec_coverage": 0.274371,
+      "max_pred_cluster": 19,
+      "n_moved": 2114,
+      "move_share": 0.0589,
+      "move_latency_mean": 7.87,
+      "ms_per_record": 3.518
+    },
+    {
+      "policy": "revision",
+      "revisit_days": 14.0,
+      "pair_precision": 0.38566,
+      "pair_recall": 0.370127,
+      "pair_f1": 0.377734,
+      "dec_fmp": 0.469781,
+      "decisions": 8621,
+      "dec_coverage": 0.270618,
+      "max_pred_cluster": 19,
+      "n_moved": 2248,
+      "move_share": 0.0626,
+      "move_latency_mean": 17.61,
+      "ms_per_record": 3.843
+    }
+  ]
+}

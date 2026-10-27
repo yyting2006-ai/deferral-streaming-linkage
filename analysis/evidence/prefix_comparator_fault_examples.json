@@ -1,0 +1,26 @@
+{
+  "scope": "Synthetic comparator examples only; historical real-data audit was not rerun.",
+  "cutoff": 3.0,
+  "results": [
+    {
+      "case": "extra_before_cutoff",
+      "historical_pass": true,
+      "timestamped_pass": false
+    },
+    {
+      "case": "one_fewer_before_cutoff",
+      "historical_pass": true,
+      "timestamped_pass": false
+    },
+    {
+      "case": "same_action_emitted_earlier",
+      "historical_pass": true,
+      "timestamped_pass": false
+    },
+    {
+      "case": "unchanged_control",
+      "historical_pass": true,
+      "timestamped_pass": true
+    }
+  ]
+}

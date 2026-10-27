@@ -1,0 +1,101 @@
+{
+  "city": "san_diego",
+  "test": [
+    "2024-05-01",
+    "2024-05-31"
+  ],
+  "library": "recordlinkage 0.16 ECMClassifier (unsupervised)",
+  "n_candidates": 733309,
+  "positives_in_pairs": 5329,
+  "native_pairs": 26999,
+  "rows": [
+    {
+      "kept_share": 0.0005,
+      "edges": 366,
+      "pair_precision": 0.168627,
+      "pair_recall": 0.033308,
+      "pair_f1": 0.055627,
+      "dec_fmp": 0.707865,
+      "decisions": 311,
+      "max_component": 49,
+      "fs_threshold": 157.513
+    },
+    {
+      "kept_share": 0.001,
+      "edges": 733,
+      "pair_precision": 0.160511,
+      "pair_recall": 0.045443,
+      "pair_f1": 0.070832,
+      "dec_fmp": 0.689655,
+      "decisions": 611,
+      "max_component": 54,
+      "fs_threshold": 157.513
+    },
+    {
+      "kept_share": 0.005,
+      "edges": 3666,
+      "pair_precision": 0.118265,
+      "pair_recall": 0.152724,
+      "pair_f1": 0.133303,
+      "dec_fmp": 0.658809,
+      "decisions": 2030,
+      "max_component": 102,
+      "fs_threshold": 156.775
+    },
+    {
+      "kept_share": 0.01,
+      "edges": 7333,
+      "pair_precision": 0.135125,
+      "pair_recall": 0.284921,
+      "pair_f1": 0.183313,
+      "dec_fmp": 0.575185,
+      "decisions": 3012,
+      "max_component": 131,
+      "fs_threshold": 156.775
+    },
+    {
+      "kept_share": 0.02,
+      "edges": 14666,
+      "pair_precision": 0.160394,
+      "pair_recall": 0.432998,
+      "pair_f1": 0.234079,
+      "dec_fmp": 0.516866,
+      "decisions": 5628,
+      "max_component": 136,
+      "fs_threshold": 153.251
+    },
+    {
+      "kept_share": 0.05,
+      "edges": 36665,
+      "pair_precision": 0.003888,
+      "pair_recall": 0.742319,
+      "pair_f1": 0.007736,
+      "dec_fmp": 0.45283,
+      "decisions": 13417,
+      "max_component": 4882,
+      "fs_threshold": -3.424
+    },
+    {
+      "kept_share": 0.1,
+      "edges": 73330,
+      "pair_precision": 0.000225,
+      "pair_recall": 0.11606,
+      "pair_f1": 0.000449,
+      "dec_fmp": 0.25,
+      "decisions": 23174,
+      "max_component": 19083,
+      "fs_threshold": -6.211
+    }
+  ],
+  "best": {
+    "kept_share": 0.02,
+    "edges": 14666,
+    "pair_precision": 0.160394,
+    "pair_recall": 0.432998,
+    "pair_f1": 0.234079,
+    "dec_fmp": 0.516866,
+    "decisions": 5628,
+    "max_component": 136,
+    "fs_threshold": 153.251
+  }
+}

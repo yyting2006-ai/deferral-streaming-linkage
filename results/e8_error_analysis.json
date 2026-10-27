@@ -1,0 +1,174 @@
+{
+  "window": [
+    "2024-05-01",
+    "2024-05-31"
+  ],
+  "tau": 0.85,
+  "n_decisions": 35649,
+  "n_merges": 9180,
+  "decision_fmp": 0.5832,
+  "buckets": [
+    {
+      "bucket": "exact addr | same svc | same-day",
+      "decisions": 3011,
+      "adjudicable": 712,
+      "correct": 354,
+      "wrong": 358,
+      "unverifiable": 2299,
+      "fmp": 0.5028
+    },
+    {
+      "bucket": "exact addr | same svc | 1-7d",
+      "decisions": 2210,
+      "adjudicable": 645,
+      "correct": 302,
+      "wrong": 343,
+      "unverifiable": 1565,
+      "fmp": 0.5318
+    },
+    {
+      "bucket": "no addr | same svc | same-day",
+      "decisions": 9149,
+      "adjudicable": 506,
+      "correct": 206,
+      "wrong": 300,
+      "unverifiable": 8643,
+      "fmp": 0.5929
+    },
+    {
+      "bucket": "no addr | same svc | 1-7d",
+      "decisions": 5459,
+      "adjudicable": 436,
+      "correct": 152,
+      "wrong": 284,
+      "unverifiable": 5023,
+      "fmp": 0.6514
+    },
+    {
+      "bucket": "same block | same svc | same-day",
+      "decisions": 1340,
+      "adjudicable": 208,
+      "correct": 97,
+      "wrong": 111,
+      "unverifiable": 1132,
+      "fmp": 0.5337
+    },
+    {
+      "bucket": "same block | same svc | 1-7d",
+      "decisions": 1114,
+      "adjudicable": 149,
+      "correct": 44,
+      "wrong": 105,
+      "unverifiable": 965,
+      "fmp": 0.7047
+    },
+    {
+      "bucket": "no addr | diff svc | 1-7d",
+      "decisions": 4733,
+      "adjudicable": 105,
+      "correct": 7,
+      "wrong": 98,
+      "unverifiable": 4628,
+      "fmp": 0.9333
+    },
+    {
+      "bucket": "exact addr | same svc | >7d",
+      "decisions": 1329,
+      "adjudicable": 176,
+      "correct": 93,
+      "wrong": 83,
+      "unverifiable": 1153,
+      "fmp": 0.4716
+    },
+    {
+      "bucket": "no addr | same svc | >7d",
+      "decisions": 1522,
+      "adjudicable": 108,
+      "correct": 29,
+      "wrong": 79,
+      "unverifiable": 1414,
+      "fmp": 0.7315
+    },
+    {
+      "bucket": "no addr | diff svc | same-day",
+      "decisions": 2094,
+      "adjudicable": 78,
+      "correct": 18,
+      "wrong": 60,
+      "unverifiable": 2016,
+      "fmp": 0.7692
+    },
+    {
+      "bucket": "no addr | diff svc | >7d",
+      "decisions": 2410,
+      "adjudicable": 46,
+      "correct": 0,
+      "wrong": 46,
+      "unverifiable": 2364,
+      "fmp": 1.0
+    },
+    {
+      "bucket": "same block | same svc | >7d",
+      "decisions": 698,
+      "adjudicable": 55,
+      "correct": 23,
+      "wrong": 32,
+      "unverifiable": 643,
+      "fmp": 0.5818
+    },
+    {
+      "bucket": "exact addr | diff svc | same-day",
+      "decisions": 201,
+      "adjudicable": 31,
+      "correct": 26,
+      "wrong": 5,
+      "unverifiable": 170,
+      "fmp": 0.1613
+    },
+    {
+      "bucket": "same block | diff svc | same-day",
+      "decisions": 75,
+      "adjudicable": 12,
+      "correct": 8,
+      "wrong": 4,
+      "unverifiable": 63,
+      "fmp": 0.3333
+    },
+    {
+      "bucket": "exact addr | diff svc | 1-7d",
+      "decisions": 119,
+      "adjudicable": 9,
+      "correct": 5,
+      "wrong": 4,
+      "unverifiable": 110,
+      "fmp": 0.4444
+    },
+    {
+      "bucket": "same block | diff svc | 1-7d",
+      "decisions": 59,
+      "adjudicable": 6,
+      "correct": 3,
+      "wrong": 3,
+      "unverifiable": 53,
+      "fmp": 0.5
+    },
+    {
+      "bucket": "exact addr | diff svc | >7d",
+      "decisions": 91,
+      "adjudicable": 6,
+      "correct": 4,
+      "wrong": 2,
+      "unverifiable": 85,
+      "fmp": 0.3333
+    },
+    {
+      "bucket": "same block | diff svc | >7d",
+      "decisions": 35,
+      "adjudicable": 1,
+      "correct": 0,
+      "wrong": 1,
+      "unverifiable": 34,
+      "fmp": 1.0
+    }
+  ]
+}

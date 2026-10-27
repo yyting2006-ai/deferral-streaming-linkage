@@ -1,0 +1,99 @@
+{
+  "city": "san_diego",
+  "confirm": [
+    "2024-05-01",
+    "2024-05-31"
+  ],
+  "calibration": [
+    "2024-03-01",
+    "2024-03-31"
+  ],
+  "candidate_base_rate": 0.006981522310525179,
+  "calibration_note": {
+    "marginal_null": 349739,
+    "selected_null": 1541,
+    "selected_pos": 1739,
+    "median_null_max": 0.9605369018922535,
+    "median_correct_max": 0.9860254664122473
+  },
+  "results": [
+    {
+      "alpha": 0.2,
+      "tau_plugin": 0.9758,
+      "plugin": {
+        "decisions": 5023,
+        "dec_correct": 1212,
+        "dec_wrong": 792,
+        "dec_unverifiable": 3019,
+        "dec_fmp": 0.39521,
+        "dec_precision": 0.60479,
+        "dec_coverage": 0.398965,
+        "seconds": 73.4,
+        "per_record_ms": 2.04
+      },
+      "conformal_marginal": {
+        "decisions": 32253,
+        "dec_correct": 344,
+        "dec_wrong": 1554,
+        "dec_unverifiable": 30355,
+        "dec_fmp": 0.818757,
+        "dec_precision": 0.181243,
+        "dec_coverage": 0.058847,
+        "seconds": 62.2,
+        "per_record_ms": 1.73,
+        "hypotheses": 35497
+      },
+      "conformal_selected": {
+        "decisions": 0,
+        "dec_correct": 0,
+        "dec_wrong": 0,
+        "dec_unverifiable": 0,
+        "dec_fmp": 0.0,
+        "dec_precision": NaN,
+        "dec_coverage": 0.0,
+        "seconds": 75.0,
+        "per_record_ms": 2.09,
+        "hypotheses": 35687
+      }
+    },
+    {
+      "alpha": 0.5,
+      "tau_plugin": 0.9758,
+      "plugin": {
+        "decisions": 5023,
+        "dec_correct": 1212,
+        "dec_wrong": 792,
+        "dec_unverifiable": 3019,
+        "dec_fmp": 0.39521,
+        "dec_precision": 0.60479,
+        "dec_coverage": 0.398965,
+        "seconds": 75.1,
+        "per_record_ms": 2.09
+      },
+      "conformal_marginal": {
+        "decisions": 33632,
+        "dec_correct": 171,
+        "dec_wrong": 1366,
+        "dec_unverifiable": 32095,
+        "dec_fmp": 0.888744,
+        "dec_precision": 0.111256,
+        "dec_coverage": 0.045701,
+        "seconds": 37.7,
+        "per_record_ms": 1.05,
+        "hypotheses": 35313
+      },
+      "conformal_selected": {
+        "decisions": 0,
+        "dec_correct": 0,
+        "dec_wrong": 0,
+        "dec_unverifiable": 0,
+        "dec_fmp": 0.0,
+        "dec_precision": NaN,
+        "dec_coverage": 0.0,
+        "seconds": 78.4,
+        "per_record_ms": 2.18,
+        "hypotheses": 35687
+      }
+    }
+  ]
+}

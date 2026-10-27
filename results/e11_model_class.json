@@ -1,0 +1,58 @@
+{
+  "cal": [
+    "2024-03-01",
+    "2024-03-31"
+  ],
+  "test": [
+    "2024-05-01",
+    "2024-05-31"
+  ],
+  "target_fmp": 0.4,
+  "rows": [
+    {
+      "model": "rule_block7",
+      "decisions": 10130,
+      "dec_correct": 1060,
+      "dec_wrong": 1100,
+      "dec_unverifiable": 7970,
+      "dec_fmp": 0.509259,
+      "dec_precision": 0.490741,
+      "dec_coverage": 0.213228,
+      "tau": 0.3
+    },
+    {
+      "model": "logistic",
+      "decisions": 12908,
+      "dec_correct": 1173,
+      "dec_wrong": 1352,
+      "dec_unverifiable": 10383,
+      "dec_fmp": 0.535446,
+      "dec_precision": 0.464554,
+      "dec_coverage": 0.195615,
+      "tau": 0.3
+    },
+    {
+      "model": "gbdt",
+      "decisions": 4685,
+      "dec_correct": 1313,
+      "dec_wrong": 746,
+      "dec_unverifiable": 2626,
+      "dec_fmp": 0.362312,
+      "dec_precision": 0.637688,
+      "dec_coverage": 0.439488,
+      "tau": 0.3
+    },
+    {
+      "model": "mlp",
+      "decisions": 10136,
+      "dec_correct": 979,
+      "dec_wrong": 741,
+      "dec_unverifiable": 8416,
+      "dec_fmp": 0.430814,
+      "dec_precision": 0.569186,
+      "dec_coverage": 0.169692,
+      "tau": 0.3
+    }
+  ],
+  "failures": {}
+}

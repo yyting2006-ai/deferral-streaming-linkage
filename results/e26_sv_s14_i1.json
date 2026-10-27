@@ -1,0 +1,32 @@
+{
+  "city": "sandiego",
+  "window": "may",
+  "test": [
+    "2024-05-01",
+    "2024-05-31"
+  ],
+  "seed": 13,
+  "tau": 0.0358,
+  "rows": [
+    {
+      "tau": 0.0358,
+      "delta": 1.0,
+      "deadline_days": 7.0,
+      "visible": true,
+      "pair_precision": 0.394234,
+      "pair_recall": 0.455461,
+      "pair_f1": 0.422642,
+      "n_pos": 7746,
+      "max_pred_cluster": 21,
+      "dec_fmp": 0.449946,
+      "decisions": 9338,
+      "dec_precision": 0.550054,
+      "dec_coverage": 0.296316,
+      "n_deferred": 967,
+      "deferred_share": 0.0269,
+      "latency_mean": 8.81,
+      "latency_max": 14,
+      "ms_per_record": 2.618
+    }
+  ]
+}

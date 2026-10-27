@@ -1,0 +1,54 @@
+{
+  "window": "2024-05-01..2024-05-03",
+  "n_records": 4192,
+  "prefix_safe": {
+    "n_records": 4192,
+    "indices": [
+      1676,
+      2515,
+      3353
+    ],
+    "prefix_pair_changes": 0,
+    "per_index": [
+      {
+        "s": 1676,
+        "prefix_pairs_changed": 0
+      },
+      {
+        "s": 2515,
+        "prefix_pairs_changed": 0
+      },
+      {
+        "s": 3353,
+        "prefix_pairs_changed": 0
+      }
+    ],
+    "examples": [],
+    "passed": true
+  },
+  "future_visible": {
+    "n_records": 4192,
+    "indices": [
+      1676,
+      2515,
+      3353
+    ],
+    "prefix_pair_changes": 0,
+    "per_index": [
+      {
+        "s": 1676,
+        "prefix_pairs_changed": 0
+      },
+      {
+        "s": 2515,
+        "prefix_pairs_changed": 0
+      },
+      {
+        "s": 3353,
+        "prefix_pairs_changed": 0
+      }
+    ],
+    "examples": [],
+    "passed": true
+  }
+}

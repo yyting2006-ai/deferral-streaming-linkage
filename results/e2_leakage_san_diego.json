@@ -1,0 +1,99 @@
+{
+  "city": "san_diego",
+  "windows": {
+    "train": [
+      "2024-01-01",
+      "2024-02-29"
+    ],
+    "dev": [
+      "2024-04-01",
+      "2024-04-30"
+    ],
+    "confirm": [
+      "2024-05-01",
+      "2024-05-31"
+    ]
+  },
+  "candidate_pairs": {
+    "n": 441457,
+    "pos": 3080,
+    "base_rate": 0.006976896896958351
+  },
+  "feature_time": {
+    "f1_arrival": null,
+    "f1_with_post_hoc": null,
+    "precision_arrival": null,
+    "recall_arrival": null
+  },
+  "rows": [
+    {
+      "method": "full",
+      "tau": 0.85,
+      "dev_f1": 0.509948,
+      "prefix": {
+        "precision": 0.362615,
+        "recall": 0.458301,
+        "f1": 0.404881,
+        "fmp": 0.637385,
+        "merge_rate": 0.69693
+      },
+      "leaky": {
+        "precision": 0.55873,
+        "recall": 0.204493,
+        "f1": 0.299405,
+        "fmp": 0.44127,
+        "merge_rate": 0.47629
+      },
+      "prefix_b3": 0.769892,
+      "leaky_b3": 0.735975,
+      "prefix_p95_ms": 3.438,
+      "leaky_total_s": 77.0
+    },
+    {
+      "method": "text_only",
+      "tau": 0.85,
+      "dev_f1": 0.139059,
+      "prefix": {
+        "precision": 0.185057,
+        "recall": 0.130777,
+        "f1": 0.153253,
+        "fmp": 0.814943,
+        "merge_rate": 0.40579
+      },
+      "leaky": {
+        "precision": 0.15099,
+        "recall": 0.023625,
+        "f1": 0.040857,
+        "fmp": 0.84901,
+        "merge_rate": 0.18795
+      },
+      "prefix_b3": 0.644343,
+      "leaky_b3": 0.643831,
+      "prefix_p95_ms": 3.706,
+      "leaky_total_s": 83.2
+    },
+    {
+      "method": "struct_only",
+      "tau": 0.85,
+      "dev_f1": 0.512801,
+      "prefix": {
+        "precision": 0.365389,
+        "recall": 0.457656,
+        "f1": 0.40635,
+        "fmp": 0.634611,
+        "merge_rate": 0.69476
+      },
+      "leaky": {
+        "precision": 0.532265,
+        "recall": 0.167183,
+        "f1": 0.254445,
+        "fmp": 0.467735,
+        "merge_rate": 0.45135
+      },
+      "prefix_b3": 0.771247,
+      "leaky_b3": 0.732505,
+      "prefix_p95_ms": 3.816,
+      "leaky_total_s": 82.6
+    }
+  ]
+}

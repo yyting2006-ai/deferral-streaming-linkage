@@ -1,0 +1,111 @@
+{
+  "target_fmp": 0.4,
+  "san_diego": {
+    "logistic": {
+      "decisions": 8071,
+      "dec_correct": 1237,
+      "dec_wrong": 1216,
+      "dec_unverifiable": 5618,
+      "dec_fmp": 0.49572,
+      "dec_precision": 0.50428,
+      "dec_coverage": 0.303928,
+      "tau": 0.913,
+      "pair_recall": 0.431965,
+      "pair_precision": 0.364488,
+      "pair_f1": 0.395368,
+      "n_gold_pos": 7746,
+      "model": "logistic",
+      "cal_fmp": 0.394586
+    },
+    "gbdt": {
+      "decisions": 9502,
+      "dec_correct": 1333,
+      "dec_wrong": 1127,
+      "dec_unverifiable": 7042,
+      "dec_fmp": 0.45813,
+      "dec_precision": 0.54187,
+      "dec_coverage": 0.258893,
+      "tau": 0.0204,
+      "pair_recall": 0.451975,
+      "pair_precision": 0.392577,
+      "pair_f1": 0.420187,
+      "n_gold_pos": 7746,
+      "model": "gbdt",
+      "cal_fmp": 0.345942
+    }
+  },
+  "chicago_transfer": {
+    "logistic": {
+      "decisions": 0,
+      "dec_correct": 0,
+      "dec_wrong": 0,
+      "dec_unverifiable": 0,
+      "dec_fmp": 0.0,
+      "dec_precision": NaN,
+      "dec_coverage": 0.0,
+      "tau": 0.913,
+      "pair_recall": 0.0,
+      "pair_precision": NaN,
+      "pair_f1": NaN,
+      "n_gold_pos": 4898,
+      "model": "sd_logistic"
+    },
+    "gbdt": {
+      "decisions": 0,
+      "dec_correct": 0,
+      "dec_wrong": 0,
+      "dec_unverifiable": 0,
+      "dec_fmp": 0.0,
+      "dec_precision": NaN,
+      "dec_coverage": 0.0,
+      "tau": 0.0204,
+      "pair_recall": 0.0,
+      "pair_precision": NaN,
+      "pair_f1": NaN,
+      "n_gold_pos": 4898,
+      "model": "sd_gbdt"
+    }
+  },
+  "importance_gbdt": [
+    [
+      "geo_dist",
+      0.3559
+    ],
+    [
+      "log_gap",
+      0.2691
+    ],
+    [
+      "desc_missing",
+      0.2357
+    ],
+    [
+      "geo_missing",
+      0.0381
+    ],
+    [
+      "char3_jac",
+      0.0319
+    ],
+    [
+      "same_service",
+      0.019
+    ],
+    [
+      "len_ratio",
+      0.0135
+    ],
+    [
+      "cos",
+      0.0085
+    ],
+    [
+      "jac",
+      0.008
+    ],
+    [
+      "same_addr",
+      0.0077
+    ]
+  ]
+}

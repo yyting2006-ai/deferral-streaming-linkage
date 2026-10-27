@@ -1,0 +1,2 @@
+# Optional; install after requirements.txt.
+matplotlib==3.10.8

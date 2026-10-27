@@ -1,0 +1,52 @@
+{
+  "city": "chicago",
+  "window": "test",
+  "test": [
+    "2026-03-08",
+    "2026-03-14"
+  ],
+  "seed": 13,
+  "tau": 0.025,
+  "rows": [
+    {
+      "tau": 0.025,
+      "delta": 0.0,
+      "deadline_days": 0.0,
+      "visible": true,
+      "pair_precision": 0.75534,
+      "pair_recall": 0.261161,
+      "pair_f1": 0.388127,
+      "n_pos": 2979,
+      "max_pred_cluster": 9,
+      "dec_fmp": 0.228471,
+      "decisions": 4572,
+      "dec_precision": 0.771529,
+      "dec_coverage": 0.124453,
+      "n_deferred": 0,
+      "deferred_share": 0.0,
+      "latency_mean": 0.0,
+      "latency_max": 0,
+      "ms_per_record": 1.895
+    },
+    {
+      "tau": 0.025,
+      "delta": 0.1,
+      "deadline_days": 1.0,
+      "visible": true,
+      "pair_precision": 0.741245,
+      "pair_recall": 0.255791,
+      "pair_f1": 0.380334,
+      "n_pos": 2979,
+      "max_pred_cluster": 12,
+      "dec_fmp": 0.216749,
+      "decisions": 4149,
+      "dec_precision": 0.783251,
+      "dec_coverage": 0.146782,
+      "n_deferred": 3129,
+      "deferred_share": 0.0747,
+      "latency_mean": 0.92,
+      "latency_max": 2,
+      "ms_per_record": 2.028
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Versions observed in the environment used for this revision's checks.
+# Complete raw-data replay has not been revalidated in a fresh environment.
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.17.0
+scikit-learn==1.8.0
+splink==5.0.0
+duckdb==2.0.0
+recordlinkage==0.16

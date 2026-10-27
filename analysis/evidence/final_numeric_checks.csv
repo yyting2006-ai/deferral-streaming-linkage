@@ -1,0 +1,83 @@
+claim,file,locator,value,note
+San Diego records,e1_census.json,[0].records,429924,direct JSON value
+San Diego raw_links,e1_census.json,[0].raw_links,57463,direct JSON value
+San Diego resolved_links,e1_census.json,[0].resolved_links,56153,direct JSON value
+San Diego known_records,e1_census.json,[0].known_records,87254,direct JSON value
+San Diego known_rate,e1_census.json,[0].known_rate,0.202952,direct JSON value
+San Diego lag_gt_30d,e1_census.json,[0].lag_gt_30d,0.2187,direct JSON value
+Chicago lag_p50,e1_census.json,[1].lag_p50,0.422,resolved workflow parent-link lag; not all component pairs
+Chicago lag_le_7d,e1_census.json,[1].lag_le_7d,0.8423,resolved workflow parent-link lag; not all component pairs
+May total positive pairs,e30_lag_stratified.json,sum positive_pairs_by_lag[].n,7746,direct JSON value
+May <=1d positive pairs,e30_lag_stratified.json,positive_pairs_by_lag[0].n,4144,direct JSON value
+May 1-7d positive pairs,e30_lag_stratified.json,positive_pairs_by_lag[1].n,2698,direct JSON value
+May 8-30d positive pairs,e30_lag_stratified.json,positive_pairs_by_lag[2].n,904,direct JSON value
+Legacy full F1,e2_leakage_san_diego.json,rows[0].prefix.f1,0.404881,separate logistic feature ablation at tau=.85; not the current GBT experiment
+Legacy text_only F1,e2_leakage_san_diego.json,rows[1].prefix.f1,0.153253,separate logistic feature ablation at tau=.85; not the current GBT experiment
+Logistic arrival pair_f1,e26_logit_smoke.json,rows[0].pair_f1,0.382911,direct JSON value
+Logistic arrival dec_fmp,e26_logit_smoke.json,rows[0].dec_fmp,0.504688,direct JSON value
+Logistic band pair_f1,e26_logit_s13.json,rows[0].pair_f1,0.398513,direct JSON value
+Logistic band dec_fmp,e26_logit_s13.json,rows[0].dec_fmp,0.473843,direct JSON value
+Logistic cutoff7 pair_f1,e26_logit_stale07.json,rows[0].pair_f1,0.408081,direct JSON value
+Logistic cutoff7 dec_fmp,e26_logit_stale07.json,rows[0].dec_fmp,0.447425,direct JSON value
+Chicago development band gain,e26_ch_dev_cal.json,max rows[delta>0].pair_f1 minus rows[0].pair_f1,0.003843000000000041,"four nonzero bands; five total configurations including arrival; tau=.025, D=1"
+Chicago later-week band gain,e26_ch_test.json,rows[1].pair_f1 minus rows[0].pair_f1,-0.007792999999999994,direct JSON value
+Louisville records,e35b_louisville.json,records,292,direct JSON value
+Louisville clusters,e35b_louisville.json,clusters,226,direct JSON value
+Louisville multi_record_clusters,e35b_louisville.json,multi_record_clusters,26,direct JSON value
+Louisville span10,e35b_louisville.json,span10,5,direct JSON value
+Louisville 0-1 positive fraction,e35b_louisville.json,buckets.0-1.same/pairs,0.08007448789571694,43/537; same service and token Jaccard >=.10
+Louisville 2-3 positive fraction,e35b_louisville.json,buckets.2-3.same/pairs,0.04918032786885246,18/366; same service and token Jaccard >=.10
+Louisville 4-6 positive fraction,e35b_louisville.json,buckets.4-6.same/pairs,0.08793969849246232,35/398; same service and token Jaccard >=.10
+Louisville 7-13 positive fraction,e35b_louisville.json,buckets.7-13.same/pairs,0.0594679186228482,38/639; same service and token Jaccard >=.10
+Louisville development_gold.json date range,private R652/development_gold.json,records[].arrival_day,2024-06-03 to 2024-06-09,private metadata checked; no record identifiers/text exported
+Louisville development_gold.json shared namespace,private R652/development_gold.json,scope,full_two_week_boundary_with_shared_cluster_namespace,direct JSON value
+Louisville temporal_confirmation_gold.json date range,private R652/temporal_confirmation_gold.json,records[].arrival_day,2024-06-10 to 2024-06-16,private metadata checked; no record identifiers/text exported
+Louisville temporal_confirmation_gold.json shared namespace,private R652/temporal_confirmation_gold.json,scope,full_two_week_boundary_with_shared_cluster_namespace,direct JSON value
+May arrival projected maximum range,comparison_seed_rows.csv,max_pred_cluster,19--19,"computed on workflow-known projection K by evaluate_partition, not all incoming records"
+May band projected maximum range,comparison_seed_rows.csv,max_pred_cluster,19--19,"computed on workflow-known projection K by evaluate_partition, not all incoming records"
+May gate5 projected maximum range,comparison_seed_rows.csv,max_pred_cluster,19--19,"computed on workflow-known projection K by evaluate_partition, not all incoming records"
+May cutoff10 projected maximum range,comparison_seed_rows.csv,max_pred_cluster,19--19,"computed on workflow-known projection K by evaluate_partition, not all incoming records"
+May gate5 mean pair_f1,comparison_seed_rows.csv,May gate5 pair_f1,0.4731871111111111,"nine seed mean, 1--8 and 13"
+May band mean pair_f1,comparison_seed_rows.csv,May band pair_f1,0.4614301111111111,"nine seed mean, 1--8 and 13"
+May cutoff10 mean pair_f1,comparison_seed_rows.csv,May cutoff10 pair_f1,0.44870777777777776,"nine seed mean, 1--8 and 13"
+Gate5 minus May cutoff10 pair_f1,comparison_seed_rows.csv,"matched seeds 1--8,13",0.02447933333333332,"t95% interval [0.016885014271791354,0.032073652394875286]"
+Gate5 minus May band pair_f1,comparison_seed_rows.csv,"matched seeds 1--8,13",0.011756999999999993,"t95% interval [0.008379900989388338,0.015134099010611649]"
+May gate5 mean pair_precision,comparison_seed_rows.csv,May gate5 pair_precision,0.5039125555555556,"nine seed mean, 1--8 and 13"
+May band mean pair_precision,comparison_seed_rows.csv,May band pair_precision,0.5241098888888889,"nine seed mean, 1--8 and 13"
+May cutoff10 mean pair_precision,comparison_seed_rows.csv,May cutoff10 pair_precision,0.47910566666666665,"nine seed mean, 1--8 and 13"
+Gate5 minus May cutoff10 pair_precision,comparison_seed_rows.csv,"matched seeds 1--8,13",0.024806888888888892,"t95% interval [0.01630768234894768,0.033306095428830104]"
+Gate5 minus May band pair_precision,comparison_seed_rows.csv,"matched seeds 1--8,13",-0.02019733333333332,"t95% interval [-0.026527654963779398,-0.013867011702887243]"
+May gate5 mean pair_recall,comparison_seed_rows.csv,May gate5 pair_recall,0.4460223333333333,"nine seed mean, 1--8 and 13"
+May band mean pair_recall,comparison_seed_rows.csv,May band pair_recall,0.4121697777777778,"nine seed mean, 1--8 and 13"
+May cutoff10 mean pair_recall,comparison_seed_rows.csv,May cutoff10 pair_recall,0.42198122222222223,"nine seed mean, 1--8 and 13"
+Gate5 minus May cutoff10 pair_recall,comparison_seed_rows.csv,"matched seeds 1--8,13",0.0240411111111111,"t95% interval [0.016990586772595507,0.031091635449626693]"
+Gate5 minus May band pair_recall,comparison_seed_rows.csv,"matched seeds 1--8,13",0.03385255555555554,"t95% interval [0.030208979646899968,0.03749613146421111]"
+May gate5 mean dec_fmp,comparison_seed_rows.csv,May gate5 dec_fmp,0.35608711111111113,"nine seed mean, 1--8 and 13"
+May band mean dec_fmp,comparison_seed_rows.csv,May band dec_fmp,0.3244706666666667,"nine seed mean, 1--8 and 13"
+May cutoff10 mean dec_fmp,comparison_seed_rows.csv,May cutoff10 dec_fmp,0.378246,"nine seed mean, 1--8 and 13"
+Gate5 minus May cutoff10 dec_fmp,comparison_seed_rows.csv,"matched seeds 1--8,13",-0.022158888888888895,"t95% interval [-0.03048606416282886,-0.01383171361494893]"
+Gate5 minus May band dec_fmp,comparison_seed_rows.csv,"matched seeds 1--8,13",0.03161644444444444,"t95% interval [0.024289596580748127,0.03894329230814075]"
+May gate5 mean dec_coverage,comparison_seed_rows.csv,May gate5 dec_coverage,0.29767933333333335,"nine seed mean, 1--8 and 13"
+May band mean dec_coverage,comparison_seed_rows.csv,May band dec_coverage,0.3210582222222222,"nine seed mean, 1--8 and 13"
+May cutoff10 mean dec_coverage,comparison_seed_rows.csv,May cutoff10 dec_coverage,0.31132044444444446,"nine seed mean, 1--8 and 13"
+Gate5 minus May cutoff10 dec_coverage,comparison_seed_rows.csv,"matched seeds 1--8,13",-0.01364111111111111,"t95% interval [-0.01624257236347054,-0.011039649858751683]"
+Gate5 minus May band dec_coverage,comparison_seed_rows.csv,"matched seeds 1--8,13",-0.023378888888888876,"t95% interval [-0.028186670736222153,-0.0185711070415556]"
+May gate5 mean deferred_share,comparison_seed_rows.csv,May gate5 deferred_share,0.06292222222222223,"nine seed mean, 1--8 and 13"
+May band mean deferred_share,comparison_seed_rows.csv,May band deferred_share,0.16822222222222222,"nine seed mean, 1--8 and 13"
+May cutoff10 mean deferred_share,comparison_seed_rows.csv,May cutoff10 deferred_share,0.0,"nine seed mean, 1--8 and 13"
+Gate5 minus May cutoff10 deferred_share,comparison_seed_rows.csv,"matched seeds 1--8,13",0.06292222222222223,"t95% interval [0.060759074466594745,0.06508536997784971]"
+Gate5 minus May band deferred_share,comparison_seed_rows.csv,"matched seeds 1--8,13",-0.1053,"t95% interval [-0.10922566679975733,-0.10137433320024268]"
+May gate2 mean F1,e26_sv2_s1.json;e26_sv2_s2.json;e26_sv2_s3.json;e26_sv2_s4.json;e26_sv2_s5.json;e26_sv2_s6.json;e26_sv2_s7.json;e26_sv2_s8.json;e26_svb_s2min.json,rows[delta=.5].pair_f1,0.4802221111111111,direct JSON value
+May gate3 mean F1,e26_svb_s1.json;e26_svb_s2.json;e26_svb_s3.json;e26_svb_s4.json;e26_svb_s5.json;e26_svb_s6.json;e26_svb_s7.json;e26_svb_s8.json;e26_svb_s3_i0.json,rows[delta=.5].pair_f1,0.47667055555555554,direct JSON value
+e31_splink_sandiego.json capped best F1,e31_splink_sandiego.json,rows[1].pair_f1,0.314217,direct JSON value
+e31_splink_sandiego.json capped projected max,e31_splink_sandiego.json,rows[1].max_pred_cluster,20,direct JSON value
+e31_splink_sandiego.json native best F1,e31_splink_sandiego.json,rows[0].pair_f1,0.219495,direct JSON value
+e31_splink_sandiego.json native projected max,e31_splink_sandiego.json,rows[0].max_pred_cluster,151,direct JSON value
+e32_splink_supervised.json capped best F1,e32_splink_supervised.json,rows[1].pair_f1,0.336961,direct JSON value
+e32_splink_supervised.json capped projected max,e32_splink_supervised.json,rows[1].max_pred_cluster,20,direct JSON value
+e32_splink_supervised.json native best F1,e32_splink_supervised.json,rows[2].pair_f1,0.218635,direct JSON value
+e32_splink_supervised.json native projected max,e32_splink_supervised.json,rows[2].max_pred_cluster,151,direct JSON value
+e34_splink_prior.json capped best F1,e34_splink_prior.json,rows[5].pair_f1,0.341922,direct JSON value
+e34_splink_prior.json capped projected max,e34_splink_prior.json,rows[5].max_pred_cluster,20,direct JSON value
+e34_splink_prior.json native best F1,e34_splink_prior.json,rows[8].pair_f1,0.218635,direct JSON value
+e34_splink_prior.json native projected max,e34_splink_prior.json,rows[8].max_pred_cluster,151,direct JSON value

@@ -1,0 +1,101 @@
+{
+  "window": [
+    "2024-05-01",
+    "2024-05-31"
+  ],
+  "n_records": 35915,
+  "tau": 0.85,
+  "rows": [
+    {
+      "knob": "k_candidates",
+      "value": 10,
+      "precision": 0.359245,
+      "recall": 0.439711,
+      "f1": 0.395426,
+      "fmp": 0.640755,
+      "merge_rate": 0.66656,
+      "b3": 0.768537,
+      "ms_mean": 0.634,
+      "ms_p95": 1.127,
+      "wall_s": 22.8
+    },
+    {
+      "knob": "k_candidates",
+      "value": 25,
+      "precision": 0.364537,
+      "recall": 0.451459,
+      "f1": 0.403368,
+      "fmp": 0.635463,
+      "merge_rate": 0.67989,
+      "b3": 0.77012,
+      "ms_mean": 1.113,
+      "ms_p95": 1.931,
+      "wall_s": 40.0
+    },
+    {
+      "knob": "k_candidates",
+      "value": 60,
+      "precision": 0.361934,
+      "recall": 0.459076,
+      "f1": 0.404758,
+      "fmp": 0.638066,
+      "merge_rate": 0.69709,
+      "b3": 0.771224,
+      "ms_mean": 2.228,
+      "ms_p95": 3.997,
+      "wall_s": 80.0
+    },
+    {
+      "knob": "k_candidates",
+      "value": 120,
+      "precision": 0.373216,
+      "recall": 0.475988,
+      "f1": 0.418383,
+      "fmp": 0.626784,
+      "merge_rate": 0.70902,
+      "b3": 0.773007,
+      "ms_mean": 4.146,
+      "ms_p95": 7.378,
+      "wall_s": 148.9
+    },
+    {
+      "knob": "window_days",
+      "value": 15.0,
+      "precision": 0.36484,
+      "recall": 0.458947,
+      "f1": 0.406518,
+      "fmp": 0.63516,
+      "merge_rate": 0.68857,
+      "b3": 0.771893,
+      "ms_mean": 2.164,
+      "ms_p95": 3.728,
+      "wall_s": 77.8
+    },
+    {
+      "knob": "window_days",
+      "value": 30.0,
+      "precision": 0.361934,
+      "recall": 0.459076,
+      "f1": 0.404758,
+      "fmp": 0.638066,
+      "merge_rate": 0.69709,
+      "b3": 0.771224,
+      "ms_mean": 2.467,
+      "ms_p95": 4.324,
+      "wall_s": 88.6
+    },
+    {
+      "knob": "window_days",
+      "value": 60.0,
+      "precision": 0.361934,
+      "recall": 0.459076,
+      "f1": 0.404758,
+      "fmp": 0.638066,
+      "merge_rate": 0.69709,
+      "b3": 0.771224,
+      "ms_mean": 2.596,
+      "ms_p95": 4.48,
+      "wall_s": 93.3
+    }
+  ]
+}

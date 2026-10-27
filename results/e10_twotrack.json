@@ -1,0 +1,327 @@
+{
+  "eval_window": [
+    "2024-05-01",
+    "2024-05-31"
+  ],
+  "seed_history": [
+    "2024-03-01",
+    "2024-04-30"
+  ],
+  "tau": 0.85,
+  "rows": [
+    {
+      "overall": {
+        "gold_positive": 23750,
+        "tp": 11031,
+        "fp": 20446,
+        "precision": 0.3504,
+        "recall": 0.4645,
+        "f1": 0.3995,
+        "fmp": 0.6496
+      },
+      "by_gap": {
+        "$\\le$7d": {
+          "gold_positive": 18863,
+          "predicted": 59151,
+          "tp": 9761,
+          "fp": 13021,
+          "unverifiable": 36369,
+          "precision": 0.4285,
+          "recall": 0.5175,
+          "fmp": 0.5715,
+          "coverage": 0.3851
+        },
+        "8--30d": {
+          "gold_positive": 4258,
+          "predicted": 23427,
+          "tp": 1247,
+          "fp": 6746,
+          "unverifiable": 15434,
+          "precision": 0.156,
+          "recall": 0.2929,
+          "fmp": 0.844,
+          "coverage": 0.3412
+        },
+        "31--90d": {
+          "gold_positive": 629,
+          "predicted": 2214,
+          "tp": 23,
+          "fp": 679,
+          "unverifiable": 1512,
+          "precision": 0.0328,
+          "recall": 0.0366,
+          "fmp": 0.9672,
+          "coverage": 0.3171
+        },
+        "$>$90d": {
+          "gold_positive": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "unverifiable": 0,
+          "precision": null,
+          "recall": null,
+          "fmp": null,
+          "coverage": null
+        }
+      },
+      "seconds": 208.4,
+      "ms_per_record": 1.98,
+      "n_merges": 27509,
+      "mode": "single",
+      "window_days": 15.0
+    },
+    {
+      "overall": {
+        "gold_positive": 23750,
+        "tp": 11206,
+        "fp": 22036,
+        "precision": 0.3371,
+        "recall": 0.4718,
+        "f1": 0.3932,
+        "fmp": 0.6629
+      },
+      "by_gap": {
+        "$\\le$7d": {
+          "gold_positive": 18863,
+          "predicted": 58690,
+          "tp": 9677,
+          "fp": 12962,
+          "unverifiable": 36051,
+          "precision": 0.4274,
+          "recall": 0.513,
+          "fmp": 0.5726,
+          "coverage": 0.3857
+        },
+        "8--30d": {
+          "gold_positive": 4258,
+          "predicted": 28174,
+          "tp": 1450,
+          "fp": 7457,
+          "unverifiable": 19267,
+          "precision": 0.1628,
+          "recall": 0.3405,
+          "fmp": 0.8372,
+          "coverage": 0.3161
+        },
+        "31--90d": {
+          "gold_positive": 629,
+          "predicted": 6438,
+          "tp": 79,
+          "fp": 1617,
+          "unverifiable": 4742,
+          "precision": 0.0466,
+          "recall": 0.1256,
+          "fmp": 0.9534,
+          "coverage": 0.2634
+        },
+        "$>$90d": {
+          "gold_positive": 0,
+          "predicted": 1,
+          "tp": 0,
+          "fp": 0,
+          "unverifiable": 1,
+          "precision": null,
+          "recall": null,
+          "fmp": null,
+          "coverage": 0.0
+        }
+      },
+      "seconds": 241.4,
+      "ms_per_record": 2.3,
+      "n_merges": 29326,
+      "mode": "single",
+      "window_days": 30.0
+    },
+    {
+      "overall": {
+        "gold_positive": 23750,
+        "tp": 11263,
+        "fp": 22514,
+        "precision": 0.3335,
+        "recall": 0.4742,
+        "f1": 0.3916,
+        "fmp": 0.6665
+      },
+      "by_gap": {
+        "$\\le$7d": {
+          "gold_positive": 18863,
+          "predicted": 58522,
+          "tp": 9661,
+          "fp": 12892,
+          "unverifiable": 35969,
+          "precision": 0.4284,
+          "recall": 0.5122,
+          "fmp": 0.5716,
+          "coverage": 0.3854
+        },
+        "8--30d": {
+          "gold_positive": 4258,
+          "predicted": 27999,
+          "tp": 1453,
+          "fp": 7395,
+          "unverifiable": 19151,
+          "precision": 0.1642,
+          "recall": 0.3412,
+          "fmp": 0.8358,
+          "coverage": 0.316
+        },
+        "31--90d": {
+          "gold_positive": 629,
+          "predicted": 10301,
+          "tp": 149,
+          "fp": 2227,
+          "unverifiable": 7925,
+          "precision": 0.0627,
+          "recall": 0.2369,
+          "fmp": 0.9373,
+          "coverage": 0.2307
+        },
+        "$>$90d": {
+          "gold_positive": 0,
+          "predicted": 2,
+          "tp": 0,
+          "fp": 0,
+          "unverifiable": 2,
+          "precision": null,
+          "recall": null,
+          "fmp": null,
+          "coverage": 0.0
+        }
+      },
+      "seconds": 261.9,
+      "ms_per_record": 2.49,
+      "n_merges": 30393,
+      "mode": "single",
+      "window_days": 90.0
+    },
+    {
+      "overall": {
+        "gold_positive": 23750,
+        "tp": 11305,
+        "fp": 21691,
+        "precision": 0.3426,
+        "recall": 0.476,
+        "f1": 0.3984,
+        "fmp": 0.6574
+      },
+      "by_gap": {
+        "$\\le$7d": {
+          "gold_positive": 18863,
+          "predicted": 59292,
+          "tp": 9766,
+          "fp": 13059,
+          "unverifiable": 36467,
+          "precision": 0.4279,
+          "recall": 0.5177,
+          "fmp": 0.5721,
+          "coverage": 0.385
+        },
+        "8--30d": {
+          "gold_positive": 4258,
+          "predicted": 27677,
+          "tp": 1478,
+          "fp": 7782,
+          "unverifiable": 18417,
+          "precision": 0.1596,
+          "recall": 0.3471,
+          "fmp": 0.8404,
+          "coverage": 0.3346
+        },
+        "31--90d": {
+          "gold_positive": 629,
+          "predicted": 3544,
+          "tp": 61,
+          "fp": 850,
+          "unverifiable": 2633,
+          "precision": 0.067,
+          "recall": 0.097,
+          "fmp": 0.933,
+          "coverage": 0.2571
+        },
+        "$>$90d": {
+          "gold_positive": 0,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "unverifiable": 0,
+          "precision": null,
+          "recall": null,
+          "fmp": null,
+          "coverage": null
+        }
+      },
+      "seconds": 208.9,
+      "ms_per_record": 1.99,
+      "n_merges": 27509,
+      "n_links": 7989,
+      "mode": "two-track",
+      "window_days": 15.0,
+      "tau_recur": 0.9
+    },
+    {
+      "overall": {
+        "gold_positive": 23750,
+        "tp": 11238,
+        "fp": 22428,
+        "precision": 0.3338,
+        "recall": 0.4732,
+        "f1": 0.3915,
+        "fmp": 0.6662
+      },
+      "by_gap": {
+        "$\\le$7d": {
+          "gold_positive": 18863,
+          "predicted": 58847,
+          "tp": 9677,
+          "fp": 13028,
+          "unverifiable": 36142,
+          "precision": 0.4262,
+          "recall": 0.513,
+          "fmp": 0.5738,
+          "coverage": 0.3858
+        },
+        "8--30d": {
+          "gold_positive": 4258,
+          "predicted": 28245,
+          "tp": 1451,
+          "fp": 7488,
+          "unverifiable": 19306,
+          "precision": 0.1623,
+          "recall": 0.3408,
+          "fmp": 0.8377,
+          "coverage": 0.3165
+        },
+        "31--90d": {
+          "gold_positive": 629,
+          "predicted": 7969,
+          "tp": 110,
+          "fp": 1912,
+          "unverifiable": 5947,
+          "precision": 0.0544,
+          "recall": 0.1749,
+          "fmp": 0.9456,
+          "coverage": 0.2537
+        },
+        "$>$90d": {
+          "gold_positive": 0,
+          "predicted": 1,
+          "tp": 0,
+          "fp": 0,
+          "unverifiable": 1,
+          "precision": null,
+          "recall": null,
+          "fmp": null,
+          "coverage": 0.0
+        }
+      },
+      "seconds": 259.7,
+      "ms_per_record": 2.47,
+      "n_merges": 29326,
+      "n_links": 2591,
+      "mode": "two-track",
+      "window_days": 30.0,
+      "tau_recur": 0.9
+    }
+  ]
+}

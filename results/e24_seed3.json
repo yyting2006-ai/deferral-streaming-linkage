@@ -1,0 +1,137 @@
+{
+  "city": "chicago",
+  "train": [
+    "2026-01-01",
+    "2026-02-28"
+  ],
+  "test": [
+    "2026-03-01",
+    "2026-03-03"
+  ],
+  "seeds": [
+    3
+  ],
+  "taus": [
+    0.05,
+    0.01
+  ],
+  "max_records": 45000,
+  "pool_shape": [
+    1275891,
+    21
+  ],
+  "n_pos_available": 1526,
+  "rule": {
+    "decisions": 10308,
+    "dec_correct": 151,
+    "dec_wrong": 31,
+    "dec_unverifiable": 10126,
+    "dec_fmp": 0.17033,
+    "dec_precision": 0.82967,
+    "dec_coverage": 0.017656,
+    "tau": 0.5,
+    "pair_recall": 0.842105,
+    "pair_precision": 0.709141,
+    "pair_f1": 0.769925
+  },
+  "curve": [
+    {
+      "n_pos": 1526,
+      "f1_mean": 0.3964,
+      "f1_sd": 0.0,
+      "p_mean": 0.6138,
+      "r_mean": 0.2928,
+      "fmp_mean": 0.3704,
+      "n_seeds": 1,
+      "seeds": [
+        3
+      ],
+      "f1_all": [
+        0.396437
+      ]
+    },
+    {
+      "n_pos": 763,
+      "f1_mean": 0.4255,
+      "f1_sd": 0.0,
+      "p_mean": 0.6024,
+      "r_mean": 0.3289,
+      "fmp_mean": 0.3933,
+      "n_seeds": 1,
+      "seeds": [
+        3
+      ],
+      "f1_all": [
+        0.425532
+      ]
+    },
+    {
+      "n_pos": 382,
+      "f1_mean": 0.4053,
+      "f1_sd": 0.0,
+      "p_mean": 0.6276,
+      "r_mean": 0.2993,
+      "fmp_mean": 0.3506,
+      "n_seeds": 1,
+      "seeds": [
+        3
+      ],
+      "f1_all": [
+        0.405345
+      ]
+    },
+    {
+      "n_pos": 153,
+      "f1_mean": NaN,
+      "f1_sd": NaN,
+      "p_mean": NaN,
+      "r_mean": 0.0,
+      "fmp_mean": 0.0,
+      "n_seeds": 1,
+      "seeds": [
+        3
+      ],
+      "f1_all": [
+        NaN
+      ]
+    }
+  ],
+  "draws": [
+    {
+      "n_pos": 1526,
+      "seed": 3,
+      "tau": 0.05,
+      "f1": 0.396437,
+      "p": 0.613793,
+      "r": 0.292763,
+      "fmp": 0.37037
+    },
+    {
+      "n_pos": 763,
+      "seed": 3,
+      "tau": 0.01,
+      "f1": 0.425532,
+      "p": 0.60241,
+      "r": 0.328947,
+      "fmp": 0.393258
+    },
+    {
+      "n_pos": 382,
+      "seed": 3,
+      "tau": 0.01,
+      "f1": 0.405345,
+      "p": 0.627586,
+      "r": 0.299342,
+      "fmp": 0.350649
+    },
+    {
+      "n_pos": 153,
+      "seed": 3,
+      "tau": 0.05,
+      "f1": NaN,
+      "p": NaN,
+      "r": 0.0,
+      "fmp": 0.0
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+arm,records_in_partition,logged_merges,unique_merge_pairs,unique_source_records,repeated_source_records,extra_source_rows,max_source_repetitions,adjudicable,unknown,wrong,correct
+arrival,35915,8626,8626,8626,0,0,1,2454,6172,1074,1380
+band,35915,7907,7907,7185,571,722,6,2492,5415,812,1680

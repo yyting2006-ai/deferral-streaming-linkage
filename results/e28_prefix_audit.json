@@ -1,0 +1,63 @@
+{
+  "window": [
+    "2024-05-01",
+    "2024-05-07"
+  ],
+  "delta": 0.5,
+  "deadline": 7.0,
+  "tau": 0.0358,
+  "honest": {
+    "peeking": false,
+    "indices": [
+      2050,
+      3467,
+      4049
+    ],
+    "detections": [
+      {
+        "index": 2050,
+        "committed_before": 104,
+        "changed": 0
+      },
+      {
+        "index": 3467,
+        "committed_before": 175,
+        "changed": 0
+      },
+      {
+        "index": 4049,
+        "committed_before": 224,
+        "changed": 0
+      }
+    ],
+    "total_changed": 0,
+    "passed": true
+  },
+  "peeking_control": {
+    "peeking": true,
+    "indices": [
+      2050,
+      3467,
+      4049
+    ],
+    "detections": [
+      {
+        "index": 2050,
+        "committed_before": 186,
+        "changed": 185
+      },
+      {
+        "index": 3467,
+        "committed_before": 284,
+        "changed": 283
+      },
+      {
+        "index": 4049,
+        "committed_before": 350,
+        "changed": 349
+      }
+    ],
+    "total_changed": 817,
+    "passed": false
+  }
+}

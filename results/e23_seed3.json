@@ -1,0 +1,102 @@
+{
+  "target_fmp": 0.4,
+  "windows": [
+    15.0,
+    30.0,
+    60.0
+  ],
+  "rows": [
+    {
+      "seed": 3,
+      "window_days": 15.0,
+      "tau": 0.03578,
+      "cal_fmp": 0.347478,
+      "cal_decisions": 4208,
+      "feasible": true,
+      "dec_fmp": 0.417443,
+      "decisions": 8242,
+      "precision": 0.414479,
+      "recall": 0.436096,
+      "f1": 0.425013,
+      "n_pos": 7746,
+      "max_pred_cluster": 19,
+      "ms_per_record": 3.308
+    },
+    {
+      "seed": 3,
+      "window_days": 30.0,
+      "tau": 0.03578,
+      "cal_fmp": 0.349079,
+      "cal_decisions": 4223,
+      "feasible": true,
+      "dec_fmp": 0.432017,
+      "decisions": 8612,
+      "precision": 0.410163,
+      "recall": 0.437645,
+      "f1": 0.423459,
+      "n_pos": 7746,
+      "max_pred_cluster": 19,
+      "ms_per_record": 2.912
+    },
+    {
+      "seed": 3,
+      "window_days": 60.0,
+      "tau": 0.03578,
+      "cal_fmp": 0.349079,
+      "cal_decisions": 4223,
+      "feasible": true,
+      "dec_fmp": 0.432017,
+      "decisions": 8612,
+      "precision": 0.410163,
+      "recall": 0.437645,
+      "f1": 0.423459,
+      "n_pos": 7746,
+      "max_pred_cluster": 19,
+      "ms_per_record": 3.019
+    }
+  ],
+  "summary": {
+    "15.0": {
+      "n_seeds": 1,
+      "f1_mean": 0.425,
+      "f1_sd": 0.0,
+      "fmp_mean": 0.4174,
+      "fmp_sd": 0.0,
+      "ms_mean": 3.308,
+      "ms_sd": 0.0,
+      "tau_mean": 0.0358,
+      "precision_mean": 0.4145,
+      "recall_mean": 0.4361,
+      "all_feasible": true,
+      "max_cal_fmp": 0.3475
+    },
+    "30.0": {
+      "n_seeds": 1,
+      "f1_mean": 0.4235,
+      "f1_sd": 0.0,
+      "fmp_mean": 0.432,
+      "fmp_sd": 0.0,
+      "ms_mean": 2.912,
+      "ms_sd": 0.0,
+      "tau_mean": 0.0358,
+      "precision_mean": 0.4102,
+      "recall_mean": 0.4376,
+      "all_feasible": true,
+      "max_cal_fmp": 0.3491
+    },
+    "60.0": {
+      "n_seeds": 1,
+      "f1_mean": 0.4235,
+      "f1_sd": 0.0,
+      "fmp_mean": 0.432,
+      "fmp_sd": 0.0,
+      "ms_mean": 3.019,
+      "ms_sd": 0.0,
+      "tau_mean": 0.0358,
+      "precision_mean": 0.4102,
+      "recall_mean": 0.4376,
+      "all_feasible": true,
+      "max_cal_fmp": 0.3491
+    }
+  }
+}

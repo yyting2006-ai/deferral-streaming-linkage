@@ -1,0 +1,47 @@
+{
+  "window_diag": {
+    "w15": {
+      "recall": 0.457785,
+      "precision": 0.363618,
+      "recovered_by_lag": {
+        "<=7": 3249,
+        "8-15": 268,
+        "16-30": 29,
+        ">30": 0
+      }
+    },
+    "w60": {
+      "recall": 0.458688,
+      "precision": 0.361041,
+      "recovered_by_lag": {
+        "<=7": 3229,
+        "8-15": 269,
+        "16-30": 55,
+        ">30": 0
+      }
+    }
+  },
+  "chicago_14d": {
+    "exact address": {
+      "precision": 0.796677,
+      "recall": 0.538383,
+      "f1": 0.642544,
+      "dec_fmp": 0.128346,
+      "decisions": 44920
+    },
+    "hundred block": {
+      "precision": 0.726455,
+      "recall": 0.774806,
+      "f1": 0.749852,
+      "dec_fmp": 0.174648,
+      "decisions": 51631
+    },
+    "street name": {
+      "precision": 0.591945,
+      "recall": 0.726215,
+      "f1": 0.652242,
+      "dec_fmp": 0.293537,
+      "decisions": 55665
+    }
+  }
+}

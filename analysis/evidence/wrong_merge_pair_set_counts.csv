@@ -1,0 +1,5 @@
+target_age_bucket,both,arrival_only,band_only
+<=1d,81,178,158
+1-7d,110,197,263
+8-30d,117,391,83
+>30d,0,0,0

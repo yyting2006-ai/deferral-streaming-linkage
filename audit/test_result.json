@@ -1,0 +1,7 @@
+{
+  "scope": "Synthetic unit tests only; not a real-data protocol audit",
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 0,
+  "passed": true
+}

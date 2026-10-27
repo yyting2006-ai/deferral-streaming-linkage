@@ -1,0 +1,72 @@
+{
+  "city": "sandiego",
+  "window": "april",
+  "test": [
+    "2024-04-01",
+    "2024-04-30"
+  ],
+  "seed": 3,
+  "tau": 0.0358,
+  "rows": [
+    {
+      "tau": 0.0358,
+      "delta": 0.5,
+      "deadline_days": 3.0,
+      "visible": true,
+      "pair_precision": 0.491211,
+      "pair_recall": 0.464451,
+      "pair_f1": 0.477456,
+      "n_pos": 6498,
+      "max_pred_cluster": 18,
+      "dec_fmp": 0.37505,
+      "decisions": 8092,
+      "dec_precision": 0.62495,
+      "dec_coverage": 0.308082,
+      "n_deferred": 2162,
+      "deferred_share": 0.0629,
+      "latency_mean": 2.93,
+      "latency_max": 6,
+      "ms_per_record": 2.681
+    },
+    {
+      "tau": 0.0358,
+      "delta": 0.5,
+      "deadline_days": 7.0,
+      "visible": true,
+      "pair_precision": 0.502254,
+      "pair_recall": 0.462912,
+      "pair_f1": 0.481781,
+      "n_pos": 6498,
+      "max_pred_cluster": 18,
+      "dec_fmp": 0.378357,
+      "decisions": 8208,
+      "dec_precision": 0.621643,
+      "dec_coverage": 0.30848,
+      "n_deferred": 2141,
+      "deferred_share": 0.0623,
+      "latency_mean": 7.27,
+      "latency_max": 14,
+      "ms_per_record": 2.747
+    },
+    {
+      "tau": 0.0358,
+      "delta": 0.5,
+      "deadline_days": 14.0,
+      "visible": true,
+      "pair_precision": 0.508904,
+      "pair_recall": 0.457371,
+      "pair_f1": 0.481764,
+      "n_pos": 6498,
+      "max_pred_cluster": 18,
+      "dec_fmp": 0.373661,
+      "decisions": 8276,
+      "dec_precision": 0.626339,
+      "dec_coverage": 0.304616,
+      "n_deferred": 2181,
+      "deferred_share": 0.0634,
+      "latency_mean": 16.24,
+      "latency_max": 28,
+      "ms_per_record": 2.928
+    }
+  ]
+}

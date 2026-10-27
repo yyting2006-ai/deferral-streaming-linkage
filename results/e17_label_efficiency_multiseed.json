@@ -1,0 +1,68 @@
+{
+  "test": [
+    "2024-05-01",
+    "2024-05-14"
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "taus": [
+    0.05,
+    0.01
+  ],
+  "rule": {
+    "decisions": 4293,
+    "dec_correct": 414,
+    "dec_wrong": 445,
+    "dec_unverifiable": 3434,
+    "dec_fmp": 0.518044,
+    "dec_precision": 0.481956,
+    "dec_coverage": 0.200093,
+    "tau": 0.5,
+    "pair_recall": 0.383361,
+    "pair_precision": 0.387405,
+    "pair_f1": 0.385372
+  },
+  "curve": [
+    {
+      "n_pos": 3080,
+      "f1_mean": 0.4547,
+      "f1_sd": 0.0119,
+      "p_mean": 0.4826,
+      "r_mean": 0.4299,
+      "fmp_mean": 0.3875,
+      "n_seeds": 5
+    },
+    {
+      "n_pos": 2000,
+      "f1_mean": 0.412,
+      "f1_sd": 0.0952,
+      "p_mean": 0.4624,
+      "r_mean": 0.3858,
+      "fmp_mean": 0.4365,
+      "n_seeds": 5
+    },
+    {
+      "n_pos": 1000,
+      "f1_mean": 0.2359,
+      "f1_sd": 0.1231,
+      "p_mean": 0.4355,
+      "r_mean": 0.1772,
+      "fmp_mean": 0.5207,
+      "n_seeds": 5
+    },
+    {
+      "n_pos": 500,
+      "f1_mean": 0.2994,
+      "f1_sd": 0.145,
+      "p_mean": 0.4608,
+      "r_mean": 0.24,
+      "fmp_mean": 0.4566,
+      "n_seeds": 5
+    }
+  ]
+}

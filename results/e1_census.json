@@ -1,0 +1,136 @@
+[
+  {
+    "city": "san_diego",
+    "records": 429924,
+    "raw_links": 57463,
+    "resolved_links": 56153,
+    "known_records": 87254,
+    "known_rate": 0.202952,
+    "components": 31101,
+    "positive_pairs": 142281,
+    "max_component": 84,
+    "lag_p50": 5.088,
+    "lag_p90": 121.189,
+    "lag_p99": 906.787,
+    "lag_le_1d": 0.2677,
+    "lag_le_7d": 0.5554,
+    "lag_gt_30d": 0.2187,
+    "same_address_rate": 0.3945,
+    "same_block_rate": 0.4935,
+    "same_service_rate": 0.9232,
+    "negative_child_lag": 0,
+    "conflation": {
+      "concurrent": {
+        "links": 32476,
+        "pos_pairs": 51559,
+        "components": 18489
+      },
+      "recurrence": {
+        "links": 23677,
+        "pos_pairs": 33794,
+        "components": 9790
+      },
+      "mixed": {
+        "links": 0,
+        "pos_pairs": 56928,
+        "components": 2822
+      }
+    },
+    "concurrent_n": 29577,
+    "concurrent_same_address": 0.4411,
+    "concurrent_same_block": 0.536,
+    "concurrent_same_service": 0.9315,
+    "concurrent_lag_median": 1.04,
+    "recurrence_n": 11646,
+    "recurrence_same_address": 0.2632,
+    "recurrence_same_block": 0.3733,
+    "recurrence_same_service": 0.9095,
+    "recurrence_lag_median": 105.62
+  },
+  {
+    "city": "chicago",
+    "records": 473370,
+    "raw_links": 18411,
+    "resolved_links": 16075,
+    "known_records": 25836,
+    "known_rate": 0.054579,
+    "components": 9761,
+    "positive_pairs": 36646,
+    "max_component": 48,
+    "lag_p50": 0.422,
+    "lag_p90": 11.012,
+    "lag_p99": 45.012,
+    "lag_le_1d": 0.5852,
+    "lag_le_7d": 0.8423,
+    "lag_gt_30d": 0.022,
+    "same_address_rate": 0.5484,
+    "same_block_rate": 0.8912,
+    "same_service_rate": 0.9337,
+    "negative_child_lag": 0,
+    "conflation": {
+      "concurrent": {
+        "links": 13655,
+        "pos_pairs": 24904,
+        "components": 8352
+      },
+      "recurrence": {
+        "links": 2420,
+        "pos_pairs": 2396,
+        "components": 976
+      },
+      "mixed": {
+        "links": 0,
+        "pos_pairs": 9346,
+        "components": 433
+      }
+    },
+    "concurrent_n": 12925,
+    "concurrent_same_address": 0.5771,
+    "concurrent_same_block": 0.8869,
+    "concurrent_same_service": 0.944,
+    "concurrent_lag_median": 0.15,
+    "recurrence_n": 337,
+    "recurrence_same_address": 0.6142,
+    "recurrence_same_block": 0.9585,
+    "recurrence_same_service": 0.9496,
+    "recurrence_lag_median": 43.71
+  },
+  {
+    "city": "louisville",
+    "records": 14745,
+    "raw_links": 0,
+    "resolved_links": 0,
+    "known_records": 0,
+    "known_rate": 0.0,
+    "components": 0,
+    "positive_pairs": 0,
+    "max_component": 0,
+    "lag_p50": 0.0,
+    "lag_p90": 0.0,
+    "lag_p99": 0.0,
+    "lag_le_1d": 0.0,
+    "lag_le_7d": 0.0,
+    "lag_gt_30d": 0.0,
+    "same_address_rate": 0.0,
+    "same_block_rate": 0.0,
+    "same_service_rate": 0.0,
+    "negative_child_lag": 0,
+    "conflation": {
+      "concurrent": {
+        "links": 0,
+        "pos_pairs": 0,
+        "components": 0
+      },
+      "recurrence": {
+        "links": 0,
+        "pos_pairs": 0,
+        "components": 0
+      },
+      "mixed": {
+        "links": 0,
+        "pos_pairs": 0,
+        "components": 0
+      }
+    }
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "san_diego": {
+    "exact address": {
+      "half_a": {
+        "share_multi": 0.33456917267421904,
+        "mean": 1.2235496052179884,
+        "p90": 2
+      },
+      "half_b": {
+        "share_multi": 0.3207420802357511,
+        "mean": 1.21103743888554,
+        "p90": 2
+      },
+      "reliability": 0.9578
+    },
+    "hundred block": {
+      "half_a": {
+        "share_multi": 0.5369292062519154,
+        "mean": 1.3653846153846154,
+        "p90": 2
+      },
+      "half_b": {
+        "share_multi": 0.5132137273877764,
+        "mean": 1.3460879922578723,
+        "p90": 2
+      },
+      "reliability": 0.9548
+    },
+    "street name": {
+      "half_a": {
+        "share_multi": 0.8507572958995198,
+        "mean": 1.6320650166235686,
+        "p90": 2
+      },
+      "half_b": {
+        "share_multi": 0.8265105470146585,
+        "mean": 1.6091347872720771,
+        "p90": 2
+      },
+      "reliability": 0.9711
+    }
+  },
+  "chicago": {
+    "exact address": {
+      "half_a": {
+        "share_multi": 1.7664008232570105,
+        "mean": 2.712117314124003,
+        "p90": 1
+      },
+      "half_b": {
+        "share_multi": 1.5100680461047076,
+        "mean": 2.4581308151645604,
+        "p90": 1
+      },
+      "reliability": 0.8435
+    },
+    "hundred block": {
+      "half_a": {
+        "share_multi": 2.297337945555723,
+        "mean": 3.17100315836968,
+        "p90": 2
+      },
+      "half_b": {
+        "share_multi": 2.042535720151092,
+        "mean": 2.907045491870586,
+        "p90": 2
+      },
+      "reliability": 0.8826
+    },
+    "street name": {
+      "half_a": {
+        "share_multi": 3.4177339901477835,
+        "mean": 4.151330049261084,
+        "p90": 3
+      },
+      "half_b": {
+        "share_multi": 3.0268370607028756,
+        "mean": 3.7667731629392973,
+        "p90": 3
+      },
+      "reliability": 0.8787
+    }
+  }
+}

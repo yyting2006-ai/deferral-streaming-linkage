@@ -1,0 +1,80 @@
+{
+  "target_fmp": 0.4,
+  "rows": [
+    {
+      "decisions": 9479,
+      "dec_correct": 1346,
+      "dec_wrong": 1151,
+      "dec_unverifiable": 6982,
+      "dec_fmp": 0.460953,
+      "dec_precision": 0.539047,
+      "dec_coverage": 0.263424,
+      "tau": 0.0204,
+      "pair_recall": 0.454686,
+      "pair_precision": 0.401596,
+      "pair_f1": 0.426496,
+      "city": "san_diego",
+      "cal_fmp": 0.363422
+    },
+    {
+      "decisions": 159,
+      "dec_correct": 6,
+      "dec_wrong": 15,
+      "dec_unverifiable": 138,
+      "dec_fmp": 0.714286,
+      "dec_precision": 0.285714,
+      "dec_coverage": 0.132075,
+      "tau": 0.0204,
+      "pair_recall": 0.003471,
+      "pair_precision": 0.53125,
+      "pair_f1": 0.006897,
+      "city": "chicago",
+      "cal_fmp": null
+    }
+  ],
+  "importance": [
+    [
+      "same_addr",
+      0.3126
+    ],
+    [
+      "geo_dist",
+      0.1334
+    ],
+    [
+      "geo_missing",
+      0.1319
+    ],
+    [
+      "log_gap",
+      0.1187
+    ],
+    [
+      "same_zip",
+      0.1089
+    ],
+    [
+      "same_block",
+      0.0711
+    ],
+    [
+      "num_dist_100",
+      0.0462
+    ],
+    [
+      "char3_jac",
+      0.0267
+    ],
+    [
+      "cos",
+      0.0201
+    ],
+    [
+      "jac",
+      0.0113
+    ]
+  ],
+  "augmentation": {
+    "copies": 6
+  }
+}

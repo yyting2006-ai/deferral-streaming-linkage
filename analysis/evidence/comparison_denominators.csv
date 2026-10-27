@@ -1,0 +1,60 @@
+file,row_index_0,seed,delta,deadline_days,merges,status,fmp,coverage,n_deferred,latency_mean,latency_max,adjudicable_merges,correct,wrong,unknown,arm,seed_persisted
+e26_seed1.json,0,1,0.0,0.0,8472,unique_integer_reconstruction,0.447743,0.29025,0,0.0,0,2459,1358,1101,6013,May arrival,False
+e26_seed2.json,0,2,0.0,0.0,8817,unique_integer_reconstruction,0.432688,0.275491,0,0.0,0,2429,1378,1051,6388,May arrival,False
+e26_may_s3.json,0,3,0.0,0.0,8608,unique_integer_reconstruction,0.432017,0.279391,0,0.0,0,2405,1366,1039,6203,May arrival,True
+e26_may_s4.json,0,4,0.0,0.0,8503,unique_integer_reconstruction,0.431911,0.286722,0,0.0,0,2438,1385,1053,6065,May arrival,True
+e26_seed5.json,0,5,0.0,0.0,8237,unique_integer_reconstruction,0.447518,0.29841,0,0.0,0,2458,1358,1100,5779,May arrival,True
+e26_seed6.json,0,6,0.0,0.0,8324,unique_integer_reconstruction,0.434638,0.288563,0,0.0,0,2402,1358,1044,5922,May arrival,True
+e26_seed7.json,0,7,0.0,0.0,8389,unique_integer_reconstruction,0.433775,0.287996,0,0.0,0,2416,1368,1048,5973,May arrival,True
+e26_seed8.json,0,8,0.0,0.0,8309,unique_integer_reconstruction,0.44263,0.294741,0,0.0,0,2449,1365,1084,5860,May arrival,True
+e26_decision_timing.json,0,13,0.0,0.0,8626,unique_integer_reconstruction,0.437653,0.284489,0,0.0,0,2454,1380,1074,6172,May arrival,False
+e26_may_d05_s1.json,0,1,0.5,7.0,7721,unique_integer_reconstruction,0.310541,0.318223,6036,7.01,14,2457,1694,763,5264,May band,True
+e26_may_d05_s2.json,0,2,0.5,7.0,8243,unique_integer_reconstruction,0.338633,0.305229,6488,7.07,14,2516,1664,852,5727,May band,True
+e26_may_s3.json,1,3,0.5,7.0,7839,unique_integer_reconstruction,0.340476,0.32147,6227,7.07,14,2520,1662,858,5319,May band,True
+e26_may_s4.json,1,4,0.5,7.0,7858,unique_integer_reconstruction,0.322231,0.317129,5986,6.99,14,2492,1689,803,5366,May band,True
+e26_seed5.json,1,5,0.5,7.0,7479,unique_integer_reconstruction,0.319951,0.329723,5823,7.02,14,2466,1677,789,5013,May band,True
+e26_seed6.json,1,6,0.5,7.0,7346,unique_integer_reconstruction,0.32491,0.339368,5898,7.03,14,2493,1683,810,4853,May band,True
+e26_seed7.json,1,7,0.5,7.0,7680,unique_integer_reconstruction,0.319633,0.326302,5972,7.03,14,2506,1705,801,5174,May band,True
+e26_seed8.json,1,8,0.5,7.0,7898,unique_integer_reconstruction,0.318018,0.316916,5786,7.04,14,2503,1707,796,5395,May band,True
+e26_may_cliff.json,1,13,0.5,7.0,7907,unique_integer_reconstruction,0.325843,0.315164,6159,7.03,14,2492,1680,812,5415,May band,True
+e26_sv5_s1.json,0,1,0.5,7.0,8587,unique_integer_reconstruction,0.362122,0.300687,2128,6.89,14,2582,1647,935,6005,May gate5,True
+e26_sv5_s2.json,0,2,0.5,7.0,9118,unique_integer_reconstruction,0.359859,0.279776,2401,7.01,14,2551,1633,918,6567,May gate5,True
+e26_sv5_s3.json,0,3,0.5,7.0,8841,unique_integer_reconstruction,0.368724,0.295102,2360,7.01,14,2609,1647,962,6232,May gate5,True
+e26_sv5_s4.json,0,4,0.5,7.0,8619,unique_integer_reconstruction,0.351657,0.297598,2160,6.91,14,2565,1663,902,6054,May gate5,True
+e26_sv5_s5.json,0,5,0.5,7.0,8409,unique_integer_reconstruction,0.353972,0.305387,2149,6.92,14,2568,1659,909,5841,May gate5,True
+e26_sv5_s6.json,0,6,0.5,7.0,8448,unique_integer_reconstruction,0.343604,0.303504,2294,6.98,14,2564,1683,881,5884,May gate5,True
+e26_sv5_s7.json,0,7,0.5,7.0,8515,unique_integer_reconstruction,0.350039,0.299941,2205,6.93,14,2554,1660,894,5961,May gate5,True
+e26_sv5_s8.json,0,8,0.5,7.0,8464,unique_integer_reconstruction,0.353792,0.302221,2326,7.0,14,2558,1653,905,5906,May gate5,True
+e26_svb_s5min.json,0,13,0.5,7.0,8820,unique_integer_reconstruction,0.361015,0.294898,2312,7.0,14,2601,1662,939,6219,May gate5,True
+e26_stale10_s1.json,0,1,0.0,0.0,7524,unique_integer_reconstruction,0.380276,0.308612,0,0.0,0,2322,1439,883,5202,May cutoff10,True
+e26_stale10_s2.json,0,2,0.0,0.0,7747,unique_integer_reconstruction,0.385776,0.299471,0,0.0,0,2320,1425,895,5427,May cutoff10,True
+e26_stale10_s3.json,0,3,0.0,0.0,7530,unique_integer_reconstruction,0.372143,0.307968,0,0.0,0,2319,1456,863,5211,May cutoff10,True
+e26_stale10_s4.json,0,4,0.0,0.0,7531,unique_integer_reconstruction,0.383795,0.31138,0,0.0,0,2345,1445,900,5186,May cutoff10,True
+e26_stale10_s5.json,0,5,0.0,0.0,7283,unique_integer_reconstruction,0.373173,0.319374,0,0.0,0,2326,1458,868,4957,May cutoff10,True
+e26_stale10_s6.json,0,6,0.0,0.0,7261,unique_integer_reconstruction,0.375707,0.316348,0,0.0,0,2297,1434,863,4964,May cutoff10,True
+e26_stale10_s7.json,0,7,0.0,0.0,7416,unique_integer_reconstruction,0.3875,0.312837,0,0.0,0,2320,1421,899,5096,May cutoff10,True
+e26_stale10_s8.json,0,8,0.0,0.0,7219,unique_integer_reconstruction,0.37305,0.319712,0,0.0,0,2308,1447,861,4911,May cutoff10,True
+e26_stale10.json,0,13,0.0,0.0,7587,unique_integer_reconstruction,0.372794,0.306182,0,0.0,0,2323,1457,866,5264,May cutoff10,True
+e26_g5inv_s1.json,0,1,0.5,7.0,8281,unique_integer_reconstruction,0.412745,0.289941,2954,8.24,14,2401,1410,991,5880,May gate5 invisible,True
+e26_g5inv_s2.json,0,2,0.5,7.0,8629,unique_integer_reconstruction,0.403179,0.277089,3259,8.24,14,2391,1427,964,6238,May gate5 invisible,True
+e26_g5inv_s3.json,0,3,0.5,7.0,8424,unique_integer_reconstruction,0.408077,0.28217,3301,8.22,14,2377,1407,970,6047,May gate5 invisible,True
+e26_g5inv_s4.json,0,4,0.5,7.0,8304,unique_integer_reconstruction,0.40192,0.288536,3005,8.28,14,2396,1433,963,5908,May gate5 invisible,True
+e26_g5inv_s5.json,0,5,0.5,7.0,8042,unique_integer_reconstruction,0.398226,0.294454,3004,8.14,14,2368,1425,943,5674,May gate5 invisible,True
+e26_g5inv_s6.json,0,6,0.5,7.0,8184,unique_integer_reconstruction,0.414471,0.292155,3176,8.24,14,2391,1400,991,5793,May gate5 invisible,True
+e26_g5inv_s7.json,0,7,0.5,7.0,8144,unique_integer_reconstruction,0.404983,0.290766,3068,8.2,14,2368,1409,959,5776,May gate5 invisible,True
+e26_g5inv_s8.json,0,8,0.5,7.0,8120,unique_integer_reconstruction,0.410321,0.291133,3300,8.24,14,2364,1394,970,5756,May gate5 invisible,True
+e26_invis_s1.json,0,1,0.5,7.0,7335,unique_integer_reconstruction,0.40678,0.313701,6541,7.9,14,2301,1365,936,5034,May band invisible,True
+e26_invis_s2.json,0,2,0.5,7.0,7601,unique_integer_reconstruction,0.411252,0.301671,6912,7.91,14,2293,1350,943,5308,May band invisible,True
+e26_invis_s3.json,0,3,0.5,7.0,7329,unique_integer_reconstruction,0.412102,0.30891,6818,7.91,14,2264,1331,933,5065,May band invisible,True
+e26_invis_s4.json,0,4,0.5,7.0,7396,unique_integer_reconstruction,0.409639,0.314224,6516,7.92,14,2324,1372,952,5072,May band invisible,True
+e26_ablation_invisible.json,0,13,0.5,7.0,7436,unique_integer_reconstruction,0.409449,0.307423,6751,7.91,14,2286,1350,936,5150,May band invisible,True
+e26_june_s1.json,0,1,0.0,0.0,7297,unique_integer_reconstruction,0.393186,0.297657,0,0.0,0,2172,1318,854,5125,June arrival,True
+e26_june_s2.json,0,2,0.0,0.0,7558,unique_integer_reconstruction,0.405405,0.283938,0,0.0,0,2146,1276,870,5412,June arrival,True
+e26_june_s3.json,0,3,0.0,0.0,7456,unique_integer_reconstruction,0.395079,0.288895,0,0.0,0,2154,1303,851,5302,June arrival,True
+e26_june_s4.json,0,4,0.0,0.0,7293,unique_integer_reconstruction,0.398517,0.2959,0,0.0,0,2158,1298,860,5135,June arrival,True
+e26_june.json,0,13,0.0,0.0,7409,unique_integer_reconstruction,0.394798,0.290593,0,0.0,0,2153,1303,850,5256,June arrival,True
+e26_june_s1.json,1,1,0.5,7.0,6658,unique_integer_reconstruction,0.300602,0.324272,5373,7.39,14,2159,1510,649,4499,June band,True
+e26_june_s2.json,1,2,0.5,7.0,7123,unique_integer_reconstruction,0.312529,0.303664,5707,7.47,14,2163,1487,676,4960,June band,True
+e26_june_s3.json,1,3,0.5,7.0,6617,unique_integer_reconstruction,0.29907,0.324921,5535,7.4,14,2150,1507,643,4467,June band,True
+e26_june_s4.json,1,4,0.5,7.0,6682,unique_integer_reconstruction,0.30358,0.32191,5264,7.35,14,2151,1498,653,4531,June band,True
+e26_june.json,1,13,0.5,7.0,6656,unique_integer_reconstruction,0.301498,0.320913,5408,7.38,14,2136,1492,644,4520,June band,True

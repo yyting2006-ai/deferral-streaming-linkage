@@ -1,0 +1,96 @@
+{
+  "city": "chicago",
+  "test": [
+    "2026-03-01",
+    "2026-03-07"
+  ],
+  "rows": [
+    {
+      "decisions": 3185,
+      "dec_correct": 187,
+      "dec_wrong": 123,
+      "dec_unverifiable": 2875,
+      "dec_fmp": 0.396774,
+      "dec_precision": 0.603226,
+      "dec_coverage": 0.097331,
+      "tau": 0.5,
+      "pair_recall": 0.338645,
+      "pair_precision": 0.586207,
+      "pair_f1": 0.429293
+    },
+    {
+      "decisions": 3185,
+      "dec_correct": 187,
+      "dec_wrong": 123,
+      "dec_unverifiable": 2875,
+      "dec_fmp": 0.396774,
+      "dec_precision": 0.603226,
+      "dec_coverage": 0.097331,
+      "tau": 0.2,
+      "pair_recall": 0.338645,
+      "pair_precision": 0.586207,
+      "pair_f1": 0.429293
+    },
+    {
+      "decisions": 3185,
+      "dec_correct": 187,
+      "dec_wrong": 123,
+      "dec_unverifiable": 2875,
+      "dec_fmp": 0.396774,
+      "dec_precision": 0.603226,
+      "dec_coverage": 0.097331,
+      "tau": 0.05,
+      "pair_recall": 0.338645,
+      "pair_precision": 0.586207,
+      "pair_f1": 0.429293
+    },
+    {
+      "decisions": 3501,
+      "dec_correct": 187,
+      "dec_wrong": 127,
+      "dec_unverifiable": 3187,
+      "dec_fmp": 0.404459,
+      "dec_precision": 0.595541,
+      "dec_coverage": 0.089689,
+      "tau": 0.01,
+      "pair_recall": 0.343958,
+      "pair_precision": 0.583333,
+      "pair_f1": 0.432749
+    },
+    {
+      "decisions": 5240,
+      "dec_correct": 141,
+      "dec_wrong": 191,
+      "dec_unverifiable": 4908,
+      "dec_fmp": 0.575301,
+      "dec_precision": 0.424699,
+      "dec_coverage": 0.063359,
+      "tau": 0.002,
+      "pair_recall": 0.304117,
+      "pair_precision": 0.399651,
+      "pair_f1": 0.3454
+    }
+  ],
+  "rule_reference": {
+    "tau": 0.5,
+    "decisions": 25543,
+    "dec_fmp": 0.191,
+    "pair_precision": 0.687,
+    "pair_recall": 0.795,
+    "pair_f1": 0.737,
+    "note": "same_block & gap_le_7, from e15"
+  },
+  "best_learned": {
+    "decisions": 3501,
+    "dec_correct": 187,
+    "dec_wrong": 127,
+    "dec_unverifiable": 3187,
+    "dec_fmp": 0.404459,
+    "dec_precision": 0.595541,
+    "dec_coverage": 0.089689,
+    "tau": 0.01,
+    "pair_recall": 0.343958,
+    "pair_precision": 0.583333,
+    "pair_f1": 0.432749
+  }
+}

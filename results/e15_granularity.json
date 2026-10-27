@@ -1,0 +1,150 @@
+{
+  "san_diego": {
+    "exact address": {
+      "eval": {
+        "decisions": 6891,
+        "dec_correct": 1000,
+        "dec_wrong": 893,
+        "dec_unverifiable": 4998,
+        "dec_fmp": 0.471738,
+        "dec_precision": 0.528262,
+        "dec_coverage": 0.274706,
+        "pair_recall": 0.348696,
+        "pair_precision": 0.37122,
+        "pair_f1": 0.359606,
+        "n_gold_pos": 7746
+      },
+      "unlabeled": {
+        "groups": 27772,
+        "multi_groups": 3819,
+        "share_in_multi": 0.3327,
+        "mean_size": 1.293,
+        "max_size": 166,
+        "window_pairs": 32761,
+        "same_day_share": 0.3375
+      }
+    },
+    "hundred block": {
+      "eval": {
+        "decisions": 10131,
+        "dec_correct": 1060,
+        "dec_wrong": 1100,
+        "dec_unverifiable": 7971,
+        "dec_fmp": 0.509259,
+        "dec_precision": 0.490741,
+        "dec_coverage": 0.213207,
+        "pair_recall": 0.384198,
+        "pair_precision": 0.333595,
+        "pair_f1": 0.357113,
+        "n_gold_pos": 7746
+      },
+      "unlabeled": {
+        "groups": 24102,
+        "multi_groups": 4966,
+        "share_in_multi": 0.4669,
+        "mean_size": 1.49,
+        "max_size": 166,
+        "window_pairs": 44660,
+        "same_day_share": 0.3318
+      }
+    },
+    "street name": {
+      "eval": {
+        "decisions": 11534,
+        "dec_correct": 995,
+        "dec_wrong": 1123,
+        "dec_unverifiable": 9416,
+        "dec_fmp": 0.530217,
+        "dec_precision": 0.469783,
+        "dec_coverage": 0.183631,
+        "pair_recall": 0.380842,
+        "pair_precision": 0.329683,
+        "pair_f1": 0.35342,
+        "n_gold_pos": 7746
+      },
+      "unlabeled": {
+        "groups": 19273,
+        "multi_groups": 4942,
+        "share_in_multi": 0.5943,
+        "mean_size": 1.851,
+        "max_size": 170,
+        "window_pairs": 80644,
+        "same_day_share": 0.2544
+      }
+    }
+  },
+  "chicago": {
+    "exact address": {
+      "eval": {
+        "decisions": 22987,
+        "dec_correct": 488,
+        "dec_wrong": 50,
+        "dec_unverifiable": 22449,
+        "dec_fmp": 0.092937,
+        "dec_precision": 0.907063,
+        "dec_coverage": 0.023405,
+        "pair_recall": 0.614874,
+        "pair_precision": 0.867854,
+        "pair_f1": 0.719782,
+        "n_gold_pos": 1506
+      },
+      "unlabeled": {
+        "groups": 14656,
+        "multi_groups": 969,
+        "share_in_multi": 0.6471,
+        "mean_size": 2.646,
+        "max_size": 13650,
+        "window_pairs": 134158044,
+        "same_day_share": 0.1468
+      }
+    },
+    "hundred block": {
+      "eval": {
+        "decisions": 25543,
+        "dec_correct": 585,
+        "dec_wrong": 138,
+        "dec_unverifiable": 24820,
+        "dec_fmp": 0.190871,
+        "dec_precision": 0.809129,
+        "dec_coverage": 0.028305,
+        "pair_recall": 0.795485,
+        "pair_precision": 0.686533,
+        "pair_f1": 0.737004,
+        "n_gold_pos": 1506
+      },
+      "unlabeled": {
+        "groups": 12128,
+        "multi_groups": 1887,
+        "share_in_multi": 0.736,
+        "mean_size": 3.198,
+        "max_size": 13650,
+        "window_pairs": 134167298,
+        "same_day_share": 0.1469
+      }
+    },
+    "street name": {
+      "eval": {
+        "decisions": 27488,
+        "dec_correct": 470,
+        "dec_wrong": 237,
+        "dec_unverifiable": 26781,
+        "dec_fmp": 0.335219,
+        "dec_precision": 0.664781,
+        "dec_coverage": 0.02572,
+        "pair_recall": 0.749668,
+        "pair_precision": 0.520037,
+        "pair_f1": 0.614088,
+        "n_gold_pos": 1506
+      },
+      "unlabeled": {
+        "groups": 8359,
+        "multi_groups": 2816,
+        "share_in_multi": 0.8563,
+        "mean_size": 4.636,
+        "max_size": 13650,
+        "window_pairs": 134200046,
+        "same_day_share": 0.1469
+      }
+    }
+  }
+}
