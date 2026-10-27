@@ -45,6 +45,8 @@ python -m analysis.revision_audit --run-dir /absolute/path/to/new-run --policy g
 
 The snapshot fetcher defaults to the versioned `v0.2.0` Release archives for San Diego and Chicago. It checks the archive hash, extracts only the expected member, then verifies the CSV hash. `--source portal` uses the original portal as a fallback; the San Diego direct portal returned HTTP 403 during preparation. See [DATA.md](docs/DATA.md) for the archive URLs, download-verification status, original sources and limits.
 
+The [public release verification record](docs/release_verification.json) documents anonymous archive downloads, extraction with the released fetcher, and manifest/tests/numerical checks from a new public clone. These checks use the existing pinned Python environment and do not constitute a fresh dependency installation or a second full raw-stream replay.
+
 ## Historical release
 
 The [`v0.1.0` tag](https://github.com/yyting2006-ai/deferral-streaming-linkage/tree/v0.1.0) preserves historical E26 code and aggregate evidence. Current `psid/methods.py` fixes the initial member count and tie ordering; invoking old E26 from the current checkout is therefore **not an equivalent historical replay**. Use a separate `v0.1.0` checkout for historical code.

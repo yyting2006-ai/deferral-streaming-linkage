@@ -2,7 +2,7 @@
 
 The author authorized release of the two existing public San Diego and Chicago input snapshots as versioned GitHub Release assets. They are separate downloads, not CSV files committed to Git. Original municipal source terms still apply. Private Louisville source renderings and annotation workbooks, fitted models, and record-level replay logs are not released. The Louisville derivative below uses randomized ids and omits source-identifying fields. Archive/member sizes and hashes are recorded in [input_snapshots.json](input_snapshots.json).
 
-Release download verification: pending maintainer confirmation after the `v0.2.0` assets are uploaded. Local archive/member hashes have been verified; this status is not a claim of a successful public download.
+Release download verification completed on 27 October 2026. Both `v0.2.0` ZIP assets were downloaded anonymously and matched their recorded sizes and SHA-256 hashes. The released `fetch_data.py` was then run from a new public clone to download and extract both archives; the resulting San Diego and Chicago CSV sizes and hashes also matched. [release_verification.json](release_verification.json) records these checks and the public-clone numerical verification. The immutable `v0.2.0` tag remains at `ff21cf4d7e7158b1a731b1dfb166c72bf2a7382d`; this later verification record does not change its scientific code or evidence.
 
 ## San Diego: corrected primary experiment
 

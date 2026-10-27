@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-27T08:03:12.587463+00:00",
+  "generated_at_utc": "2026-10-27T08:10:46.474778+00:00",
   "scope": "Git-visible code, aggregate evidence, figures, synthetic tests and authorized anonymous derivative; excludes this manifest itself",
   "files": {
     ".gitattributes": {
@@ -23,8 +23,8 @@
       "sha256": "d961790572a7e0572c5144a973334f30dbf856c6ff00db04f1dc427254815f4f"
     },
     "README.md": {
-      "bytes": 7088,
-      "sha256": "1e3cbdfd0a8331fff7d82a52dadc1a709491d1ef57daa3700a0983dbbb374026"
+      "bytes": 7448,
+      "sha256": "be8610f21868d71fb35c643ad3cbab7fe68f1ea2e67be8c58f9af7278e66aaac"
     },
     "analysis/build_manifest.py": {
       "bytes": 3694,
@@ -175,8 +175,8 @@
       "sha256": "933498e072055a1385621901fe79277333e28d033088a99dcce2f88e90af2f71"
     },
     "docs/DATA.md": {
-      "bytes": 7437,
-      "sha256": "ee1a3a03ddbfb453a442bcf46627d6bc38e12d67e2949d10c1fb5f8bfd6f62ef"
+      "bytes": 7851,
+      "sha256": "c2476149cdcce4840868a6124ca0f2e7f58797481ead6047189cf6ddb43ad308"
     },
     "docs/REPRODUCE.md": {
       "bytes": 10763,
@@ -193,6 +193,10 @@
     "docs/input_snapshots.json": {
       "bytes": 1067,
       "sha256": "a778d439ee7b46253000435574628aec324d0f4cf78689361eb56bcb82b00685"
+    },
+    "docs/release_verification.json": {
+      "bytes": 2336,
+      "sha256": "f2caea97d40378223801a594b7fe7ce24383b611e719e184e3b1fc17cf33bba1"
     },
     "experiments/e11d_gbdt.py": {
       "bytes": 4087,
