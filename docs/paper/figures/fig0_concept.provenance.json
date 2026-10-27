@@ -1,0 +1,17 @@
+{
+  "asset": "fig0_concept.png",
+  "role": "Illustrative selected deferred path; not empirical data",
+  "generator": "Built-in ImageGen",
+  "dimensions_pixels": [
+    1837,
+    856
+  ],
+  "sha256": "fdebceb6371eb848d92b8bb3f5feadefe1fe2dce85dca7533156e78447c3a3d1",
+  "paper_label": "fig:concept",
+  "paper_figure_number": 1,
+  "paper_page": 2,
+  "semantic_review": "Internal subagent PASS: singleton pending, target NEW before claimant MERGE, arrival/deadline claim triggers, deadline NEW or MERGE alternatives, and immutable final output correctly depicted.",
+  "visual_review": "Final-size PDF page inspected: labels readable, no cutoff/overlap; typography enlarged in a targeted ImageGen edit. Raster typography assessed visually, not asserted as programmatically measured point sizes.",
+  "disclosure": "AI-assisted schematic identified in caption; immediate paths omitted.",
+  "data_unchanged": true
+}

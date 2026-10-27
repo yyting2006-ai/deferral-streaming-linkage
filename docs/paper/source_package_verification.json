@@ -1,0 +1,12 @@
+{
+  "source_zip_sha256": "b02de00b5499fa91421a670a97225c8ce5fa85c59dc726dcd4e846749e4d9835",
+  "manifest_files_verified": 22,
+  "isolated_source_build": "passed",
+  "pages": 12,
+  "page_text_equal_to_delivered_pdf": true,
+  "overfull_boxes": 0,
+  "undefined_references": 0,
+  "public_source_text_scan": "passed",
+  "pdf_sha256": "0219460dab11f807fbf732725d5742ecda1adf6a943770943eca653e7417e821",
+  "concept_png_sha256": "fdebceb6371eb848d92b8bb3f5feadefe1fe2dce85dca7533156e78447c3a3d1"
+}

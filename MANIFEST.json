@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-27T08:10:46.474778+00:00",
+  "generated_at_utc": "2026-10-27T08:53:18.453736+00:00",
   "scope": "Git-visible code, aggregate evidence, figures, synthetic tests and authorized anonymous derivative; excludes this manifest itself",
   "files": {
     ".gitattributes": {
@@ -16,15 +16,15 @@
     },
     "CITATION.cff": {
       "bytes": 682,
-      "sha256": "33fc2ffc0f147fc766aab0d7fac76c1c4a6eb271eae0842dc95e8c49d38a5d55"
+      "sha256": "dc40778ccb5d2a9835c2efab905146bd2552e9e0db3623b678b2ec0e7a37e735"
     },
     "LICENSE": {
       "bytes": 1068,
       "sha256": "d961790572a7e0572c5144a973334f30dbf856c6ff00db04f1dc427254815f4f"
     },
     "README.md": {
-      "bytes": 7448,
-      "sha256": "be8610f21868d71fb35c643ad3cbab7fe68f1ea2e67be8c58f9af7278e66aaac"
+      "bytes": 8071,
+      "sha256": "9912298eff76368070bb798801b363ef9c495140db72416b61deac1bc667df24"
     },
     "analysis/build_manifest.py": {
       "bytes": 3694,
@@ -193,6 +193,34 @@
     "docs/input_snapshots.json": {
       "bytes": 1067,
       "sha256": "a778d439ee7b46253000435574628aec324d0f4cf78689361eb56bcb82b00685"
+    },
+    "docs/paper/README.md": {
+      "bytes": 1257,
+      "sha256": "14dbde97a0791aec8829a55ace4a1ee0f1d46723ba25f925845543fedc4c79dd"
+    },
+    "docs/paper/SHA256SUMS.txt": {
+      "bytes": 353,
+      "sha256": "ca7a6d159e83d687d44ddee09af59ce727617a3ff058004b27ac31ffef551459"
+    },
+    "docs/paper/figures/fig0_concept.png": {
+      "bytes": 2048438,
+      "sha256": "fdebceb6371eb848d92b8bb3f5feadefe1fe2dce85dca7533156e78447c3a3d1"
+    },
+    "docs/paper/figures/fig0_concept.prompt.txt": {
+      "bytes": 6359,
+      "sha256": "21f6d964147ede9ce943fd3430b4408a019e5745d3bf4cfdf72d17ff97b5db20"
+    },
+    "docs/paper/figures/fig0_concept.provenance.json": {
+      "bytes": 923,
+      "sha256": "b792a6f3cffb2c80b2cd3381b2bada655f0343e0a22b5b364cecd72509a8364d"
+    },
+    "docs/paper/main.pdf": {
+      "bytes": 2747451,
+      "sha256": "0219460dab11f807fbf732725d5742ecda1adf6a943770943eca653e7417e821"
+    },
+    "docs/paper/source_package_verification.json": {
+      "bytes": 502,
+      "sha256": "b36e0a2d5aff2435c3f1d3ca080ce9841769c187c46632a888bd4e9fad4a1f5c"
     },
     "docs/release_verification.json": {
       "bytes": 2336,
