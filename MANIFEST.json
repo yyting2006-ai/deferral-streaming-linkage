@@ -2,9 +2,13 @@
   "date": "2026-10-27",
   "scope": "Source code, aggregate results and synthetic tests; see README for replay limitations.",
   "files": {
+    ".gitattributes": {
+      "bytes": 81,
+      "sha256": "fcc6cc5fa42d432464f1ce4476e8878fd1c4950d45cd8f58daa060e6ddb7c31a"
+    },
     ".gitignore": {
-      "bytes": 190,
-      "sha256": "43355e24582cd7f74ec0e28cec11cbbba9b3532dfd68b0c8dba53f836d901ec5"
+      "bytes": 294,
+      "sha256": "0f994c38146aaad464735e75b94c2971e6483110db472fcd51db4febf70c77b5"
     },
     "analysis/check_results.py": {
       "bytes": 3252,

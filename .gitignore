@@ -18,5 +18,7 @@ cache/
 *.pt
 *.pth
 *_dump*.json
+# Aggregate summaries only; this file contains no record-level assignments.
+!results/e26_dump_rows.json
 *.log
 !audit/test_result.json

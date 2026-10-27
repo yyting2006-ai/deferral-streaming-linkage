@@ -1,0 +1,52 @@
+{
+  "city": "sandiego",
+  "window": "may",
+  "test": [
+    "2024-05-01",
+    "2024-05-31"
+  ],
+  "seed": 13,
+  "tau": 0.0358,
+  "rows": [
+    {
+      "tau": 0.0358,
+      "delta": 0.0,
+      "deadline_days": 0.0,
+      "visible": true,
+      "pair_precision": 0.415049,
+      "pair_recall": 0.450039,
+      "pair_f1": 0.431836,
+      "n_pos": 7746,
+      "max_pred_cluster": 19,
+      "dec_fmp": 0.437653,
+      "decisions": 8626,
+      "dec_precision": 0.562347,
+      "dec_coverage": 0.284489,
+      "n_deferred": 0,
+      "deferred_share": 0.0,
+      "latency_mean": 0.0,
+      "latency_max": 0,
+      "ms_per_record": 2.736
+    },
+    {
+      "tau": 0.0358,
+      "delta": 0.5,
+      "deadline_days": 7.0,
+      "visible": true,
+      "pair_precision": 0.529335,
+      "pair_recall": 0.416989,
+      "pair_f1": 0.466493,
+      "n_pos": 7746,
+      "max_pred_cluster": 19,
+      "dec_fmp": 0.325843,
+      "decisions": 7907,
+      "dec_precision": 0.674157,
+      "dec_coverage": 0.315164,
+      "n_deferred": 6159,
+      "deferred_share": 0.1715,
+      "latency_mean": 7.03,
+      "latency_max": 14,
+      "ms_per_record": 3.128
+    }
+  ]
+}
