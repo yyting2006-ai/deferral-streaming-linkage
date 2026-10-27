@@ -1,0 +1,10 @@
+{
+  "pdf": "reproductions\\revision_v2\\figures\\fig3_risk_recall.pdf",
+  "auditable": true,
+  "minimum_required_pt": 9.5,
+  "minimum_found_pt": 9.5,
+  "text_run_count": 15,
+  "below_minimum_count": 0,
+  "below_minimum": [],
+  "warnings": []
+}

@@ -1,0 +1,64 @@
+{
+  "question": "Which positive pairs and directed wrong operations are gained or lost under deferral?",
+  "archetype": "quantitative grid",
+  "panel_roles": [
+    "May positive-pair tradeoff",
+    "May wrong-operation tradeoff",
+    "July positive-pair tradeoff",
+    "July wrong-operation tradeoff"
+  ],
+  "n": "One GBT seed13 replay per fixed stream; exact dependent set counts; no independent-pair uncertainty.",
+  "uncertainty": "None: descriptive dependent counts, not independent replicates",
+  "direction": "Left=lostpositivepairs or introducedwrongoperations; right=recoveredpositivepairs or avoidedwrongoperations. Axislabels give count magnitudes.",
+  "bin_definition": "[0,1],(1,7],(7,30],(30,infinity) elapsed24-hour days",
+  "target_age": "Avoided operations use Arrival target age; introduced operations use deferral-policy target age",
+  "aggregation": "Sum all original trigger rows; common/unchanged rows retained in Source Data",
+  "exclusions": "No source rows excluded among Band/Gate vs Arrival. Both >30d positive groups are zero; tinywrongcounts labeled directly.",
+  "counts": {
+    "May_positive_band": {
+      "favorable": 512,
+      "adverse": 1011,
+      "common": 2360
+    },
+    "May_positive_gate5": {
+      "favorable": 506,
+      "adverse": 673,
+      "common": 2698
+    },
+    "May_wrong_band": {
+      "favorable": 765,
+      "adverse": 442,
+      "common": 278
+    },
+    "May_wrong_gate5": {
+      "favorable": 587,
+      "adverse": 354,
+      "common": 456
+    },
+    "July_positive_band": {
+      "favorable": 352,
+      "adverse": 1095,
+      "common": 2224
+    },
+    "July_positive_gate5": {
+      "favorable": 281,
+      "adverse": 742,
+      "common": 2577
+    },
+    "July_wrong_band": {
+      "favorable": 874,
+      "adverse": 419,
+      "common": 230
+    },
+    "July_wrong_gate5": {
+      "favorable": 626,
+      "adverse": 361,
+      "common": 478
+    }
+  },
+  "original_source_rows": 191,
+  "width_mm": 180,
+  "font_floor_pt": 9.5,
+  "backend": "Python/Matplotlib",
+  "smoothing": "none"
+}

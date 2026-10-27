@@ -2,7 +2,7 @@
 
 [Paper PDF](main.pdf) · [Figure 1 PNG](figures/fig0_concept.png) ·
 [Figure 2 PNG](figures/fig1_workflow.png) ·
-[LaTeX source ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.5/pvldb_revision_source.zip)
+[LaTeX source ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.6/pvldb_revision_source.zip)
 
 The manuscript has 13 pages, five figures, seven tables and two algorithms.
 The main text ends on page 12; references continue onto page 13. The 37 cited
@@ -31,6 +31,18 @@ NEW, from seven-day re-scoring, which emits NEW or MERGE. Its
 [provenance](figures/fig1_workflow.provenance.json) record generation and internal
 semantic review. Both illustrations are disclosed in their manuscript captions.
 Figures 3–5 are code-generated empirical plots with released source data.
+Version v0.2.6 uses 9.5–11 pt labels at 180 mm width, paired effect intervals,
+full-grid risk curves with enlarged decision regions, and horizontal diverging
+count plots. Original measurements are preserved. See the
+[figure revision](data_figure_revision.md) and
+[standalone plotting source/data ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.6/data_figures_source.zip).
+
+![Matched performance and paired gains](../../reproductions/revision_v2/figures/fig2_main_comparison.png)
+
+![Full risk paths and enlarged decision regions](../../reproductions/revision_v2/figures/fig3_risk_recall.png)
+
+![Positive-pair and wrong-operation changes](../../reproductions/revision_v2/figures/fig4_mechanism.png)
+
 The earlier [structured workflow](../../reproductions/revision_v2/figures/fig1_workflow.png)
 remains reproducible through `analysis.render_revision_figures --figures workflow`.
 

@@ -1,0 +1,93 @@
+{
+  "question": "How do complete threshold tradeoffs and the March-selected operating points transfer to May?",
+  "core_conclusion": "March-selected proxy-risk feasibility need not transfer to May; feasible threshold alternatives exist in the observed May grid.",
+  "archetype": "quantitative grid",
+  "panel_roles": [
+    "Complete March calibration grid",
+    "Complete May exploratory grid",
+    "March operating-point separation",
+    "May transfer of the frozen threshold"
+  ],
+  "n": "One fitted scorer per family (seed 13); 13 frozen thresholds per curve.",
+  "uncertainty": "Descriptive fixed-stream paths; no independent threshold replicates or error bars.",
+  "minimum_volume": {
+    "merge_fraction": 0.01,
+    "known_merges": 100
+  },
+  "risk": "Wrong known MERGEs / all known MERGEs. Unknown MERGEs are excluded from this denominator, not asserted correct.",
+  "selection": "Diamond outlines mark March-selected thresholds in full and zoom views. The May marker does not assert May feasibility.",
+  "selected_thresholds": {
+    "gbt": 0.0358,
+    "logit": 0.2
+  },
+  "threshold_order": [
+    0.01,
+    0.02,
+    0.0358,
+    0.05,
+    0.07,
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    0.9,
+    0.99
+  ],
+  "curve_counts": {
+    "March_gbt": {
+      "thresholds": 13,
+      "finite_risk": 13,
+      "volume_eligible": 11,
+      "risk_feasible": 9
+    },
+    "March_logit": {
+      "thresholds": 13,
+      "finite_risk": 12,
+      "volume_eligible": 10,
+      "risk_feasible": 3
+    },
+    "May_gbt": {
+      "thresholds": 13,
+      "finite_risk": 13,
+      "volume_eligible": 11,
+      "risk_feasible": 5
+    }
+  },
+  "undefined_risk_omissions": {
+    "March_gbt": 0,
+    "March_logit": 1,
+    "May_gbt": 0
+  },
+  "undefined_policy": "March logistic at tau .99 has no known MERGEs: risk is undefined, remains in Source Data, and is not plotted at zero.",
+  "full_domain": {
+    "x": [
+      0,
+      1.05
+    ],
+    "y": [
+      0,
+      0.65
+    ]
+  },
+  "zoom_domain": {
+    "x": [
+      0.28,
+      0.55
+    ],
+    "y": [
+      0.3,
+      0.57
+    ]
+  },
+  "zoom_rule": "Lower panels repeat the same paths within a shared decision region; all finite observations remain in the upper row.",
+  "transform": "Straight connections in ascending threshold order; no smoothing, monotone interpolation, frontier selection, or reselection.",
+  "source_mapping": "Same original result() metrics and protocol-driven family/grid selection; all 39 observations retained.",
+  "adaptation": "Structural adaptation of the existing threshold renderer with original data and statistics preserved.",
+  "height_mm": 108,
+  "width_mm": 180,
+  "font_floor_pt": 9.5,
+  "backend": "Python/Matplotlib",
+  "smoothing": "none"
+}

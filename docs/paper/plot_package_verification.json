@@ -1,0 +1,24 @@
+{
+  "isolated_replot": "passed",
+  "manifest_files_verified": 105,
+  "data_figures_zip_sha256": "1a3fb13e16463adb8864c4cb72574e3be94368c1ed02a7b31c62fa5dfc44854f",
+  "byte_identity_in_current_runtime": {
+    "fig2_main_comparison": {
+      "pdf": true,
+      "svg": true,
+      "source_data.csv": true
+    },
+    "fig3_risk_recall": {
+      "pdf": true,
+      "svg": true,
+      "source_data.csv": true
+    },
+    "fig4_mechanism": {
+      "pdf": true,
+      "svg": true,
+      "source_data.csv": true
+    }
+  },
+  "public_source_text_scan": "passed",
+  "external_geometry_qa_in_isolated_build": false
+}

@@ -54,9 +54,9 @@ reproducibility:
 |---|---|---|---|
 | Figure 1 | Selected deferred path | `docs/paper/figures/fig0_concept.png` | AI-assisted concept schematic; checked against the state-transition algorithm for singleton pending state, target NEW before claimant MERGE, arrival/deadline claim triggers, deadline NEW/MERGE alternatives, and immutable final outputs. |
 | Figure 2 | Research design | `docs/paper/figures/fig1_workflow.png` | AI-assisted workflow schematic; checked against the current temporal protocol, retrieval channels and causal state machine. |
-| Figure 3 | Main comparison | `reproductions/revision_v2/figures/fig2_main_comparison` | `analysis.render_revision_figures --figures main` |
-| Figure 4 | Threshold risk–recall curves | `reproductions/revision_v2/figures/fig3_risk_recall` | `analysis.render_revision_figures --figures threshold` |
-| Figure 5 | Pair-set changes | `reproductions/revision_v2/figures/fig4_mechanism` | `analysis.render_revision_figures --figures mechanism` |
+| Figure 3 | Main comparison | `reproductions/revision_v2/figures/fig2_main_comparison` | `analysis.render_readable_figures --figures main` |
+| Figure 4 | Threshold risk–recall curves | `reproductions/revision_v2/figures/fig3_risk_recall` | `analysis.render_readable_figures --figures threshold` |
+| Figure 5 | Pair-set changes | `reproductions/revision_v2/figures/fig4_mechanism` | `analysis.render_readable_figures --figures mechanism` |
 
 Paths in the figure mapping are relative to the repository root. Figures 3–5
 are code-generated empirical figures with PDF, SVG, PNG and Source Data CSV
@@ -75,12 +75,13 @@ current manuscript Figure 2. The published `v0.2.0`, `v0.2.1` and `v0.2.2` tags
 remain fixed. The current paper and source ZIP are linked from the
 [manuscript page](docs/paper/README.md).
 
-Generate the three empirical figures and the historical structured workflow
+Generate the three empirical figures and, separately, the historical structured workflow
 from released inputs with:
 
 ```text
 python -m pip install -r requirements-figures.txt
-python -m analysis.render_revision_figures --run-dir reproductions/revision_v2 --out build/revision_v2_figures
+python -m analysis.render_readable_figures --run-dir reproductions/revision_v2 --out build/revision_v2_figures
+python -m analysis.render_revision_figures --run-dir reproductions/revision_v2 --out build/revision_v2_figures --figures workflow
 ```
 
 The plotting script enforces complete numerical inputs. External Nature figure

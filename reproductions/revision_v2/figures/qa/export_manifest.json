@@ -1,0 +1,26 @@
+[
+  {
+    "figure": "fig2_main_comparison",
+    "pdf_sha256": "5ff65db0025346693b4ac7bae33d836865a464cfbb64754ee58162012a318837",
+    "qa": {
+      "text": 0,
+      "collision": 0
+    }
+  },
+  {
+    "figure": "fig3_risk_recall",
+    "pdf_sha256": "d98d98ad8ccfd5716a34042eabceedf8c38ad93f12a01572e0c00e30c3b416af",
+    "qa": {
+      "text": 0,
+      "collision": 0
+    }
+  },
+  {
+    "figure": "fig4_mechanism",
+    "pdf_sha256": "aa16e7e5037e79959c84b09ba5e90ab751140a87b135ec478751ff018e65014f",
+    "qa": {
+      "text": 0,
+      "collision": 0
+    }
+  }
+]

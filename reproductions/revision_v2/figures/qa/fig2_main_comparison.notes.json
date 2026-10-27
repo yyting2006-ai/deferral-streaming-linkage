@@ -1,0 +1,115 @@
+{
+  "question": "Does the Gate improvement beyond the cutoff recur across matched fits and the later frozen window?",
+  "archetype": "quantitative grid",
+  "panel_roles": [
+    "Exploratory levels",
+    "Frozen-window levels",
+    "Exploratory paired contrasts",
+    "Frozen paired contrasts"
+  ],
+  "raw_n": 40,
+  "paired_differences_n": 20,
+  "n": "Five GBT scorer fits per policy/window; seeds1,2,3,4,13",
+  "center": "Arithmetic mean; direct values label means only",
+  "uncertainty": "Upper row sample SD; lower row paired pointwise95% t interval,df4,unadjusted; fit-seed variability only",
+  "pairing": "Thin upper profiles join the same seed; lower contrasts subtract the same-seed Cutoff.",
+  "transform": "Only lower x-axis is multiplied by100 to show F1 percentage points; no data exclusion or smoothing",
+  "exclusions": "None among4 primary arms; visibility controls remain separately reported in the paper",
+  "summary": [
+    {
+      "window": "May",
+      "arm": "arrival",
+      "n": 5,
+      "mean_f1": 0.41471792867510243,
+      "sd_f1": 0.0028744233093481197
+    },
+    {
+      "window": "May",
+      "arm": "band",
+      "n": 5,
+      "mean_f1": 0.44901752331132305,
+      "sd_f1": 0.016157220090790753
+    },
+    {
+      "window": "May",
+      "arm": "gate5",
+      "n": 5,
+      "mean_f1": 0.4670041268726493,
+      "sd_f1": 0.013967191227506143
+    },
+    {
+      "window": "May",
+      "arm": "cutoff10",
+      "n": 5,
+      "mean_f1": 0.442358570003757,
+      "sd_f1": 0.0026766582086618813
+    },
+    {
+      "window": "July",
+      "arm": "arrival",
+      "n": 5,
+      "mean_f1": 0.46900124666941573,
+      "sd_f1": 0.006870432131614617
+    },
+    {
+      "window": "July",
+      "arm": "band",
+      "n": 5,
+      "mean_f1": 0.4879923678097414,
+      "sd_f1": 0.007183908398994401
+    },
+    {
+      "window": "July",
+      "arm": "gate5",
+      "n": 5,
+      "mean_f1": 0.5014799177961407,
+      "sd_f1": 0.007172076517250118
+    },
+    {
+      "window": "July",
+      "arm": "cutoff10",
+      "n": 5,
+      "mean_f1": 0.4834500787928345,
+      "sd_f1": 0.005710898991624547
+    }
+  ],
+  "paired_summary": [
+    {
+      "window": "May",
+      "arm": "band",
+      "mean": 0.006658953307566051,
+      "ci95_low": -0.012755694636264504,
+      "ci95_high": 0.026073601251396607,
+      "df": 4
+    },
+    {
+      "window": "May",
+      "arm": "gate5",
+      "mean": 0.02464555686889216,
+      "ci95_low": 0.009326430044016974,
+      "ci95_high": 0.03996468369376734,
+      "df": 4
+    },
+    {
+      "window": "July",
+      "arm": "band",
+      "mean": 0.00454228901690693,
+      "ci95_low": -0.00019197809152081673,
+      "ci95_high": 0.009276556125334678,
+      "df": 4
+    },
+    {
+      "window": "July",
+      "arm": "gate5",
+      "mean": 0.018029839003306215,
+      "ci95_low": 0.013517174685977235,
+      "ci95_high": 0.022542503320635197,
+      "df": 4
+    }
+  ],
+  "source_contrasts_sha256": "7e79f7bd44e7d71316297ca3a897ae013f813478e30baac7683932e0a281c80b",
+  "width_mm": 180,
+  "font_floor_pt": 9.5,
+  "backend": "Python/Matplotlib",
+  "smoothing": "none"
+}
