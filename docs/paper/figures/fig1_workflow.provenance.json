@@ -1,15 +1,24 @@
 {
   "figure": "Manuscript Figure 2: study design",
   "asset": "fig1_workflow.png",
-  "generation_method": "Built-in ImageGen; complete artistic redraw using the preceding workflow and Figure 1 as references",
+  "generation_method": "Built-in ImageGen; four-stage three-column technical-roadmap generation using a user-supplied layout reference; followed by a targeted claim/deadline label edit",
   "generated_date": "2026-10-27",
-  "sha256": "6e28d0db59e5df727ae14b99c97821a216bdc7918b4b3a855bb9aaf7218eb886",
+  "sha256": "0d55613111e22451243dc2b4933b0dfe8b7a213aa7cce77b657d93ef8785f68d",
   "dimensions_px": [
-    1831,
-    859
+    1774,
+    887
   ],
   "prompt_file": "fig1_workflow.prompt.txt",
   "purpose": "Illustrative research-workflow schematic; contains no empirical result plot",
+  "output_role": "Author-review schematic; submission eligibility not independently certified",
+  "policy_check": {
+    "date": "2026-10-27",
+    "pages_checked": [
+      "https://www.vldb.org/2027/submission-guidelines.html",
+      "https://www.vldb.org/2027/formatting-guidelines.html"
+    ],
+    "finding": "No image-specific AI eligibility statement located on these two pages; AI assistance is disclosed in the caption."
+  },
   "source_evidence": [
     "analysis/render_revision_figures.py: workflow labels",
     "Manuscript protocol and setup"
@@ -21,7 +30,7 @@
       "Jan-Feb fit; March calibration; May exploratory; July frozen retrospective validation",
       "Address, block and token retrieval; 21 fixed features",
       "One visible pending singleton",
-      "Claim or seven-day deadline; immutable NEW/MERGE",
+      "Claim finalizes pending target NEW; seven-day re-score yields NEW/MERGE",
       "Hidden pending and ten-day cutoff controls",
       "Five primary scorer seeds; threshold, mechanism, causality and resource evidence"
     ],

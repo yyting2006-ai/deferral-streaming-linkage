@@ -1,20 +1,48 @@
+Initial generation prompt
+
 Use case: infographic-diagram.
-Redesign the FIRST reference image completely as Figure 2 of a peer-reviewed database research paper. The second reference is Figure 1 and supplies the visual language only: white background, refined isometric city/report illustrations, ink-navy typography, blue/teal with restrained amber accents. This is a substantial artistic redraw of the boring first image, not a text-grid restyling. Create a polished, visually engaging, scientifically precise research-workflow schematic. Landscape 3200 x 1500 or similar ratio 2.13:1. Keep all content inside a modest white margin. Large sharp legible sans-serif text suitable for reproduction at 178 mm width. Use illustrative objects and clear arrows instead of a grid of repetitive boxes. No overall title; this will have a paper caption.
+Create a replacement scientific Figure 2 for a database research paper using ImageGen. Use the most recent reference image, which is a collage of technical-roadmap templates, as a STYLE reference only. Specifically adapt the upper template's visual grammar: a narrow stage column at left, a wide research-content column in the middle, and a narrow checks/output column at right; stacked horizontal stages, fine borders, restrained pastel section colors and clear directional connectors. Make an original diagram for the exact research content below. Exclude all sample placeholder text, watermarks, logos, advertisements and screenshot black margins.
 
-Layout: four numbered panels flow left to right, separated only by generous whitespace or very faint vertical rules. Headers on one baseline: "a  Data & protocol", "b  Retrieve & score", "c  Commitment policies", "d  Evidence". Panels c and d may use slightly smaller headings to fit. Beautiful restrained research-journal typography. Four distinct visual compositions, one coherent palette. All supporting text dark navy, never pale low-contrast.
+Purpose: readers should understand how a shared retrieval/scoring pipeline is evaluated under different finalization policies over a chronological study protocol. Audience: database-research reviewers.
+Output: a flat, carefully typeset academic technical-roadmap schematic on pure white, landscape 3200 x 1600 (2:1). Use readable English, consistent Arial/Helvetica-like sans serif, large concise labels. Body font ~46-50 px, headings ~54 px. No small footnotes. Flat rectangles and thin orthogonal arrows; no isometric buildings, photorealism, 3-D objects, glossy icons, locks, shadows or decorative pictograms. The visual interest comes from structured grouping and a central branching policy diagram, not repeated uniform cards.
 
-Panel a: a small elegant isometric municipal street corner with location pins and two request cards, much less detailed than reference 2. Label "San Diego 311" then "2024 requests". Beneath it, a vertical chronological spine with four colored nodes and EXACT labels, each on one or two lines:
-"Jan–Feb" / "Fit scorer"
-"March" / "Calibrate threshold"
-"May" / "Exploratory analysis"
-"July" / "Frozen retrospective validation"
-July needs all three words retrospective validation and no suggestion of prospective testing.
+Composition: three aligned column headers at top: "Study stage" (left ~15%), "Research workflow" (middle ~67%), "Checks & outputs" (right ~18%). Four horizontal bands, generous but compact spacing. Thin neutral outlines; dark charcoal text and arrows. Pale blue first two bands, pale sand central policy band, pale teal evaluation band; colors only in header strips and light module fills, overall background stays white. Narrow left stage boxes with subtle downward chevrons connecting the four stages. This is a technical flowchart, not a dashboard or a poster. Use small bold panel letters a, b, c, d in stage labels. The central commitment band is the hero, about 36% of the diagram height; others share the remainder.
 
-Panel b: top a report card icon caption "Arrival-time fields", with two lines "Text · Service" and "Address · Time". Three small refined retrieval icons side by side (address pin, block map, token/text index), label EXACTLY "Address", "Block", "Token". Their three arrows converge to a slim feature-vector icon labeled "21 features", then a blue decision-tree illustration labeled "Fixed scorer". Beneath, a single best-match card with magnifier, label "Best candidate + score". Use downward arrows for this true inference flow. No numerical scores.
+ROW a, stage label exactly "a  Temporal protocol".
+Middle: four connected horizontal chronological cells, exact month/title pairs:
+"Jan–Feb" / "Fit scorer" → "March" / "Calibrate threshold" → "May" / "Exploratory analysis" → "July" / "Frozen retrospective validation".
+Right small two-line module: "San Diego 311" / "2024 requests".
+Timeline cells have quiet lightly colored header tabs, aligned body baselines. July text wraps gracefully at same size.
 
-Panel c: top show a small fork into TWO policy paths. LEFT smaller compact path labeled "Arrival" with small request card pointing directly to a lock, sublabel "Finalize now". RIGHT larger hero path labeled "Band / Gate": show ONE SINGLE amber-edged document card within an amber dashed halo labeled "Pending singleton"; below it "Visible to retrieval". Show a subtle looping retrieval arrow to the card. This card is not a cluster. Below the single card, two small clearly alternative routes: handshake/connecting-card icon labeled "Claim", and clock icon labeled "7-day deadline". They converge into a single dark teal lock seal, label "Immutable NEW / MERGE". The arrival path also feeds the final lock seal. Tiny but readable footer under this panel: "Controls: hidden pending; 10-day cutoff". The schematic abstracts selector details; no selection equations. Do not show pending as already merged, or imply existing committed records can move. Deadline claim details are in Figure1 and need not be repeated.
+ROW b, stage label exactly "b  Shared inference".
+Middle left-to-right actual inference:
+module "Arrival fields" with small line "Text · Service" and "Address · Time"
+→ retrieval module containing THREE short rows "Address", "Block", "Token", with header "Retrieval"
+→ module "21 features" / "Fixed scorer"
+→ module "Best candidate" / "Score + identity".
+Right: "Workflow labels" / "Offline supervision". This right module is explanatory, with no arrow entering the online retrieval flow. Draw no future-reference-label input to inference.
 
-Panel d: five neatly aligned visual audit rows, each with a tasteful small blue/teal icon, bold short heading and subordinate text, on white (no enclosing row boxes). Five seed dots: "Paired quality" / "5 scorer seeds". Threshold-slider icon: "Risk–recall" / "Full threshold grid". Small paired graph nodes: "Mechanism" / "Pair-set changes". Two aligned event streams with lock/check icon: "Causality" / "Complete event prefixes". Stopwatch and pending card icon: "Resources" / "Latency and pending".
-These are methodological icons, NOT empirical charts: no invented axes, data points, curves, numbers or result bars.
+ROW c, stage label exactly "c  Commitment".
+Middle contains a true two-path scientific comparison. Upper short lane: label "Arrival" then a thin arrow directly to a shared terminal rectangle at the far right marked "NEW or MERGE", subtitle "Immutable output".
+Lower major lane starts "Band / Gate", then arrow labelled "Selected requests" to a pale amber single rectangle "Pending singleton" / "Retrievable · uncommitted". Next split from that pending rectangle into two vertically stacked short alternative route labels "Claim" and "7-day deadline"; these reconverge into the SAME terminal NEW or MERGE rectangle as Arrival. Selected deferral is one singleton, not a merged cluster. All arrows have small unambiguous arrowheads; routing is orthogonal and labels never touch arrows. There is only one shared final output node. The figure abstracts the claim's detailed event order and deadline rescoring; those are explained elsewhere in the paper. Do not add unsupported event steps.
+Right: small outlined module headed "Controls" with two lines "Hidden pending" and "10-day cutoff".
+Keep the selected-request label readable and clarify that the lower lane depicts selected deferrals, not all Band/Gate requests.
 
-Connect the four panels with just three short blue arrows at midheight placed in the gutters. The overall result should feel like an expertly illustrated academic infographic with deliberate whitespace, no heavy panel frames, no gradients behind whole panels, no decorative glossy dashboard UI, no watermarks, no giant empty margins. Use restrained soft shadows only for the tiny physical illustration objects. Keep all wording exactly accurate and correctly spelled.
+ROW d, stage label exactly "d  Evaluation".
+Middle: five concise horizontally aligned evidence groups, separated by hairline vertical rules, each with one strong heading and one short descriptor:
+"Quality" / "5 GBT fits"
+"Risk–recall" / "Full grid"
+"Mechanism" / "Pair-set changes"
+"Causality" / "Event prefixes"
+"Resources" / "Delay + occupancy"
+Right: "Reported evidence" / "Figures 3–5" / "Tables 1–7".
+These are text-based evidence categories, not data plots. Do not invent measurements, bar charts, sample curves or numerical outcomes.
+
+Across the diagram maintain consistent panel insets, equal gutters, even border weights and large final-size readable typography. Space comes from economical labels, not from shrinking text. All requested phrases spelled correctly. Draw exact scientific structure, clear comparative branches, elegant restrained pastel technical-roadmap style matching the supplied example's information organization. Deliver only the figure, no external title or caption.
+
+Targeted ImageGen edit prompt
+
+Edit this research-roadmap figure with EXACTLY TWO text corrections in the amber Commitment row:
+1. The upper arrow from Pending singleton to the final-output box currently labeled "Claim": replace that label with "Claim: NEW". This specifies the pending target's correct claim outcome.
+2. The lower arrow currently labeled "7-day deadline": replace that label with "7-day re-score". Keep the outcome box "NEW or MERGE" / "Immutable output" exactly as it is.
+Preserve all other text, diagram geometry, typography, arrow connections, four-stage three-column layout, colors and image dimensions unchanged. Keep the labels clear of their arrow lines and borders. High resolution. Output only the revised figure.

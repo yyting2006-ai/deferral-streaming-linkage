@@ -2,12 +2,13 @@
 
 Research artifact for *What Does Deferral Buy? Measuring Provisional Identity in Streaming Linkage*. The current entry point is [`experiments/e37_revision_suite.py`](experiments/e37_revision_suite.py), using the corrected causal event engine. It emits one immutable final `NEW` or `MERGE` per observed record, executes deadlines at their exact UTC times, and enforces a cluster cap of 20 actual records.
 
-[Latest paper (PDF)](docs/paper/main.pdf) · [LaTeX source ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.3/pvldb_revision_source.zip) · [Paper release](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/tag/v0.2.3)
+[Latest paper (PDF)](docs/paper/main.pdf) · [LaTeX source ZIP](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/download/v0.2.4/pvldb_revision_source.zip) · [Paper release](https://github.com/yyting2006-ai/deferral-streaming-linkage/releases/tag/v0.2.4)
 
 ![Provisional identity: selected deferred path](docs/paper/figures/fig0_concept.png)
 
-The 12-page manuscript includes AI-assisted illustrative schematics as Figures
-1–2; Figures 3–5 are code-generated empirical plots. Their
+The 12-page manuscript includes an AI-assisted concept illustration (Figure 1)
+and a technical-roadmap schematic made with ImageGen (Figure 2). The roadmap
+uses four stages and three columns. Figures 3–5 are code-generated empirical plots. Their
 [prompts, provenance and source-build verification](docs/paper/README.md) accompany
 the paper. The [post-deadline audit and reporting supplement](reproductions/round2/README.md)
 records the new coverage check, July contrasts and measured resource table.
@@ -15,7 +16,7 @@ The original 120-run scientific results remain unchanged.
 
 Read the [algorithm](docs/algorithm.md), [complete protocol](docs/causal_protocol.md), [reproduction instructions](docs/REPRODUCE.md), and [data specifications](docs/DATA.md).
 
-![Study design: data, retrieval, commitment and evidence](docs/paper/figures/fig1_workflow.png)
+![Technical roadmap: temporal protocol, inference, commitment and evaluation](docs/paper/figures/fig1_workflow.png)
 
 [ARTIFACT.md](ARTIFACT.md) maps each corrected result and figure to its inputs and reproduction command. Software citation metadata are in [CITATION.cff](CITATION.cff); no manuscript DOI or acceptance status is asserted.
 
