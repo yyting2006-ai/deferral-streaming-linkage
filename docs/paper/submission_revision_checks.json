@@ -1,0 +1,77 @@
+{
+  "chunks": {
+    "audit_transfer.tex": {
+      "matches_reviewed_change_set": true,
+      "changed": true
+    },
+    "conclusion.tex": {
+      "matches_reviewed_change_set": true,
+      "changed": false
+    },
+    "discussion_base.tex": {
+      "matches_reviewed_change_set": true,
+      "changed": false
+    },
+    "opening.tex": {
+      "matches_reviewed_change_set": true,
+      "changed": false
+    },
+    "preamble.tex": {
+      "matches_reviewed_change_set": true,
+      "changed": true
+    },
+    "protocol.tex": {
+      "matches_reviewed_change_set": true,
+      "changed": false
+    },
+    "related.tex": {
+      "matches_reviewed_change_set": true,
+      "changed": false
+    },
+    "results.tex": {
+      "matches_reviewed_change_set": true,
+      "changed": true
+    },
+    "setup.tex": {
+      "matches_reviewed_change_set": true,
+      "changed": false
+    }
+  },
+  "unchanged_assets": [
+    "figures/fig0_concept.png",
+    "figures/fig0_concept.prompt.txt",
+    "figures/fig0_concept.provenance.json",
+    "figures/fig1_workflow.png",
+    "figures/fig1_workflow.prompt.txt",
+    "figures/fig1_workflow.provenance.json",
+    "figures/fig2_main_comparison.paired_differences.csv",
+    "figures/fig2_main_comparison.pdf",
+    "figures/fig2_main_comparison.source_data.csv",
+    "figures/fig2_main_comparison.svg",
+    "figures/fig3_risk_recall.pdf",
+    "figures/fig3_risk_recall.source_data.csv",
+    "figures/fig3_risk_recall.svg",
+    "figures/fig4_mechanism.pdf",
+    "figures/fig4_mechanism.source_data.csv",
+    "figures/fig4_mechanism.svg",
+    "tables/v2_candidates.tex",
+    "tables/v2_core.tex",
+    "tables/v2_denominators.tex",
+    "tables/v2_logit.tex",
+    "tables/v2_timing.tex",
+    "tables/v3_resources.tex",
+    "refs.bib",
+    "numbers_v2.tex",
+    "acmart.cls",
+    "pvldb.sty",
+    "ACM-Reference-Format.bst"
+  ],
+  "all_asset_hashes_match": true,
+  "new_experiments": false,
+  "scientific_corrections": [
+    "two occupancy rounding tails",
+    "Chicago sweep scope",
+    "omit a judgment-check claim absent from public inputs"
+  ],
+  "author_update": "first two author cities/states changed per explicit user confirmation"
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-27T14:05:21.342645+00:00",
+  "generated_at_utc": "2026-10-27T14:39:58.601820+00:00",
   "scope": "Git-visible code, aggregate evidence, figures, synthetic tests and authorized anonymous derivative; excludes this manifest itself",
   "files": {
     ".gitattributes": {
@@ -16,15 +16,15 @@
     },
     "CITATION.cff": {
       "bytes": 682,
-      "sha256": "150520e9173f2e5e28591331a800869304c84c9fe55120c43a72339585faeff3"
+      "sha256": "c8a3df3eb0cedd605d7d59f8e04541734be0844344e76430d43193134d3b266c"
     },
     "LICENSE": {
       "bytes": 1068,
       "sha256": "d961790572a7e0572c5144a973334f30dbf856c6ff00db04f1dc427254815f4f"
     },
     "README.md": {
-      "bytes": 8716,
-      "sha256": "9ecad36f3703c066929f6c5ff1b7a4cb259b32cd68b11e1d33ece65e4cc23380"
+      "bytes": 8780,
+      "sha256": "7a7c0d443e418e0a2744e1db7aa9b84601d6e731885d6fc0b061b0b32edffa51"
     },
     "analysis/build_manifest.py": {
       "bytes": 3694,
@@ -199,28 +199,28 @@
       "sha256": "c2476149cdcce4840868a6124ca0f2e7f58797481ead6047189cf6ddb43ad308"
     },
     "docs/REPRODUCE.md": {
-      "bytes": 10763,
-      "sha256": "9fcfa1844a0cc7c52375f02e32db571d18ab0412d0a0c91cbe98974f11ddc8d0"
+      "bytes": 11210,
+      "sha256": "6e2ca0cd4297d9374abf0db422c2553d4866446ad67c69bee70fdeb90a1bbd4b"
     },
     "docs/algorithm.md": {
       "bytes": 2976,
       "sha256": "d8eb2d294aa51e172ac77c008b49d440cfacf9e7463e66df1b08a88a4d84d9d6"
     },
     "docs/causal_protocol.md": {
-      "bytes": 18597,
-      "sha256": "26f99427d5ad14712561cd15cfedbef96ff5b2cbbaa2218a424b76abc338273e"
+      "bytes": 19269,
+      "sha256": "3e145728c83cc9fd1e353ee0c6138b156edc40ca9dd7f4e2d831ea45f7ae2dfe"
     },
     "docs/input_snapshots.json": {
       "bytes": 1067,
       "sha256": "a778d439ee7b46253000435574628aec324d0f4cf78689361eb56bcb82b00685"
     },
     "docs/paper/README.md": {
-      "bytes": 3874,
-      "sha256": "2ebf8b4d7bc3f71968975d62ab22ef221e1ec00ced49420a3e1c5d94dc999eec"
+      "bytes": 4040,
+      "sha256": "5f0aee9b134d73fa8ddc53716bfc5943a10d22896bef5ece780361a20171a7f4"
     },
     "docs/paper/SHA256SUMS.txt": {
       "bytes": 795,
-      "sha256": "2d9e5fd4f24f866139f7bfb2ff8d272375ed334f78d842f7d6d96dd715dea971"
+      "sha256": "5df9c905d6812a1e97eac76b8d256aeb4cc523081fa98bce36052059ca9b74ca"
     },
     "docs/paper/anti_defensive_changes.diff": {
       "bytes": 37711,
@@ -266,6 +266,10 @@
       "bytes": 1849,
       "sha256": "347864a3802d3fe482cf386fe5c2f7341d866fafa4c79169c508162a6125a02d"
     },
+    "docs/paper/final_submission_audit.md": {
+      "bytes": 5338,
+      "sha256": "668a9009667a4f49325e2247835d0851f83ee5195791de7957e3fbc4da0e4ac1"
+    },
     "docs/paper/language_changes.diff": {
       "bytes": 47411,
       "sha256": "8d9466833fae256e87bd30c9606c9bc3f1bc1959b6ac3f9b3faa84d8a1a6db27"
@@ -279,8 +283,8 @@
       "sha256": "d0a0865c2cd922bc40dd6206f2fe725608a46bc301fd7baf594b57521633b6de"
     },
     "docs/paper/main.pdf": {
-      "bytes": 4224549,
-      "sha256": "ee0f5673b392a4cc93c6739f6fe0f934bfbfec43c7d4a48764effeae017df931"
+      "bytes": 4224623,
+      "sha256": "e48c74cc76d1d9d09c3a8611024ac8863bd28fda8e30f4e57c8634af9405739c"
     },
     "docs/paper/plot_package_verification.json": {
       "bytes": 628,
@@ -288,7 +292,15 @@
     },
     "docs/paper/source_package_verification.json": {
       "bytes": 650,
-      "sha256": "7a7438bb208c4fa6cb013a97f1f4e29a510dfa7f6ca3e1978d849fb5d01ee534"
+      "sha256": "b03deaa08e165bfbef669f37de6a90efcff4f26c5451f8ae70a3219337e29447"
+    },
+    "docs/paper/submission_audit_changes.diff": {
+      "bytes": 2603,
+      "sha256": "6fa2f65863fec2e6a0047fba3f494a5072d02414ca266dc199b031289fe69cdd"
+    },
+    "docs/paper/submission_revision_checks.json": {
+      "bytes": 2240,
+      "sha256": "ab99d6a0c44877d21f45cab37ce346949ee1430e5759453de27cbaa510f7e004"
     },
     "docs/release_verification.json": {
       "bytes": 2336,
@@ -335,8 +347,8 @@
       "sha256": "00a9af6386c401f29974317e3e2e567edab387f5a2613bbdb8e048a253ae280f"
     },
     "experiments/e37_revision_suite.py": {
-      "bytes": 14600,
-      "sha256": "a0600ad3ebd1879e01e1c9b88688d7b458e10cee560dd855f7a0957cf5ca98b3"
+      "bytes": 14885,
+      "sha256": "93e129e74e2d692ba2f55401f6cbcb63b06d2aa9eb4906ef31675eb948d2d70f"
     },
     "experiments/logit_scorer.py": {
       "bytes": 1052,

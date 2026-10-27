@@ -35,7 +35,11 @@ def digest(path):
         for b in iter(lambda:f.read(8*1024*1024), b''): h.update(b)
     return h.hexdigest()
 def json_finite(data):
-    """Undefined metrics serialize as null, never as a fabricated zero."""
+    """Serialize nonfinite values as null; preserve finite legacy sentinels.
+
+    Canonical ratios are recomputed from counts by analysis.summarize_revision.
+    This serializer cannot identify a zero-denominator ratio encoded as 0.0.
+    """
     if isinstance(data, dict): return {k:json_finite(v) for k,v in data.items()}
     if isinstance(data, (list,tuple)): return [json_finite(v) for v in data]
     if isinstance(data, (float,np.floating)) and not math.isfinite(data): return None
@@ -147,7 +151,7 @@ def replay_job(run_dir,job):
     summary=cl.summary(); ev=evaluate_partition(cl.partition(),gold,{r.rid for r in rs}); dec=decision_fmp(cl.merge_log,gold)
     assert summary['complete'] and summary['unique_finalizations'] and summary['max_cluster_size']<=20 and not summary['n_pending']
     result={'job':job,'finished_utc':stamp(),'metrics':ev,'decision':dec,'protocol_summary':summary,'cache_identity':identity,
-      'undefined_metric_encoding':'null means the metric denominator is zero; it is not a zero score',
+      'undefined_metric_encoding':'Nonfinite values serialize as null. Raw metric helpers can retain finite zero-denominator sentinels; use analysis.summarize_revision normalized count-based ratios for interpretation.',
       'candidate_trace':{'enabled':bool(writer),'rows':writer.rows if writer else 0,'candidate_instances':writer.candidate_instances if writer else 0},
       'runtime':{'replay_wall_seconds':elapsed,'process_cpu_seconds':cpu_seconds,'drain_seconds':drain_seconds,'trace_io_seconds':trace_io_seconds,'arrival_mean_ms':float(np.mean(sample)) if sample else None,'arrival_p95_ms':float(np.quantile(sample,.95)) if sample else None, 'measurement_note':'Concurrent local CPU workers; wall time includes trace serialization when enabled. Arrival timing excludes serialization but includes due timers and snapshot construction. These are not isolated throughput benchmarks.'}}
     if job.get('retain_events',True):

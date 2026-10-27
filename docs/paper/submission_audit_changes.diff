@@ -1,0 +1,64 @@
+--- v0.2.8/audit_transfer.tex
++++ v0.2.9/audit_transfer.tex
+@@ -64,8 +64,8 @@
+ The historical Chicago check uses an earlier engine and a six-field export
+ from the city's 311 portal \cite{chicago311}, without free text.
+ Among linked reports the median lag is 0.42 days and 84\%
+-fall within seven days. In its first March week, the largest observed band
+-change among the tested settings is $+0.0038$ $F_1$; the selected setting yields
++fall within seven days. In its first March week, the historical $\tau=.025$
++development sweep gives a maximum band gain of $+0.0038$ $F_1$; the selected setting yields
+ a change in the following week's $F_1$ of $-0.0078$ in one fitted run. This
+ descriptive, single-fit comparison leaves the repaired gate untested in Chicago;
+ the observed changes do not establish a zero effect. Its code, inputs, and original results remain
+@@ -92,8 +92,7 @@
+ sensitivity estimate is conditional on a selected-confidence subset and does
+ not replace the full-sample agreement measures.
+ Adjudication retains 292 records in 226 issues, including 26 multi-record
+-issues, and leaves 35 unadjudicable. All 326 asserted same/different review
+-judgments agree with the resulting partition. Unadjudicable records are
++issues, and leaves 35 unadjudicable. Unadjudicable records are
+ excluded from the lag analysis rather than treated as singleton negatives.
+ 
+ \begin{table}[t]
+
+
+
+
+--- v0.2.8/preamble.tex
++++ v0.2.9/preamble.tex
+@@ -44,7 +44,8 @@
+ \author{Tingrui You}
+ \affiliation{%
+   \institution{Hainan International College, Beijing Language and Culture University}
+-  \city{Beijing}
++  \city{Lingshui}
++  \state{Hainan}
+   \country{China}
+ }
+ \email{yyting2006@163.com}
+@@ -52,7 +53,8 @@
+ \author{Jiayang Wu}
+ \affiliation{%
+   \institution{Hainan International College, Beijing Language and Culture University}
+-  \city{Beijing}
++  \city{Lingshui}
++  \state{Hainan}
+   \country{China}
+ }
+ \email{1131427648@qq.com}
+
+
+
+--- v0.2.8/results.tex
++++ v0.2.9/results.tex
+@@ -152,7 +152,7 @@
+ end-of-month drain (\Cref{tab:timing}). Hiding pending identities changes actual
+ latency: all hidden records reach their own deadline, while visible targets
+ can finalize on a claim. May's mean pending occupancy over the full replay
+-horizon is 913.7 for Band and 251.9 for Gate, versus 1,145.2 and 475.2 for
++horizon is 913.7 for Band and 251.9 for Gate, versus 1,145.1 and 475.1 for
+ their hidden counterparts. This includes the final timer drain.
+ 
+ The one-fit May delay sensitivity gives Band $F_1$ of $0.4304$ at $D=3$
+

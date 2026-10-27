@@ -99,6 +99,13 @@ python -m analysis.summarize_revision --run-dir /absolute/path/to/new-run --mech
 
 This writes `results_summary.json`, normalized integer-count metrics, matched contrasts, event/runtime timing summaries and the result manifest under `reports/`. It requires all five main seeds per expected group. Pointwise paired 95% t intervals describe scorer-fit variability, not population uncertainty or multiplicity-adjusted significance.
 
+Use these normalized ratios for analysis. The original
+`March_logit_s13_tau0.99.json` makes zero merges and retains three legacy
+`0.0` sentinels (`decision.dec_fmp`, `decision.dec_coverage`, `metrics.fmp`).
+They represent undefined ratios. The normalization step recomputes them as
+`null` and records the corrections in `raw_encoding_overrides`; it does not
+rewrite the original JSON. See [the encoding specification](causal_protocol.md).
+
 `--mechanism` additionally reads complete private logs for the six seed-13 policies in May and July. It reconstructs positive-pair additions/losses, directed wrong-merge sets, triggers, exact denominators, common-source support and stratified sensitivity. To rerun only these analyses:
 
 ```text

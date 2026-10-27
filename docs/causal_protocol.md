@@ -249,8 +249,17 @@ components are treated as negatives under a closed-world workflow assumption.
 Unknown records are excluded from these pair denominators. A directed merge is
 adjudicable only when both its source and actual scored representative are known.
 Decision FMP is wrong/adjudicable merges; coverage is adjudicable/all final merges.
-Both counts and unknown counts must accompany these proportions. Undefined
-zero-denominator metrics serialize as JSON `null`, not as zero accuracy.
+Both counts and unknown counts accompany these proportions. In the canonical
+analysis, `analysis.summarize_revision.normalized_row` recomputes ratios from
+the integer counts and represents zero-denominator FMP and coverage as `null`.
+The original replay JSON preserves the historical metric-helper encoding:
+`March_logit_s13_tau0.99.json` has zero merges and stores `0.0` in
+`decision.dec_fmp`, `decision.dec_coverage`, and `metrics.fmp`. These are legacy
+sentinels, not zero-risk measurements. The raw file and its original metadata
+remain unchanged for provenance; `raw_encoding_overrides` in the normalized
+results records all three replacements. `json_finite` converts nonfinite
+values to `null` but preserves finite sentinels, so raw float fields alone
+must not be used to select or plot feasible operating points.
 
 Every model report binds its protocol, feature file, training source hashes, and
 serialized model checksum. Every replay report binds its exact job, protocol,
